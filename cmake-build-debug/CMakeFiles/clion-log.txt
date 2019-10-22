@@ -1,4 +1,0 @@
-"D:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_CXX_FLAGS=-IC:/SFML/include -IC:/jsoncpp/include" "-DCMAKE_EXE_LINKER_FLAGS=-LC:/SFML/lib -LC:/jsoncpp/lib" -G "CodeBlocks - MinGW Makefiles" C:\Users\adm\Documents\project\pzero
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/adm/Documents/project/pzero/cmake-build-debug
