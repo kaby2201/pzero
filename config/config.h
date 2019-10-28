@@ -1,10 +1,10 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#include "DEFINITIONS.hpp"
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Audio/SoundBuffer.hpp>
-
 #include "engine/resource_manager.h"
 
 class Config{
@@ -26,12 +26,15 @@ public:
         MENU_BACKGROUND,
         CURSOR
     };
+
     static ResourceManager<sf::Texture, int> textures;
 
     enum Sounds : int{
+        BACKGROUND_MUSIC,
         MENU_SELECTION,
         ON_CLICK
     };
+
     static ResourceManager<sf::SoundBuffer, int> sounds;
 
     enum Fonts : int{
@@ -39,13 +42,12 @@ public:
     };
     static ResourceManager<sf::Font, int> fonts;
 
-    // Initializer all the resources
-    static void init();
+    static bool loadResources();
 
 private:
     static void initTextures();
     static void initFonts();
-    static void initConfig();
+    static void initSounds();
 };
 
 

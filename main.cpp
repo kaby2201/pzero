@@ -1,12 +1,13 @@
-#include <engine/machine.h>
-
+#include <iostream>
+#include <engine/game.h>
 int main() {
-    // Create the machine
-    Machine machine;
-
-    // Run until the running flag is set to false
-    while (machine.GetRunning())
-        machine.goNext();
+    Game game;
+    if(!game.init())
+    {
+        std::cout << "Fail to load game items" << std::endl;
+        return EXIT_FAILURE;
+    }
+    game.run();
 
     return EXIT_SUCCESS;
 }

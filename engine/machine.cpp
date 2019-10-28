@@ -7,10 +7,10 @@ Machine::Machine(){
     running = true;
 
     // Start in the main menu state
-    state = StateId::STATE_MAIN_MENU;
+    this->state = StateId::STATE_NONE;
 
     // Add states to the state map
-    states.emplace(StateId::STATE_MAIN_MENU, new StateMainMenu());
+    //states.emplace(StateId::STATE_MAIN_MENU, new StateMainMenu());
     states.emplace(StateId::STATE_EXIT, new StateExit());
 }
 
@@ -26,6 +26,6 @@ void Machine::goNext(){
     states[state]->goNext(*this);
 }
 
-void Machine::SetState(StateId state){
+void Machine::setState(StateId state){
     this->state = state;
 }

@@ -5,10 +5,10 @@
 
 class State;
 
-class Machine
-{
+class Machine{
 public:
-    enum class StateId { HELLO, GOODBYE, EXIT,
+    enum class StateId {
+        STATE_NONE,
         STATE_MAIN_MENU,
         STATE_OPTION_MENU,
         STATE_HIGH_SCORE,
@@ -21,12 +21,13 @@ public:
     ~Machine();
 
     void goNext();
-    void SetState(StateId state);
-    bool GetRunning() const { return running; }
-    void SetRunning(bool running) { this->running = running; }
+    void setState(StateId state);
+    bool isRunning() const { return running; }
+    void setRunning(bool running) { this->running = running; }
 
 protected:
     bool running;
+    static Machine* machine;
     StateId state;
     std::map<StateId, State*> states;
 };

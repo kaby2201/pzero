@@ -6,7 +6,11 @@
 class StateMainMenu : public State
 {
 public:
+    StateMainMenu();
     void goNext(Machine &machine);
+protected:
+    sf::Texture gameTitle;
+    sf::Font font;
 };
 
 

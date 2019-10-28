@@ -5,5 +5,5 @@
 
 void StateExit::goNext(Machine &machine){
     std::cout << "Exiting..." << std::endl;
-    machine.SetRunning(false);
+    machine.setRunning(false);
 }
