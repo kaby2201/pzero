@@ -1,24 +1,20 @@
 #ifndef STATE_H
 #define STATE_H
 
-#include <SFML/Graphics.hpp>
-
-class Machine;
 
 class State{
 public:
-    State() {}
+    virtual void pause(){}
 
-    virtual ~State() {};
+    virtual void init() = 0;
 
-    virtual void enter() = 0;
+    virtual void resume() {}
 
-    virtual void render(sf::RenderWindow &window, float deltatime) = 0;
+    virtual void handleInput() = 0;
 
-    virtual void goNext() = 0;
-    virtual void goNext(Machine &context) = 0;
+    virtual void draw(float dt) = 0;
 
-    virtual void handleEvents(sf::Event &event) = 0;
+    virtual void update(float dt) = 0;
+
 };
-
-#endif
+#endif //STATE_H

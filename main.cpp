@@ -1,13 +1,8 @@
-#include <iostream>
-#include <engine/game.h>
-int main() {
-    Game game;
-    if(!game.init())
-    {
-        std::cout << "Fail to load game items" << std::endl;
-        return EXIT_FAILURE;
-    }
-    game.run();
+#include "game.h"
+#include "DEFINITIONS.hpp"
 
+int main()
+{
+    Game game(SCREEN_WIDTH, SCREEN_HEIGHT, GAME_NAME);
     return EXIT_SUCCESS;
 }

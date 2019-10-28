@@ -1,35 +1,34 @@
 #ifndef MACHINE_H
 #define MACHINE_H
 
-#include <map>
+#include <stack>
+#include <memory>
+#include "state/state.h"
 
-class State;
+typedef std::unique_ptr<State> stateRef;
 
-class Machine{
+class Machine {
 public:
-    enum class StateId {
-        STATE_NONE,
-        STATE_MAIN_MENU,
-        STATE_OPTION_MENU,
-        STATE_HIGH_SCORE,
-        STATE_GAME_SETTINGS,
-        STATE_EXIT,
-        STATE_PAUSE_MENU
-    };
-
     Machine();
-    ~Machine();
+    ~Machine(){}
 
-    void goNext();
-    void setState(StateId state);
-    bool isRunning() const { return running; }
-    void setRunning(bool running) { this->running = running; }
+    void removeState();
 
-protected:
-    bool running;
-    static Machine* machine;
-    StateId state;
-    std::map<StateId, State*> states;
+    void processStateChanges();
+
+    stateRef& getActiveState();
+
+    void addState(stateRef newState, bool isReplacing = true);
+
+private:
+    std::stack<stateRef> states;
+    stateRef newState;
+
+    bool isRemoving;
+    bool resuming;
+    bool isAdding;
+    bool isReplacing;
 };
 
-#endif
+
+#endif //MACHINE_H

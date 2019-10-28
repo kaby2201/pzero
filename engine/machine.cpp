@@ -1,31 +1,44 @@
 #include "machine.h"
-#include "state/stateexit.h"
-#include "state/state_main_manu.h"
 
-Machine::Machine(){
-    // Start the machine running
-    running = true;
+Machine::Machine() {}
 
-    // Start in the main menu state
-    this->state = StateId::STATE_NONE;
-
-    // Add states to the state map
-    //states.emplace(StateId::STATE_MAIN_MENU, new StateMainMenu());
-    states.emplace(StateId::STATE_EXIT, new StateExit());
+void Machine::addState(stateRef newState, bool isReplacing) {
+    this->isAdding = true;
+    this->isReplacing = isReplacing;
+    this->newState = std::move(newState);
 }
 
-Machine::~Machine(){
-    // Free the states from memory
-    for (auto state: states) {
-        delete state.second;
+void Machine::removeState() {
+    this->isRemoving = true;
+}
+
+void Machine::processStateChanges(){
+
+    if (this->isRemoving && !this->states.empty()){
+        this->states.pop();
+
+        if (!this->states.empty()){
+            this->states.top()->resume();
+        }
+
+        this->isRemoving = false;
     }
-    states.clear();
+
+    if (this->isAdding){
+        if (!this->states.empty()){
+            if (this->isReplacing){
+                this->states.pop();
+            }else{
+                this->states.top()->pause();
+            }
+        }
+
+        this->states.push(std::move(this->newState));
+        this->states.top()->init();
+        this->isAdding = false;
+    }
 }
 
-void Machine::goNext(){
-    states[state]->goNext(*this);
-}
-
-void Machine::setState(StateId state){
-    this->state = state;
+stateRef &Machine::getActiveState(){
+    return this->states.top();
 }
