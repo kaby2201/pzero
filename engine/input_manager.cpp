@@ -12,3 +12,13 @@ bool InputManager::isSpriteClicked(const sf::Sprite& object, sf::Mouse::Button b
 sf::Vector2i InputManager::getMousePosition(sf::RenderWindow &window) {
     return sf::Mouse::getPosition(window);
 }
+
+bool InputManager::isTextClicked(const sf::Text &obj, sf::Mouse::Button button, sf::RenderWindow &window) {
+    if (sf::Mouse::isButtonPressed(button)) {
+        sf::IntRect tempRect(obj.getPosition().x, obj.getPosition().y, obj.getGlobalBounds().width,
+                             obj.getGlobalBounds().height);
+
+        return tempRect.contains(sf::Mouse::getPosition(window));
+    }
+    return false;
+}

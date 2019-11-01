@@ -22,11 +22,9 @@ private:
     sf::Clock clock;
 
     sf::Text text;
-    sf::Font font;
-
-    sf::Sound sound;
 
     sf::Sprite background;
+    sf::Texture backgroundTexture;
 };
 
 

@@ -2,6 +2,7 @@
 #define MAIN_MENU_STATE_H
 
 
+#include <SFML/Audio/Sound.hpp>
 #include "game.h"
 
 class MainMenuState : public State {
@@ -26,7 +27,7 @@ private:
     gameDataRef data;
     sf::Sprite b;
     sf::Sprite button;
-    sf::Sprite title;
+    sf::Text title;
 };
 
 

@@ -8,6 +8,7 @@
 #include <engine/machine.h>
 #include <engine/asset_manager.h>
 #include <engine/input_manager.h>
+#include <SFML/Audio/Sound.hpp>
 
 
 /*
@@ -35,12 +36,12 @@ struct GameData{
     Machine machine;
     InputManager input;
     sf::RenderWindow window;
+    sf::Sound sound;
 
     AssetManager<sf::Font, Font> fonts;
     AssetManager<sf::SoundBuffer, Music> music;
     AssetManager<sf::Sprite, Sprite> sprites;
     AssetManager<sf::Texture, Texture> textures;
-
 };
 
 typedef std::shared_ptr<GameData> gameDataRef;

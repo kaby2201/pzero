@@ -2,7 +2,7 @@
 
 // Game settings (for dev)
 #define GAME_NAME "MARIO LIKE 2019"
-#define SPLASH_STATE_SHOW_TIME 5
+#define SPLASH_STATE_SHOW_TIME 10
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
@@ -13,7 +13,7 @@
 #define MENU_BACKGROUND_MUSIC "resources/music/menu.ogg"
 
 // Images
-#define SPLASH_SCREEN_BACKGROUND "resources/ui/game-splash-screen.png"
+#define SPLASH_SCREEN_BACKGROUND "resources/ui/game_background_1.png"
 
 
 // Fonts

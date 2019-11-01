@@ -9,7 +9,7 @@ public:
     ~InputManager(){}
 
     bool isSpriteClicked(const sf::Sprite& object, sf::Mouse::Button button, sf::RenderWindow& window);
-
+    bool isTextClicked(const sf::Text& obj, sf::Mouse::Button button, sf::RenderWindow& window);
     sf::Vector2i getMousePosition(sf::RenderWindow &window);
 };
 

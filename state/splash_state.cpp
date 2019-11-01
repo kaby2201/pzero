@@ -7,22 +7,24 @@
 SplashState::SplashState(gameDataRef data) : data(std::move(data)){}
 
 void SplashState::init(){
+    // Load and sed the background
     this->data->textures.load(Texture::WELCOME_BACKGROUND_IMG, SPLASH_SCREEN_BACKGROUND);
+
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
+
 
     this->data->fonts.load(Font::GAME_TITLE, GAME_TITLE_FONT);
     text.setFont(this->data->fonts.get(Font::GAME_TITLE));
-    sf::Color color(189, 195, 199,1.0);
 
-    text.setFillColor(sf::Color::Black);
+    text.setFillColor(sf::Color::White);
     text.setCharacterSize(90);
-    text.setPosition(50.f, 50.f);
-    text.setString("Welcome to " GAME_NAME);
+    text.setString( GAME_NAME);
+    text.setPosition((float)this->data->window.getSize().x/3, (float)this->data->window.getSize().y/2);
 
     // Load file and play the music
     this->data->music.load(Music::BACKGROUND_MUSIC, MENU_BACKGROUND_MUSIC);
-    sound.setBuffer(this->data->music.get(Music::BACKGROUND_MUSIC));
-    sound.play();
+    this->data->sound.setBuffer(this->data->music.get(Music::BACKGROUND_MUSIC));
+    this->data->sound.play();
 }
 
 void SplashState::handleInput(){
@@ -47,7 +49,7 @@ void SplashState::update(float dt){
 
 void SplashState::draw(float dt){
     this->data->window.clear();
-    this->data->window.draw( this->background );
+    this->data->window.draw( this->background);
     this->data->window.draw(text);
     this->data->window.display();
 }
