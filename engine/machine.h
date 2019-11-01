@@ -9,7 +9,7 @@ typedef std::unique_ptr<State> stateRef;
 
 class Machine {
 public:
-    Machine();
+    Machine(){}
     ~Machine(){}
 
     void removeState();

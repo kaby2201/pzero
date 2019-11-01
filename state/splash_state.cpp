@@ -17,7 +17,7 @@ void SplashState::init(){
     text.setFillColor(sf::Color::Black);
     text.setCharacterSize(90);
     text.setPosition(50.f, 50.f);
-    text.setString("Welcome to " GAME_NAME);
+    text.setString("Loading ...");
 
     // Load file and play the music
     this->data->music.load(Music::BACKGROUND_MUSIC, MENU_BACKGROUND_MUSIC);
