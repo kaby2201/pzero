@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/gcc.exe")
+set(CMAKE_C_COMPILER "C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "7.3.0")
@@ -16,11 +16,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/ar.exe")
-set(CMAKE_C_COMPILER_AR "C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/ld.exe")
+set(CMAKE_AR "C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/ar.exe")
+set(CMAKE_C_COMPILER_AR "C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/bin/ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -69,7 +69,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include;C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed;C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/x86_64-w64-mingw32/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include;C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed;C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/x86_64-w64-mingw32/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/Users/Public/SFML/lib;C:/Users/Public/jsoncpp/lib;C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0;C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/lib/gcc;C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/x86_64-w64-mingw32/lib;C:/Users/Mr. Engineer/Compiler/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/Users/Sultan/SFML/lib;C:/Users/Sultan/jsoncpp/lib;C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0;C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/lib/gcc;C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/x86_64-w64-mingw32/lib;C:/x86_64-7.3.0-release-posix-seh-rt_v5-rev0/mingw64/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

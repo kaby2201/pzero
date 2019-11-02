@@ -9,9 +9,12 @@ int main() {
     window.setFramerateLimit(60);
     sf::CircleShape shape;
     sf::Music music;
-    if (!music.openFromFile("C:\\Users\\Mr. Engineer\\Desktop\\Algorithms\\SFML\\music.ogg"))
-    {std::cout<<"ERROR"<<std::endl;}
-    music.setVolume(20);
+    if (!music.openFromFile("music.ogg"))
+    {
+        std::cout<<"ERROR"<<std::endl;
+    }
+    music.setVolume(100);
+    music
     shape.setRadius(20.f);
     shape.setFillColor(sf::Color::Blue);
     shape.setPosition(400,400);
@@ -20,7 +23,7 @@ int main() {
 
     while(window.isOpen())
     {
-        sf::Event event;
+        sf::Event event{};
 
         while(window.pollEvent(event))
         {
@@ -37,9 +40,11 @@ int main() {
                         if (!alpha) {
                             music.play();
                             alpha = true;
+                            std::cout<<"plays!!"<<std::endl;
                         } else if (alpha) {
                             music.pause();
                             alpha = false;
+                            std::cout<<"Pause!!"<<std::endl;
                         }
                     }
                 }
