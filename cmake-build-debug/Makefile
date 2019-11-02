@@ -230,6 +230,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+state/Menu.obj: state/Menu.cpp.obj
+
+.PHONY : state/Menu.obj
+
+# target to build an object file
+state/Menu.cpp.obj:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/Menu.cpp.obj
+.PHONY : state/Menu.cpp.obj
+
+state/Menu.i: state/Menu.cpp.i
+
+.PHONY : state/Menu.i
+
+# target to preprocess a source file
+state/Menu.cpp.i:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/Menu.cpp.i
+.PHONY : state/Menu.cpp.i
+
+state/Menu.s: state/Menu.cpp.s
+
+.PHONY : state/Menu.s
+
+# target to generate assembly for a file
+state/Menu.cpp.s:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/Menu.cpp.s
+.PHONY : state/Menu.cpp.s
+
 state/in_game.obj: state/in_game.cpp.obj
 
 .PHONY : state/in_game.obj
@@ -332,6 +359,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... state/Menu.obj
+	@echo ... state/Menu.i
+	@echo ... state/Menu.s
 	@echo ... state/in_game.obj
 	@echo ... state/in_game.i
 	@echo ... state/in_game.s

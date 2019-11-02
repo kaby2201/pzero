@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pzero.dir/engine/machine.cpp.obj"
   "CMakeFiles/pzero.dir/game.cpp.obj"
   "CMakeFiles/pzero.dir/main.cpp.obj"
+  "CMakeFiles/pzero.dir/state/Menu.cpp.obj"
   "CMakeFiles/pzero.dir/state/in_game.cpp.obj"
   "CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj"
   "CMakeFiles/pzero.dir/state/splash_state.cpp.obj"
