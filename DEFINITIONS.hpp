@@ -1,8 +1,8 @@
 #pragma once
 
 // Game settings (for dev)
-#define GAME_NAME "MARIO LIKE 2019"
-#define SPLASH_STATE_SHOW_TIME 10
+#define GAME_NAME "Mamba Game"
+#define SPLASH_STATE_SHOW_TIME 3
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
@@ -14,6 +14,7 @@
 
 // Images
 #define SPLASH_SCREEN_BACKGROUND "resources/ui/game_background_1.png"
+#define BACKGROUND_CLOUD "resources/ui/clouds_2.png"
 
 
 // Fonts

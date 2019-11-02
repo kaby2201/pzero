@@ -24,7 +24,8 @@ private:
     sf::Text text;
 
     sf::Sprite background;
-    sf::Texture backgroundTexture;
+    sf::Sprite cloud;
+    sf::Vector2i Size;
 };
 
 

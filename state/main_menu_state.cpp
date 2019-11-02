@@ -8,14 +8,14 @@ void MainMenuState::init() {
 
     this->title.setString("Click here to start the game");
     title.setFont(this->data->fonts.get(Font::GAME_TITLE));
-    title.setCharacterSize(55);
+    title.setCharacterSize(60);
 }
 
 void MainMenuState::handleInput() {
     sf::Event event;
 
     while (this->data->window.pollEvent(event)) {
-        if (sf::Event::Closed == event.type) {
+        if (sf::Event::Closed == event.type || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
             data->window.close();
         }
 
