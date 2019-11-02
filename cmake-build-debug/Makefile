@@ -122,32 +122,86 @@ pzero/fast:
 	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/build
 .PHONY : pzero/fast
 
-Menu.obj: Menu.cpp.obj
+engine/input_manager.obj: engine/input_manager.cpp.obj
 
-.PHONY : Menu.obj
+.PHONY : engine/input_manager.obj
 
 # target to build an object file
-Menu.cpp.obj:
-	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/Menu.cpp.obj
-.PHONY : Menu.cpp.obj
+engine/input_manager.cpp.obj:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/engine/input_manager.cpp.obj
+.PHONY : engine/input_manager.cpp.obj
 
-Menu.i: Menu.cpp.i
+engine/input_manager.i: engine/input_manager.cpp.i
 
-.PHONY : Menu.i
+.PHONY : engine/input_manager.i
 
 # target to preprocess a source file
-Menu.cpp.i:
-	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/Menu.cpp.i
-.PHONY : Menu.cpp.i
+engine/input_manager.cpp.i:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/engine/input_manager.cpp.i
+.PHONY : engine/input_manager.cpp.i
 
-Menu.s: Menu.cpp.s
+engine/input_manager.s: engine/input_manager.cpp.s
 
-.PHONY : Menu.s
+.PHONY : engine/input_manager.s
 
 # target to generate assembly for a file
-Menu.cpp.s:
-	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/Menu.cpp.s
-.PHONY : Menu.cpp.s
+engine/input_manager.cpp.s:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/engine/input_manager.cpp.s
+.PHONY : engine/input_manager.cpp.s
+
+engine/machine.obj: engine/machine.cpp.obj
+
+.PHONY : engine/machine.obj
+
+# target to build an object file
+engine/machine.cpp.obj:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/engine/machine.cpp.obj
+.PHONY : engine/machine.cpp.obj
+
+engine/machine.i: engine/machine.cpp.i
+
+.PHONY : engine/machine.i
+
+# target to preprocess a source file
+engine/machine.cpp.i:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/engine/machine.cpp.i
+.PHONY : engine/machine.cpp.i
+
+engine/machine.s: engine/machine.cpp.s
+
+.PHONY : engine/machine.s
+
+# target to generate assembly for a file
+engine/machine.cpp.s:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/engine/machine.cpp.s
+.PHONY : engine/machine.cpp.s
+
+game.obj: game.cpp.obj
+
+.PHONY : game.obj
+
+# target to build an object file
+game.cpp.obj:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/game.cpp.obj
+.PHONY : game.cpp.obj
+
+game.i: game.cpp.i
+
+.PHONY : game.i
+
+# target to preprocess a source file
+game.cpp.i:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/game.cpp.i
+.PHONY : game.cpp.i
+
+game.s: game.cpp.s
+
+.PHONY : game.s
+
+# target to generate assembly for a file
+game.cpp.s:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/game.cpp.s
+.PHONY : game.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -176,6 +230,87 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+state/in_game.obj: state/in_game.cpp.obj
+
+.PHONY : state/in_game.obj
+
+# target to build an object file
+state/in_game.cpp.obj:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/in_game.cpp.obj
+.PHONY : state/in_game.cpp.obj
+
+state/in_game.i: state/in_game.cpp.i
+
+.PHONY : state/in_game.i
+
+# target to preprocess a source file
+state/in_game.cpp.i:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/in_game.cpp.i
+.PHONY : state/in_game.cpp.i
+
+state/in_game.s: state/in_game.cpp.s
+
+.PHONY : state/in_game.s
+
+# target to generate assembly for a file
+state/in_game.cpp.s:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/in_game.cpp.s
+.PHONY : state/in_game.cpp.s
+
+state/main_menu_state.obj: state/main_menu_state.cpp.obj
+
+.PHONY : state/main_menu_state.obj
+
+# target to build an object file
+state/main_menu_state.cpp.obj:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj
+.PHONY : state/main_menu_state.cpp.obj
+
+state/main_menu_state.i: state/main_menu_state.cpp.i
+
+.PHONY : state/main_menu_state.i
+
+# target to preprocess a source file
+state/main_menu_state.cpp.i:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/main_menu_state.cpp.i
+.PHONY : state/main_menu_state.cpp.i
+
+state/main_menu_state.s: state/main_menu_state.cpp.s
+
+.PHONY : state/main_menu_state.s
+
+# target to generate assembly for a file
+state/main_menu_state.cpp.s:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/main_menu_state.cpp.s
+.PHONY : state/main_menu_state.cpp.s
+
+state/splash_state.obj: state/splash_state.cpp.obj
+
+.PHONY : state/splash_state.obj
+
+# target to build an object file
+state/splash_state.cpp.obj:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/splash_state.cpp.obj
+.PHONY : state/splash_state.cpp.obj
+
+state/splash_state.i: state/splash_state.cpp.i
+
+.PHONY : state/splash_state.i
+
+# target to preprocess a source file
+state/splash_state.cpp.i:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/splash_state.cpp.i
+.PHONY : state/splash_state.cpp.i
+
+state/splash_state.s: state/splash_state.cpp.s
+
+.PHONY : state/splash_state.s
+
+# target to generate assembly for a file
+state/splash_state.cpp.s:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/splash_state.cpp.s
+.PHONY : state/splash_state.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +320,27 @@ help:
 	@echo ... pzero
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Menu.obj
-	@echo ... Menu.i
-	@echo ... Menu.s
+	@echo ... engine/input_manager.obj
+	@echo ... engine/input_manager.i
+	@echo ... engine/input_manager.s
+	@echo ... engine/machine.obj
+	@echo ... engine/machine.i
+	@echo ... engine/machine.s
+	@echo ... game.obj
+	@echo ... game.i
+	@echo ... game.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... state/in_game.obj
+	@echo ... state/in_game.i
+	@echo ... state/in_game.s
+	@echo ... state/main_menu_state.obj
+	@echo ... state/main_menu_state.i
+	@echo ... state/main_menu_state.s
+	@echo ... state/splash_state.obj
+	@echo ... state/splash_state.i
+	@echo ... state/splash_state.s
 .PHONY : help
 
 

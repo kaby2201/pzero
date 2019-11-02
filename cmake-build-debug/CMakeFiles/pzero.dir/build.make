@@ -57,6 +57,7 @@ include CMakeFiles/pzero.dir/progress.make
 include CMakeFiles/pzero.dir/flags.make
 
 CMakeFiles/pzero.dir/main.cpp.obj: CMakeFiles/pzero.dir/flags.make
+CMakeFiles/pzero.dir/main.cpp.obj: CMakeFiles/pzero.dir/includes_CXX.rsp
 CMakeFiles/pzero.dir/main.cpp.obj: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pzero.dir/main.cpp.obj"
 	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\pzero.dir\main.cpp.obj -c C:\Users\Nicolas\dat220g19h\pzero\main.cpp
@@ -69,34 +70,115 @@ CMakeFiles/pzero.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pzero.dir/main.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nicolas\dat220g19h\pzero\main.cpp -o CMakeFiles\pzero.dir\main.cpp.s
 
-CMakeFiles/pzero.dir/Menu.cpp.obj: CMakeFiles/pzero.dir/flags.make
-CMakeFiles/pzero.dir/Menu.cpp.obj: ../Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pzero.dir/Menu.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\pzero.dir\Menu.cpp.obj -c C:\Users\Nicolas\dat220g19h\pzero\Menu.cpp
+CMakeFiles/pzero.dir/engine/machine.cpp.obj: CMakeFiles/pzero.dir/flags.make
+CMakeFiles/pzero.dir/engine/machine.cpp.obj: CMakeFiles/pzero.dir/includes_CXX.rsp
+CMakeFiles/pzero.dir/engine/machine.cpp.obj: ../engine/machine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pzero.dir/engine/machine.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\pzero.dir\engine\machine.cpp.obj -c C:\Users\Nicolas\dat220g19h\pzero\engine\machine.cpp
 
-CMakeFiles/pzero.dir/Menu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pzero.dir/Menu.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nicolas\dat220g19h\pzero\Menu.cpp > CMakeFiles\pzero.dir\Menu.cpp.i
+CMakeFiles/pzero.dir/engine/machine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pzero.dir/engine/machine.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nicolas\dat220g19h\pzero\engine\machine.cpp > CMakeFiles\pzero.dir\engine\machine.cpp.i
 
-CMakeFiles/pzero.dir/Menu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pzero.dir/Menu.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nicolas\dat220g19h\pzero\Menu.cpp -o CMakeFiles\pzero.dir\Menu.cpp.s
+CMakeFiles/pzero.dir/engine/machine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pzero.dir/engine/machine.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nicolas\dat220g19h\pzero\engine\machine.cpp -o CMakeFiles\pzero.dir\engine\machine.cpp.s
+
+CMakeFiles/pzero.dir/engine/input_manager.cpp.obj: CMakeFiles/pzero.dir/flags.make
+CMakeFiles/pzero.dir/engine/input_manager.cpp.obj: CMakeFiles/pzero.dir/includes_CXX.rsp
+CMakeFiles/pzero.dir/engine/input_manager.cpp.obj: ../engine/input_manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pzero.dir/engine/input_manager.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\pzero.dir\engine\input_manager.cpp.obj -c C:\Users\Nicolas\dat220g19h\pzero\engine\input_manager.cpp
+
+CMakeFiles/pzero.dir/engine/input_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pzero.dir/engine/input_manager.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nicolas\dat220g19h\pzero\engine\input_manager.cpp > CMakeFiles\pzero.dir\engine\input_manager.cpp.i
+
+CMakeFiles/pzero.dir/engine/input_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pzero.dir/engine/input_manager.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nicolas\dat220g19h\pzero\engine\input_manager.cpp -o CMakeFiles\pzero.dir\engine\input_manager.cpp.s
+
+CMakeFiles/pzero.dir/state/splash_state.cpp.obj: CMakeFiles/pzero.dir/flags.make
+CMakeFiles/pzero.dir/state/splash_state.cpp.obj: CMakeFiles/pzero.dir/includes_CXX.rsp
+CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../state/splash_state.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pzero.dir/state/splash_state.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\pzero.dir\state\splash_state.cpp.obj -c C:\Users\Nicolas\dat220g19h\pzero\state\splash_state.cpp
+
+CMakeFiles/pzero.dir/state/splash_state.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pzero.dir/state/splash_state.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nicolas\dat220g19h\pzero\state\splash_state.cpp > CMakeFiles\pzero.dir\state\splash_state.cpp.i
+
+CMakeFiles/pzero.dir/state/splash_state.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pzero.dir/state/splash_state.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nicolas\dat220g19h\pzero\state\splash_state.cpp -o CMakeFiles\pzero.dir\state\splash_state.cpp.s
+
+CMakeFiles/pzero.dir/game.cpp.obj: CMakeFiles/pzero.dir/flags.make
+CMakeFiles/pzero.dir/game.cpp.obj: CMakeFiles/pzero.dir/includes_CXX.rsp
+CMakeFiles/pzero.dir/game.cpp.obj: ../game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pzero.dir/game.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\pzero.dir\game.cpp.obj -c C:\Users\Nicolas\dat220g19h\pzero\game.cpp
+
+CMakeFiles/pzero.dir/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pzero.dir/game.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nicolas\dat220g19h\pzero\game.cpp > CMakeFiles\pzero.dir\game.cpp.i
+
+CMakeFiles/pzero.dir/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pzero.dir/game.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nicolas\dat220g19h\pzero\game.cpp -o CMakeFiles\pzero.dir\game.cpp.s
+
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: CMakeFiles/pzero.dir/flags.make
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: CMakeFiles/pzero.dir/includes_CXX.rsp
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/main_menu_state.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\pzero.dir\state\main_menu_state.cpp.obj -c C:\Users\Nicolas\dat220g19h\pzero\state\main_menu_state.cpp
+
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pzero.dir/state/main_menu_state.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nicolas\dat220g19h\pzero\state\main_menu_state.cpp > CMakeFiles\pzero.dir\state\main_menu_state.cpp.i
+
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pzero.dir/state/main_menu_state.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nicolas\dat220g19h\pzero\state\main_menu_state.cpp -o CMakeFiles\pzero.dir\state\main_menu_state.cpp.s
+
+CMakeFiles/pzero.dir/state/in_game.cpp.obj: CMakeFiles/pzero.dir/flags.make
+CMakeFiles/pzero.dir/state/in_game.cpp.obj: CMakeFiles/pzero.dir/includes_CXX.rsp
+CMakeFiles/pzero.dir/state/in_game.cpp.obj: ../state/in_game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pzero.dir/state/in_game.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\pzero.dir\state\in_game.cpp.obj -c C:\Users\Nicolas\dat220g19h\pzero\state\in_game.cpp
+
+CMakeFiles/pzero.dir/state/in_game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pzero.dir/state/in_game.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nicolas\dat220g19h\pzero\state\in_game.cpp > CMakeFiles\pzero.dir\state\in_game.cpp.i
+
+CMakeFiles/pzero.dir/state/in_game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pzero.dir/state/in_game.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nicolas\dat220g19h\pzero\state\in_game.cpp -o CMakeFiles\pzero.dir\state\in_game.cpp.s
 
 # Object files for target pzero
 pzero_OBJECTS = \
 "CMakeFiles/pzero.dir/main.cpp.obj" \
-"CMakeFiles/pzero.dir/Menu.cpp.obj"
+"CMakeFiles/pzero.dir/engine/machine.cpp.obj" \
+"CMakeFiles/pzero.dir/engine/input_manager.cpp.obj" \
+"CMakeFiles/pzero.dir/state/splash_state.cpp.obj" \
+"CMakeFiles/pzero.dir/game.cpp.obj" \
+"CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj" \
+"CMakeFiles/pzero.dir/state/in_game.cpp.obj"
 
 # External object files for target pzero
 pzero_EXTERNAL_OBJECTS =
 
 pzero.exe: CMakeFiles/pzero.dir/main.cpp.obj
-pzero.exe: CMakeFiles/pzero.dir/Menu.cpp.obj
+pzero.exe: CMakeFiles/pzero.dir/engine/machine.cpp.obj
+pzero.exe: CMakeFiles/pzero.dir/engine/input_manager.cpp.obj
+pzero.exe: CMakeFiles/pzero.dir/state/splash_state.cpp.obj
+pzero.exe: CMakeFiles/pzero.dir/game.cpp.obj
+pzero.exe: CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj
+pzero.exe: CMakeFiles/pzero.dir/state/in_game.cpp.obj
 pzero.exe: CMakeFiles/pzero.dir/build.make
 pzero.exe: CMakeFiles/pzero.dir/linklibs.rsp
 pzero.exe: CMakeFiles/pzero.dir/objects1.rsp
 pzero.exe: CMakeFiles/pzero.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable pzero.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable pzero.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\pzero.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
