@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Nicolas/dat220g19h/pzero/Menu.cpp
+Menu.h
+C:/Users/Nicolas/dat220g19h/pzero/Menu.h
+iostream
+-
+SFML/Graphics.hpp
+C:/Users/Nicolas/dat220g19h/pzero/SFML/Graphics.hpp
+
+C:/Users/Nicolas/dat220g19h/pzero/Menu.h
+iostream
+-
+SFML/Graphics.hpp
+C:/Users/Nicolas/dat220g19h/pzero/SFML/Graphics.hpp
+
+C:/Users/Nicolas/dat220g19h/pzero/main.cpp
+iostream
+-
+iostream
+-
+SFML/Graphics.hpp
+C:/Users/Nicolas/dat220g19h/pzero/SFML/Graphics.hpp
+Menu.h
+C:/Users/Nicolas/dat220g19h/pzero/Menu.h
+
