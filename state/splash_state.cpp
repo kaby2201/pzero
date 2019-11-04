@@ -6,10 +6,11 @@
 #include <iostream>
 #include "main_menu_state.h"
 
+
 SplashState::SplashState(gameDataRef data) : data(std::move(data)){}
 
 void SplashState::init(){
-    // Load and sed the background
+    // Load and set the background
     this->data->textures.load(Texture::WELCOME_BACKGROUND_IMG, SPLASH_SCREEN_BACKGROUND);
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
 
@@ -51,7 +52,7 @@ void SplashState::update(float dt){
 
     if (this->clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME){
         // TODO - add the to start from here
-        this->data->machine.addState(stateRef(new InGame(data)), true);
+        this->data->machine.addState(stateRef(new MainMenuState(data)), true);
     }
 }
 

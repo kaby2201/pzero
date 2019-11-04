@@ -1,3 +1,0 @@
-C:\Users\Sultan\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\SFML.dir/objects.a
-C:\x86_64-7.3.0-release-posix-seh-rt_v5-rev0\mingw64\bin\ar.exe cr CMakeFiles\SFML.dir/objects.a @CMakeFiles\SFML.dir\objects1.rsp
-C:\x86_64-7.3.0-release-posix-seh-rt_v5-rev0\mingw64\bin\g++.exe -IC:/Users/Sultan/SFML/include -IC:/Users/Sultan/jsoncpp/include -g  -LC:/Users/Sultan/SFML/lib -LC:/Users/Sultan/jsoncpp/lib -Wl,--whole-archive CMakeFiles\SFML.dir/objects.a -Wl,--no-whole-archive  -o SFML.exe -Wl,--out-implib,libSFML.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\SFML.dir\linklibs.rsp

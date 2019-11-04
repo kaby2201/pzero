@@ -20,7 +20,6 @@ public:
 private:
     gameDataRef data;
     sf::Clock clock;
-
     sf::Text text;
 
     sf::Sprite background;
