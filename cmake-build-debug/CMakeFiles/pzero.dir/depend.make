@@ -41,6 +41,8 @@ CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../game.h
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/state.h
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/main_menu_state.cpp
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/main_menu_state.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/splash_state.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/state.h
 
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../DEFINITIONS.hpp
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../engine/asset_manager.h

@@ -111,12 +111,6 @@
 		<Unit filename="C:/Users/Nicolas/dat220g19h/pzero/main.cpp">
 			<Option target="pzero"/>
 		</Unit>
-		<Unit filename="C:/Users/Nicolas/dat220g19h/pzero/state/Menu.cpp">
-			<Option target="pzero"/>
-		</Unit>
-		<Unit filename="C:/Users/Nicolas/dat220g19h/pzero/state/Menu.h">
-			<Option target="pzero"/>
-		</Unit>
 		<Unit filename="C:/Users/Nicolas/dat220g19h/pzero/state/in_game.cpp">
 			<Option target="pzero"/>
 		</Unit>

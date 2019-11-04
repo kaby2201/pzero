@@ -51,7 +51,7 @@ void SplashState::update(float dt){
 
     if (this->clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME){
         // TODO - add the to start from here
-        this->data->machine.addState(stateRef(new InGame(data)), true);
+        this->data->machine.addState(stateRef(new MainMenuState(data)), true);
     }
 }
 

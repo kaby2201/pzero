@@ -42,6 +42,8 @@ CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj
  ../state/state.h
  C:/Users/Nicolas/dat220g19h/pzero/state/main_menu_state.cpp
  C:/Users/Nicolas/dat220g19h/pzero/state/main_menu_state.h
+ C:/Users/Nicolas/dat220g19h/pzero/state/splash_state.h
+ C:/Users/Nicolas/dat220g19h/pzero/state/state.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj
  ../DEFINITIONS.hpp
  ../engine/asset_manager.h

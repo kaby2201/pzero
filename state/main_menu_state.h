@@ -28,6 +28,8 @@ private:
     sf::Sprite b;
     sf::Sprite button;
     sf::Text title;
+
+    sf::Text startGameBtn;
 };
 
 
