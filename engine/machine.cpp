@@ -1,6 +1,5 @@
 #include "machine.h"
 
-Machine::Machine() {}
 
 void Machine::addState(stateRef newState, bool isReplacing) {
     this->isAdding = true;
