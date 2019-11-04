@@ -1,5 +1,5 @@
 #include "game.h"
-#include <state/splash_state.h>
+#include "splash_state.h"
 
 Game::Game(int width, int height, const std::string& title) {
     data->window.create(sf::VideoMode(width, height), title);

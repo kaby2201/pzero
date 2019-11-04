@@ -7,5 +7,5 @@ set(SOURCE_FILES
         DEFINITIONS.hpp state/state.h engine/machine.cpp engine/machine.h engine/asset_manager.h engine/input_manager.cpp engine/input_manager.h state/splash_state.cpp state/splash_state.h state/game.cpp state/game.h state/main_menu_state.cpp state/main_menu_state.h)
 
 add_executable(pzero ${SOURCE_FILES})
-target_include_directories(pzero PUBLIC . ext/jsoncpp)
+target_include_directories(pzero PUBLIC . )
 target_link_libraries (pzero sfml-graphics sfml-window sfml-system sfml-audio)
