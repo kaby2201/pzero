@@ -1,6 +1,5 @@
 #include "DEFINITIONS.hpp"
 #include "splash_state.h"
-#include "in_game.h"
 
 #include <utility>
 #include <iostream>
@@ -49,9 +48,9 @@ void SplashState::update(float dt){
 
     cloud.setPosition(cloud.getPosition().x - 1.0f, cloud.getPosition().y);
 
+    // Will change to splash state after 3-seconds
     if (this->clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME){
-        // TODO - add the to start from here
-        this->data->machine.addState(stateRef(new InGame(data)), true);
+        this->data->machine.addState(stateRef(new MainMenuState(data)), true);
     }
 }
 

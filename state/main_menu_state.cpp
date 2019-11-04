@@ -12,7 +12,7 @@ void MainMenuState::init() {
 }
 
 void MainMenuState::handleInput() {
-    sf::Event event;
+    sf::Event event{};
 
     while (this->data->window.pollEvent(event)) {
         if (sf::Event::Closed == event.type || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {

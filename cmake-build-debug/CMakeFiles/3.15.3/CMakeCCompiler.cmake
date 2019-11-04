@@ -72,5 +72,5 @@ endif()
 
 set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include;C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed;C:/mingw64/x86_64-w64-mingw32/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/Users/Nicolas/SFML/lib;C:/Users/Nicolas/jsoncpp/lib;C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0;C:/mingw64/lib/gcc;C:/mingw64/x86_64-w64-mingw32/lib;C:/mingw64/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/SFML/lib;C:/jsoncpp/lib;C:/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0;C:/mingw64/lib/gcc;C:/mingw64/x86_64-w64-mingw32/lib;C:/mingw64/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

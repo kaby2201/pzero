@@ -1,8 +1,8 @@
 #pragma once
 
 // Game settings (for dev)
-#define GAME_NAME "Mamba Game"
-#define SPLASH_STATE_SHOW_TIME 3
+#define GAME_NAME "Pzero"
+#define SPLASH_STATE_SHOW_TIME 5
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
@@ -18,5 +18,4 @@
 
 
 // Fonts
-#define GAME_MAIN_FONT "resources/font/Modak-Regular.ttf"
 #define GAME_TITLE_FONT "resources/font/Modak-Regular.ttf"

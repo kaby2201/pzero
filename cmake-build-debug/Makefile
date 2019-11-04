@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\Nicolas\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.6817.32\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = C:\Users\adm\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.6817.32\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Users\Nicolas\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.6817.32\bin\cmake\win\bin\cmake.exe -E remove -f
+RM = C:\Users\adm\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.6817.32\bin\cmake\win\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Nicolas\dat220g19h\pzero
+CMAKE_SOURCE_DIR = C:\Users\adm\Documents\project\pzero
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\adm\Documents\project\pzero\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	C:\Users\Nicolas\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.6817.32\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	C:\Users\adm\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.6817.32\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	C:\Users\Nicolas\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.6817.32\bin\cmake\win\bin\cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	C:\Users\adm\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.6817.32\bin\cmake\win\bin\cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\adm\Documents\project\pzero\cmake-build-debug\CMakeFiles C:\Users\adm\Documents\project\pzero\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Nicolas\dat220g19h\pzero\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\adm\Documents\project\pzero\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,33 +176,6 @@ engine/machine.cpp.s:
 	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/engine/machine.cpp.s
 .PHONY : engine/machine.cpp.s
 
-game.obj: game.cpp.obj
-
-.PHONY : game.obj
-
-# target to build an object file
-game.cpp.obj:
-	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/game.cpp.obj
-.PHONY : game.cpp.obj
-
-game.i: game.cpp.i
-
-.PHONY : game.i
-
-# target to preprocess a source file
-game.cpp.i:
-	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/game.cpp.i
-.PHONY : game.cpp.i
-
-game.s: game.cpp.s
-
-.PHONY : game.s
-
-# target to generate assembly for a file
-game.cpp.s:
-	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/game.cpp.s
-.PHONY : game.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -230,32 +203,32 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-state/in_game.obj: state/in_game.cpp.obj
+state/game.obj: state/game.cpp.obj
 
-.PHONY : state/in_game.obj
+.PHONY : state/game.obj
 
 # target to build an object file
-state/in_game.cpp.obj:
-	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/in_game.cpp.obj
-.PHONY : state/in_game.cpp.obj
+state/game.cpp.obj:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/game.cpp.obj
+.PHONY : state/game.cpp.obj
 
-state/in_game.i: state/in_game.cpp.i
+state/game.i: state/game.cpp.i
 
-.PHONY : state/in_game.i
+.PHONY : state/game.i
 
 # target to preprocess a source file
-state/in_game.cpp.i:
-	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/in_game.cpp.i
-.PHONY : state/in_game.cpp.i
+state/game.cpp.i:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/game.cpp.i
+.PHONY : state/game.cpp.i
 
-state/in_game.s: state/in_game.cpp.s
+state/game.s: state/game.cpp.s
 
-.PHONY : state/in_game.s
+.PHONY : state/game.s
 
 # target to generate assembly for a file
-state/in_game.cpp.s:
-	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/in_game.cpp.s
-.PHONY : state/in_game.cpp.s
+state/game.cpp.s:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/game.cpp.s
+.PHONY : state/game.cpp.s
 
 state/main_menu_state.obj: state/main_menu_state.cpp.obj
 
@@ -326,15 +299,12 @@ help:
 	@echo ... engine/machine.obj
 	@echo ... engine/machine.i
 	@echo ... engine/machine.s
-	@echo ... game.obj
-	@echo ... game.i
-	@echo ... game.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... state/in_game.obj
-	@echo ... state/in_game.i
-	@echo ... state/in_game.s
+	@echo ... state/game.obj
+	@echo ... state/game.i
+	@echo ... state/game.s
 	@echo ... state/main_menu_state.obj
 	@echo ... state/main_menu_state.i
 	@echo ... state/main_menu_state.s
