@@ -17,7 +17,9 @@
 
 enum class Texture : int{
     WELCOME_BACKGROUND_IMG,
-    BACKGROUND_CLOUD_TEXTURE
+    BACKGROUND_CLOUD_TEXTURE,
+    MENU_BOARD_BACKGROUND,
+    PAUSE_HEADER
 };
 
 enum class  Font : int{

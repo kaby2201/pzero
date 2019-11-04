@@ -24,6 +24,10 @@ CMakeFiles/pzero.dir/state/game.cpp.obj: ../state/state.h
 CMakeFiles/pzero.dir/state/game.cpp.obj: ../state/game.cpp
 CMakeFiles/pzero.dir/state/game.cpp.obj: ../state/game.h
 
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/game_arena.cpp
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/game_arena.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/state.h
+
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../DEFINITIONS.hpp
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../engine/asset_manager.h
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../engine/input_manager.h
@@ -32,6 +36,18 @@ CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/state.h
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/game.h
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/main_menu_state.cpp
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/main_menu_state.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/pause_state.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/state.h
+
+CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../DEFINITIONS.hpp
+CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../engine/asset_manager.h
+CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../engine/input_manager.h
+CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../engine/machine.h
+CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/state.h
+CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/game.h
+CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/pause_state.cpp
+CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/pause_state.h
+CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/state.h
 
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../DEFINITIONS.hpp
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../engine/asset_manager.h

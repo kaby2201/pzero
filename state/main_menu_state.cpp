@@ -1,4 +1,5 @@
 #include "main_menu_state.h"
+#include "pause_state.h"
 #include <iostream>
 #include "DEFINITIONS.hpp"
 
@@ -20,8 +21,7 @@ void MainMenuState::handleInput() {
         }
 
         if (this->data->input.isTextClicked(this->title, sf::Mouse::Left, data->window)) {
-            std::cout << "Go to the game screen; \n";
-            data->sound.stop();
+            data->machine.addState(stateRef(new PauseState(data)), false);
         }
     }
 }

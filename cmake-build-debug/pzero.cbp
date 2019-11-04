@@ -111,10 +111,22 @@
 		<Unit filename="C:/Users/adm/Documents/project/pzero/state/game.h">
 			<Option target="pzero"/>
 		</Unit>
+		<Unit filename="C:/Users/adm/Documents/project/pzero/state/game_arena.cpp">
+			<Option target="pzero"/>
+		</Unit>
+		<Unit filename="C:/Users/adm/Documents/project/pzero/state/game_arena.h">
+			<Option target="pzero"/>
+		</Unit>
 		<Unit filename="C:/Users/adm/Documents/project/pzero/state/main_menu_state.cpp">
 			<Option target="pzero"/>
 		</Unit>
 		<Unit filename="C:/Users/adm/Documents/project/pzero/state/main_menu_state.h">
+			<Option target="pzero"/>
+		</Unit>
+		<Unit filename="C:/Users/adm/Documents/project/pzero/state/pause_state.cpp">
+			<Option target="pzero"/>
+		</Unit>
+		<Unit filename="C:/Users/adm/Documents/project/pzero/state/pause_state.h">
 			<Option target="pzero"/>
 		</Unit>
 		<Unit filename="C:/Users/adm/Documents/project/pzero/state/splash_state.cpp">

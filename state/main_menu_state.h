@@ -7,7 +7,7 @@
 
 class MainMenuState : public State {
 public:
-    MainMenuState(gameDataRef data) : data(data){}
+    MainMenuState(gameDataRef data) : data(std::move(data)){}
 
     ~MainMenuState(){}
 

@@ -230,6 +230,33 @@ state/game.cpp.s:
 	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/game.cpp.s
 .PHONY : state/game.cpp.s
 
+state/game_arena.obj: state/game_arena.cpp.obj
+
+.PHONY : state/game_arena.obj
+
+# target to build an object file
+state/game_arena.cpp.obj:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/game_arena.cpp.obj
+.PHONY : state/game_arena.cpp.obj
+
+state/game_arena.i: state/game_arena.cpp.i
+
+.PHONY : state/game_arena.i
+
+# target to preprocess a source file
+state/game_arena.cpp.i:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/game_arena.cpp.i
+.PHONY : state/game_arena.cpp.i
+
+state/game_arena.s: state/game_arena.cpp.s
+
+.PHONY : state/game_arena.s
+
+# target to generate assembly for a file
+state/game_arena.cpp.s:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/game_arena.cpp.s
+.PHONY : state/game_arena.cpp.s
+
 state/main_menu_state.obj: state/main_menu_state.cpp.obj
 
 .PHONY : state/main_menu_state.obj
@@ -256,6 +283,33 @@ state/main_menu_state.s: state/main_menu_state.cpp.s
 state/main_menu_state.cpp.s:
 	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/main_menu_state.cpp.s
 .PHONY : state/main_menu_state.cpp.s
+
+state/pause_state.obj: state/pause_state.cpp.obj
+
+.PHONY : state/pause_state.obj
+
+# target to build an object file
+state/pause_state.cpp.obj:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/pause_state.cpp.obj
+.PHONY : state/pause_state.cpp.obj
+
+state/pause_state.i: state/pause_state.cpp.i
+
+.PHONY : state/pause_state.i
+
+# target to preprocess a source file
+state/pause_state.cpp.i:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/pause_state.cpp.i
+.PHONY : state/pause_state.cpp.i
+
+state/pause_state.s: state/pause_state.cpp.s
+
+.PHONY : state/pause_state.s
+
+# target to generate assembly for a file
+state/pause_state.cpp.s:
+	$(MAKE) -f CMakeFiles\pzero.dir\build.make CMakeFiles/pzero.dir/state/pause_state.cpp.s
+.PHONY : state/pause_state.cpp.s
 
 state/splash_state.obj: state/splash_state.cpp.obj
 
@@ -305,9 +359,15 @@ help:
 	@echo ... state/game.obj
 	@echo ... state/game.i
 	@echo ... state/game.s
+	@echo ... state/game_arena.obj
+	@echo ... state/game_arena.i
+	@echo ... state/game_arena.s
 	@echo ... state/main_menu_state.obj
 	@echo ... state/main_menu_state.i
 	@echo ... state/main_menu_state.s
+	@echo ... state/pause_state.obj
+	@echo ... state/pause_state.i
+	@echo ... state/pause_state.s
 	@echo ... state/splash_state.obj
 	@echo ... state/splash_state.i
 	@echo ... state/splash_state.s
