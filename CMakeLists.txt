@@ -25,5 +25,5 @@ set(SOURCE_FILES
         state/setting_state.h)
 
 add_executable(pzero ${SOURCE_FILES})
-target_include_directories(pzero PUBLIC . ext/jsoncpp)
+target_include_directories(pzero PUBLIC . )
 target_link_libraries (pzero sfml-graphics sfml-window sfml-system sfml-audio)
