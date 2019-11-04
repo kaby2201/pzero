@@ -15,11 +15,11 @@
 // Images
 #define SPLASH_SCREEN_BACKGROUND "resources/ui/game_background_1.png"
 #define BACKGROUND_CLOUD "resources/ui/clouds_2.png"
-#define SETTINGS_SCREEN_BACKROUND "resources/ui/table"
-#define MUTE_ON "resources/ui/mute"
-#define MUTE_OFF "resources/ui/muteoff"
-#define VOLUME_ADD "resources/ui/addvolume"
-#define VOLUME_DECREASE "resources/ui/decreasevolume"
+#define SETTINGS_SCREEN_BACKROUND "resources/ui/table.png"
+#define MUTE_ON "resources/ui/mute.png"
+#define MUTE_OFF "resources/ui/muteoff.png"
+#define VOLUME_ADD "resources/ui/addvolume.png"
+#define VOLUME_DECREASE "resources/ui/decreasevolume.png"
 
 
 
