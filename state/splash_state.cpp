@@ -11,7 +11,7 @@ void SplashState::init(){
     // Load and sed the background
     this->data->textures.load(Texture::WELCOME_BACKGROUND_IMG, SPLASH_SCREEN_BACKGROUND);
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
-
+    background.setScale(this->data->window.getSize().x, this->data->window.getSize().y);
 
     this->data->fonts.load(Font::GAME_TITLE, GAME_TITLE_FONT);
     text.setFont(this->data->fonts.get(Font::GAME_TITLE));
