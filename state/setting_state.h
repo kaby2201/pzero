@@ -25,15 +25,17 @@ public:
 private:
     sf::Text text;
     sf::Text text1;
-    sf::Text text2;
+    sf::Text Vnumber;
     gameDataRef data;
     sf::Sprite background;
     sf::Sprite table;
     sf::Sprite muteOff;
     sf::Sprite muteOn;
-    sf::Sprite button;
+    sf::Sprite Vinrease;
+    sf::Sprite Vdecrease;
     std::vector<sf::Sprite> buttons;
     bool alpha = false;
+    int num;
 };
 
 

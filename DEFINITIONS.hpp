@@ -2,7 +2,7 @@
 
 // Game settings (for dev)
 #define GAME_NAME "Mamba Game"
-#define SPLASH_STATE_SHOW_TIME 5
+#define SPLASH_STATE_SHOW_TIME 1
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080

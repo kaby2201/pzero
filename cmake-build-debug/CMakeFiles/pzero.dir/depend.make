@@ -62,7 +62,6 @@ CMakeFiles/pzero.dir/state/splash_state.cpp.obj: .././engine/input_manager.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: .././engine/machine.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: .././game.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: .././state/state.h
-CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../state/in_game.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../state/main_menu_state.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../state/splash_state.cpp
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../state/splash_state.h

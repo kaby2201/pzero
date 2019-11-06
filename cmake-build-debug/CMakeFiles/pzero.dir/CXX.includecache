@@ -44,127 +44,37 @@ engine/input_manager.h
 SFML/Audio/Sound.hpp
 -
 
-.././state/splash_state.h
-SFML/Audio/Sound.hpp
--
-SFML/Graphics.hpp
--
-game.h
-.././state/game.h
-state.h
 .././state/state.h
 
-.././state/state.h
-
-C:/Users/Mr. Engineer/dat220g19h/pzero/DEFINITIONS.hpp
-
-C:/Users/Mr. Engineer/dat220g19h/pzero/game.cpp
-game.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/game.h
-state/splash_state.h
--
-
-C:/Users/Mr. Engineer/dat220g19h/pzero/game.h
-memory
--
-string
--
-SFML/Graphics.hpp
--
-SFML/Audio/SoundBuffer.hpp
--
-engine/machine.h
--
-engine/asset_manager.h
--
-engine/input_manager.h
--
-SFML/Audio/Sound.hpp
--
-
-C:/Users/Mr. Engineer/dat220g19h/pzero/main.cpp
-game.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/game.h
-DEFINITIONS.hpp
-C:/Users/Mr. Engineer/dat220g19h/pzero/DEFINITIONS.hpp
-
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/in_game.cpp
-in_game.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/in_game.h
-
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/in_game.h
-SFML/Graphics.hpp
--
-game.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/game.h
-state.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/state.h
-
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/main_menu_state.cpp
-main_menu_state.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/main_menu_state.h
-iostream
--
-DEFINITIONS.hpp
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/DEFINITIONS.hpp
-setting_state.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/setting_state.h
-in_game.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/in_game.h
-
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/main_menu_state.h
+C:/Users/Sultan/dat220g19h/pzero/state/main_menu_state.h
 SFML/Audio/Sound.hpp
 -
 game.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/game.h
+C:/Users/Sultan/dat220g19h/pzero/state/game.h
 
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/setting_state.cpp
+C:/Users/Sultan/dat220g19h/pzero/state/setting_state.cpp
 setting_state.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/setting_state.h
+C:/Users/Sultan/dat220g19h/pzero/state/setting_state.h
 DEFINITIONS.hpp
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/DEFINITIONS.hpp
+C:/Users/Sultan/dat220g19h/pzero/state/DEFINITIONS.hpp
 setting_state.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/setting_state.h
+C:/Users/Sultan/dat220g19h/pzero/state/setting_state.h
 main_menu_state.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/main_menu_state.h
+C:/Users/Sultan/dat220g19h/pzero/state/main_menu_state.h
 iostream
 -
 game.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/game.h
+C:/Users/Sultan/dat220g19h/pzero/state/game.h
 
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/setting_state.h
+C:/Users/Sultan/dat220g19h/pzero/state/setting_state.h
 SFML/Graphics.hpp
 -
 game.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/game.h
+C:/Users/Sultan/dat220g19h/pzero/state/game.h
 state.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/state.h
+C:/Users/Sultan/dat220g19h/pzero/state/state.h
 iostream
 -
 
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/splash_state.cpp
-DEFINITIONS.hpp
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/DEFINITIONS.hpp
-splash_state.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/splash_state.h
-in_game.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/in_game.h
-utility
--
-iostream
--
-main_menu_state.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/main_menu_state.h
-
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/splash_state.h
-SFML/Audio/Sound.hpp
--
-SFML/Graphics.hpp
--
-game.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/game.h
-state.h
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/state.h
-
-C:/Users/Mr. Engineer/dat220g19h/pzero/state/state.h
+C:/Users/Sultan/dat220g19h/pzero/state/state.h
 
