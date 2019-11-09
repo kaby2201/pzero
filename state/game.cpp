@@ -2,7 +2,7 @@
 #include <state/splash_state.h>
 
 Game::Game(int width, int height, const std::string& title) {
-    data->window.create(sf::VideoMode(width, height), title, sf::Style::Fullscreen);
+    data->window.create(sf::VideoMode(width, height), title);
     data->machine.addState(stateRef(new SplashState(this->data)));
     this->run();
 }

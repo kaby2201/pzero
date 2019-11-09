@@ -12,8 +12,8 @@ void SettingState::pause() {
 void SettingState::init() {
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
 
-    this->data->textures.load(Texture::TABLE_BACKGROUND, SETTINGS_SCREEN_BACKROUND);
-    table.setTexture(this->data->textures.get(Texture::TABLE_BACKGROUND));
+    this->data->textures.load(Texture::TABLE_BACKGROUND_TEXTURE, SETTINGS_SCREEN_BACKROUND);
+    table.setTexture(this->data->textures.get(Texture::TABLE_BACKGROUND_TEXTURE));
     table.setScale(0.7, 0.6);
     table.setPosition(SCREEN_WIDTH / 2.f - table.getGlobalBounds().width / 2,
                       SCREEN_HEIGHT / 2.f - table.getGlobalBounds().height / 2);

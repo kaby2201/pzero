@@ -6,7 +6,7 @@
 #include "game.h"
 #include "state.h"
 
-class SplashState : public State{
+class SplashState : public State {
 public:
     SplashState(gameDataRef data);
 
@@ -17,6 +17,7 @@ public:
     void update(float dt);
 
     void draw(float dt);
+
 private:
     gameDataRef data;
     sf::Clock clock;

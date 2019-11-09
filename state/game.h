@@ -15,33 +15,37 @@
  *  Add all game asset resources here. If you know whey will be used two
  */
 
-enum class Texture : int{
+enum class Texture : int {
     WELCOME_BACKGROUND_IMG,
     BACKGROUND_CLOUD_TEXTURE,
-    TABLE_BACKGROUND,
+    TABLE_BACKGROUND_TEXTURE,
     OFF_MUTE,
     ON_MUTE,
     VOLUME_INCREASE,
     DECREASE_VOLUME,
-    EXIT
-
+    EXIT,
+    TABLE,
+    BUTTON1,
+    BUTTON2,
+    BUTTON3,
+    BUTTON4
 };
 
-enum class  Font : int{
+enum class Font : int {
     GAME_TITLE,
     MAIN_FONT
 };
 
-enum class Sprite : int{
-    PLAY_BTN,
-
+enum class Sprite : int {
+    PLAY_BTN
 };
 
-enum class Music : int{
+
+enum class Music : int {
     BACKGROUND_MUSIC
 };
 
-struct GameData{
+struct GameData {
     Machine machine;
     InputManager input;
     sf::RenderWindow window;
@@ -55,14 +59,15 @@ struct GameData{
 
 typedef std::shared_ptr<GameData> gameDataRef;
 
-class Game{
+class Game {
 public:
-    Game(int width, int height, const std::string& title);
+    Game(int width, int height, const std::string &title);
 
 private:
     void run();
+
     sf::Clock clock;
-    const float   dt = 1.0f / 60.0f;
+    const float dt = 1.0f / 60.0f;
     gameDataRef data = std::make_shared<GameData>();
 };
 
