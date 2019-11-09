@@ -22,7 +22,8 @@ enum class Texture : int{
     OFF_MUTE,
     ON_MUTE,
     VOLUME_INCREASE,
-    DECREASE_VOLUME
+    DECREASE_VOLUME,
+    EXIT
 
 };
 

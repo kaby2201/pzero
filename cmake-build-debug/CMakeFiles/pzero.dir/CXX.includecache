@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-.././DEFINITIONS.hpp
-
 .././engine/asset_manager.h
 memory
 -
@@ -26,7 +24,25 @@ memory
 state/state.h
 .././engine/state/state.h
 
-.././game.h
+.././state/splash_state.h
+SFML/Audio/Sound.hpp
+-
+SFML/Graphics.hpp
+-
+game.h
+.././state/game.h
+state.h
+.././state/state.h
+
+.././state/state.h
+
+C:/Users/Sultan/dat220g19h/pzero/game.cpp
+game.h
+C:/Users/Sultan/dat220g19h/pzero/game.h
+state/splash_state.h
+-
+
+C:/Users/Sultan/dat220g19h/pzero/game.h
 memory
 -
 string
@@ -43,38 +59,4 @@ engine/input_manager.h
 -
 SFML/Audio/Sound.hpp
 -
-
-.././state/state.h
-
-C:/Users/Sultan/dat220g19h/pzero/state/main_menu_state.h
-SFML/Audio/Sound.hpp
--
-game.h
-C:/Users/Sultan/dat220g19h/pzero/state/game.h
-
-C:/Users/Sultan/dat220g19h/pzero/state/setting_state.cpp
-setting_state.h
-C:/Users/Sultan/dat220g19h/pzero/state/setting_state.h
-DEFINITIONS.hpp
-C:/Users/Sultan/dat220g19h/pzero/state/DEFINITIONS.hpp
-setting_state.h
-C:/Users/Sultan/dat220g19h/pzero/state/setting_state.h
-main_menu_state.h
-C:/Users/Sultan/dat220g19h/pzero/state/main_menu_state.h
-iostream
--
-game.h
-C:/Users/Sultan/dat220g19h/pzero/state/game.h
-
-C:/Users/Sultan/dat220g19h/pzero/state/setting_state.h
-SFML/Graphics.hpp
--
-game.h
-C:/Users/Sultan/dat220g19h/pzero/state/game.h
-state.h
-C:/Users/Sultan/dat220g19h/pzero/state/state.h
-iostream
--
-
-C:/Users/Sultan/dat220g19h/pzero/state/state.h
 

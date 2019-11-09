@@ -26,6 +26,7 @@ private:
     sf::Text text;
     sf::Text text1;
     sf::Text Vnumber;
+    sf::Text title;
     gameDataRef data;
     sf::Sprite background;
     sf::Sprite table;
@@ -33,7 +34,8 @@ private:
     sf::Sprite muteOn;
     sf::Sprite Vinrease;
     sf::Sprite Vdecrease;
-    std::vector<sf::Sprite> buttons;
+    sf::Sprite exit;
+
     bool alpha = false;
     int num;
 };

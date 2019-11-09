@@ -20,6 +20,7 @@
 #define MUTE_OFF "resources/ui/muteoff.png"
 #define VOLUME_ADD "resources/ui/addvolume.png"
 #define VOLUME_DECREASE "resources/ui/decreasevolume.png"
+#define EXIT_BUTTON "resources/ui/exit.png"
 
 
 
