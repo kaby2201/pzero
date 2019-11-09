@@ -11,14 +11,13 @@ void SplashState::init(){
     // Load and sed the background
     this->data->textures.load(Texture::WELCOME_BACKGROUND_IMG, SPLASH_SCREEN_BACKGROUND);
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
-    background.setScale(this->data->window.getSize().x, this->data->window.getSize().y);
 
     this->data->fonts.load(Font::GAME_TITLE, GAME_TITLE_FONT);
     text.setFont(this->data->fonts.get(Font::GAME_TITLE));
 
     text.setFillColor(sf::Color(71, 71, 135));
     text.setCharacterSize(190);
-    text.setString( GAME_NAME);
+    text.setString( GAME_NAME " 2019");
 
     text.setPosition((float)data->window.getSize().x/4, (float)data->window.getSize().y/3);
 
