@@ -28,7 +28,9 @@ enum class Texture : int {
     BUTTON1,
     BUTTON2,
     BUTTON3,
-    BUTTON4
+    BUTTON4,
+    MENU_BOARD_BACKGROUND,
+    PAUSE_HEADER
 };
 
 enum class Font : int {

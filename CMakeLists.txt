@@ -12,6 +12,8 @@ set(SOURCE_FILES
         engine/input_manager.h
         state/game.cpp
         state/game.h
+        state/pause_state.h
+        state/pause_state.cpp
         state/state.h
         state/splash_state.cpp
         state/splash_state.h
