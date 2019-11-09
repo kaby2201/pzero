@@ -1,14 +1,16 @@
 #include "main_menu_state.h"
 #include <iostream>
 #include "DEFINITIONS.hpp"
+#include "setting_state.h"
+#include "in_game.h"
 
 void MainMenuState::init() {
     button.setColor(sf::Color::Blue);
     button.setPosition(((float)SCREEN_WIDTH / 2) - (this->button.getGlobalBounds().width / 2),((float)SCREEN_HEIGHT / 2) -(this->button.getGlobalBounds().height / 2));
 
-    this->title.setString("Click here to start the game");
-    title.setFont(this->data->fonts.get(Font::GAME_TITLE));
-    title.setCharacterSize(60);
+    this->settings.setString("Settings");
+    settings.setFont(this->data->fonts.get(Font::GAME_TITLE));
+    settings.setCharacterSize(60);
 }
 
 void MainMenuState::handleInput() {
@@ -19,9 +21,10 @@ void MainMenuState::handleInput() {
             data->window.close();
         }
 
-        if (this->data->input.isTextClicked(this->title, sf::Mouse::Left, data->window)) {
-            std::cout << "Go to the game screen; \n";
-            data->sound.stop();
+        if (this->data->input.isTextClicked(this->settings, sf::Mouse::Left, data->window)) {
+            this->data->machine.addState(stateRef(new SettingState(data)), true);
+            //data->sound.stop();
+
         }
     }
 }
@@ -33,7 +36,7 @@ void MainMenuState::update(float dt) {
 void MainMenuState::draw(float dt) {
     data->window.clear();
     data->window.draw(b);
-    data->window.draw(title);
+    data->window.draw(settings);
     data->window.setTitle("Game::menu");
     data->window.display();
 }

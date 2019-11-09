@@ -27,7 +27,7 @@ private:
     gameDataRef data;
     sf::Sprite b;
     sf::Sprite button;
-    sf::Text title;
+    sf::Text settings;
 };
 
 

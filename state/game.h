@@ -17,7 +17,14 @@
 
 enum class Texture : int{
     WELCOME_BACKGROUND_IMG,
-    BACKGROUND_CLOUD_TEXTURE
+    BACKGROUND_CLOUD_TEXTURE,
+    TABLE_BACKGROUND,
+    OFF_MUTE,
+    ON_MUTE,
+    VOLUME_INCREASE,
+    DECREASE_VOLUME,
+    EXIT
+
 };
 
 enum class  Font : int{
@@ -26,7 +33,8 @@ enum class  Font : int{
 };
 
 enum class Sprite : int{
-    PLAY_BTN
+    PLAY_BTN,
+
 };
 
 enum class Music : int{
