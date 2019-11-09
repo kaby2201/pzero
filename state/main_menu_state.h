@@ -7,9 +7,9 @@
 
 class MainMenuState : public State {
 public:
-    MainMenuState(gameDataRef data) : data(data){}
+    MainMenuState(gameDataRef data) : data(data) {}
 
-    ~MainMenuState(){}
+    ~MainMenuState() {}
 
     void init();
 
@@ -27,9 +27,11 @@ private:
     gameDataRef data;
     sf::Sprite b;
     sf::Sprite button;
-    sf::Text title;
+    sf::Text title, title1;
+    sf::Sprite background;
+    sf::Sprite btn1, btn2, btn3, btn4, table;
 
-    sf::Text startGameBtn;
+    sf::Text b1, b2, b3, b4;
 };
 
 

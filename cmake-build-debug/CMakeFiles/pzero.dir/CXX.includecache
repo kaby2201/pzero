@@ -55,6 +55,10 @@ DEFINITIONS.hpp
 C:/Users/Nicolas/dat220g19h/pzero/state/DEFINITIONS.hpp
 splash_state.h
 C:/Users/Nicolas/dat220g19h/pzero/state/splash_state.h
+SFML/Graphics.hpp
+C:/Users/Nicolas/dat220g19h/pzero/state/SFML/Graphics.hpp
+SFML/System.hpp
+-
 
 C:/Users/Nicolas/dat220g19h/pzero/state/main_menu_state.h
 SFML/Audio/Sound.hpp

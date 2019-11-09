@@ -2,7 +2,7 @@
 
 // Game settings (for dev)
 #define GAME_NAME "Mamba Game"
-#define SPLASH_STATE_SHOW_TIME 0
+#define SPLASH_STATE_SHOW_TIME 1
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
@@ -15,7 +15,11 @@
 // Images
 #define SPLASH_SCREEN_BACKGROUND "resources/ui/game_background_1.png"
 #define BACKGROUND_CLOUD "resources/ui/clouds_2.png"
-
+#define TABLE_BACKGROUND "resources/ui/table.png"
+#define PLAY_BUTTON "resources/ui/play.png"
+#define SETTING_BUTTON "resources/ui/setting.png"
+#define HELP_BUTTON "resources/ui/help.png"
+#define EXIT_BUTTON "resources/ui/exit.png"
 
 // Fonts
 #define GAME_MAIN_FONT "resources/font/Modak-Regular.ttf"
