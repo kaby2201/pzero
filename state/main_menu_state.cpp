@@ -2,7 +2,6 @@
 #include <iostream>
 #include "DEFINITIONS.hpp"
 #include "setting_state.h"
-#include "in_game.h"
 
 void MainMenuState::init() {
     button.setColor(sf::Color::Blue);
