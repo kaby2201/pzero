@@ -27,11 +27,11 @@ private:
     sf::Sprite b;
     sf::Sprite button;
     sf::Text settings;
-    sf::Text title, title1;
+    sf::Text  titleMenu;
     sf::Sprite background;
-    sf::Sprite btn1, btn2, btn3, btn4, table;
+    sf::Sprite btnPlay, btnSetting, btnHelp, btnExit, table, btnScore;
 
-    sf::Text b1, b2, b3, b4;
+    sf::Text btn_play, btn_setting, btn_help, btn_score;
 };
 
 

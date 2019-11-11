@@ -14,60 +14,76 @@ void MainMenuState::init() {
 
     this->data->textures.load(Texture::TABLE, TABLE_BACKGROUND);
     table.setTexture(this->data->textures.get(Texture::TABLE));
-    table.setScale(0.8, 0.9);
+    table.setScale(0.9, 1.0);
     table.setPosition(SCREEN_WIDTH / 2.f - table.getGlobalBounds().width / 2,
                       SCREEN_HEIGHT / 2.f - table.getGlobalBounds().height / 2);
 
-    // insert images as buttons
-    this->data->textures.load(Texture::BUTTON1, PLAY_BUTTON);
-    btn1.setTexture(this->data->textures.get(Texture::BUTTON1));
-    btn1.setScale(0.3, 0.3);
-    btn1.setPosition((table.getPosition().x + table.getGlobalBounds().width - btn1.getGlobalBounds().width -
+    // insert images and texts of menu state
+    this->data->textures.load(Texture::BUTTON_PLAY, PLAY_BUTTON);
+    btnPlay.setTexture(this->data->textures.get(Texture::BUTTON_PLAY));
+    btnPlay.setScale(0.25, 0.25);
+    btnPlay.setPosition((table.getPosition().x + table.getGlobalBounds().width - btnPlay.getGlobalBounds().width -
                       table.getPosition().x / 2) + 80, table.getPosition().y + 80);
 
-    this->data->textures.load(Texture::BUTTON2, SETTING_BUTTON);
-    btn2.setTexture(this->data->textures.get(Texture::BUTTON2));
-    btn2.setScale(0.5, 0.5);
-    btn2.setPosition((table.getPosition().x + table.getGlobalBounds().width - btn2.getGlobalBounds().width -
+    this->data->textures.load(Texture::BUTTON_SETTING, SETTING_BUTTON);
+    btnSetting.setTexture(this->data->textures.get(Texture::BUTTON_SETTING));
+    btnSetting.setScale(0.4, 0.4);
+    btnSetting.setPosition((table.getPosition().x + table.getGlobalBounds().width - btnSetting.getGlobalBounds().width -
                       table.getPosition().x / 2) + 80, table.getPosition().y + 240);
 
 
-    this->data->textures.load(Texture::BUTTON3, HELP_BUTTON);
-    btn3.setTexture(this->data->textures.get(Texture::BUTTON3));
-    btn3.setScale(0.5, 0.5);
-    btn3.setPosition((table.getPosition().x + table.getGlobalBounds().width - btn3.getGlobalBounds().width -
+    this->data->textures.load(Texture::BUTTON_HELP, HELP_BUTTON);
+    btnHelp.setTexture(this->data->textures.get(Texture::BUTTON_HELP));
+    btnHelp.setScale(0.4, 0.4);
+    btnHelp.setPosition((table.getPosition().x + table.getGlobalBounds().width - btnHelp.getGlobalBounds().width -
                       table.getPosition().x / 2) + 80, table.getPosition().y + 400);
 
-    // button texts
-    this->b1.setString("Play");
-    b1.setFont(this->data->fonts.get(Font::GAME_TITLE));
-    b1.setCharacterSize(100);
-    b1.setFillColor(sf::Color::Black);
-    b1.setPosition(table.getPosition().x - b1.getGlobalBounds().width + 350, table.getPosition().y + 80);
+    this->data->textures.load(Texture::BUTTON_SCORE, SCORE_BUTTON);
+    btnScore.setTexture(this->data->textures.get(Texture::BUTTON_SCORE));
+    btnScore.setScale(0.4, 0.4);
+    btnScore.setPosition((table.getPosition().x + table.getGlobalBounds().width - btnScore.getGlobalBounds().width -
+                         table.getPosition().x / 2) + 80, table.getPosition().y + 560);
+    // buttons text for Menu
 
-    this->b2.setString("Settings");
-    b2.setFont(this->data->fonts.get(Font::GAME_TITLE));
-    b2.setCharacterSize(100);
-    b2.setFillColor(sf::Color::Black);
-    b2.setPosition(table.getPosition().x - b2.getGlobalBounds().width + 530, table.getPosition().y + 240);
+    this->btn_play.setString("Play");
+    btn_play.setFont(this->data->fonts.get(Font::GAME_TITLE));
+    btn_play.setCharacterSize(80);
+    btn_play.setFillColor(sf::Color::Black);
+    btn_play.setPosition(table.getPosition().x - btn_play.getGlobalBounds().width + 350, table.getPosition().y + 80);
 
-    this->b3.setString("Help");
-    b3.setFont(this->data->fonts.get(Font::GAME_TITLE));
-    b3.setCharacterSize(100);
-    b3.setFillColor(sf::Color::Black);
-    b3.setPosition(table.getPosition().x - b3.getGlobalBounds().width + 350, table.getPosition().y + 400);
+    // setting button
+    this->btn_setting.setString("Setting");
+    btn_setting.setFont(this->data->fonts.get(Font::GAME_TITLE));
+    btn_setting.setCharacterSize(80);
+    btn_setting.setFillColor(sf::Color::Black);
+    btn_setting.setPosition(table.getPosition().x - btn_setting.getGlobalBounds().width + 470, table.getPosition().y + 240);
 
-    this->data->textures.load(Texture::BUTTON4, EXIT_BUTTON);
-    btn4.setTexture(this->data->textures.get(Texture::BUTTON4));
-    btn4.setScale(0.25, 0.25);
-    btn4.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - btn4.getGlobalBounds().width / 2,
-                     table.getPosition().y + 560);
+    // help button
+    this->btn_help.setString("Help");
+    btn_help.setFont(this->data->fonts.get(Font::GAME_TITLE));
+    btn_help.setCharacterSize(80);
+    btn_help.setFillColor(sf::Color::Black);
+    btn_help.setPosition(table.getPosition().x - btn_help.getGlobalBounds().width + 350, table.getPosition().y + 400);
 
-    this->title1.setString("MENU");
-    title1.setFont(this->data->fonts.get(Font::GAME_TITLE));
-    title1.setCharacterSize(100);
-    title1.setFillColor(sf::Color::Black);
-    title1.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - title1.getGlobalBounds().width / 2,
+    // score button
+    this->btn_score.setString("Score");
+    btn_score.setFont(this->data->fonts.get(Font::GAME_TITLE));
+    btn_score.setCharacterSize(80);
+    btn_score.setFillColor(sf::Color::Black);
+    btn_score.setPosition(table.getPosition().x - btn_score.getGlobalBounds().width + 400, table.getPosition().y + 560);
+
+    // exit button
+    this->data->textures.load(Texture::BUTTON_EXIT, EXIT_MENU_BUTTON);
+    btnExit.setTexture(this->data->textures.get(Texture::BUTTON_EXIT));
+    btnExit.setScale(0.4, 0.4);
+    btnExit.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - btnExit.getGlobalBounds().width / 2, table.getPosition().y + 700);
+
+    // Menu text that is on the top of the Menu
+    this->titleMenu.setString("MENU");
+    titleMenu.setFont(this->data->fonts.get(Font::GAME_TITLE));
+    titleMenu.setCharacterSize(100);
+    titleMenu.setFillColor(sf::Color::Black);
+    titleMenu.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - titleMenu.getGlobalBounds().width / 2,
                        table.getPosition().y - 100);
 
 }
@@ -80,11 +96,11 @@ void MainMenuState::handleInput() {
             data->window.close();
         }
 
-        if (this->data->input.isSpriteClicked(this->btn2, sf::Mouse::Left, data->window)) {
+        if (this->data->input.isSpriteClicked(this->btnSetting, sf::Mouse::Left, data->window)) {
             this->data->machine.addState(stateRef(new SettingState(data)), true);
         }
 
-        if (this->data->input.isSpriteClicked(this->btn4, sf::Mouse::Left, data->window)) {
+        if (this->data->input.isSpriteClicked(this->btnExit, sf::Mouse::Left, data->window)) {
             data->window.close();
         }
 
@@ -101,15 +117,17 @@ void MainMenuState::draw(float dt) {
     data->window.draw(settings);
 
     data->window.draw(background);
-    data->window.draw(title1);
+    data->window.draw(titleMenu);
     data->window.draw(table);
-    data->window.draw(btn1);
-    data->window.draw(btn2);
-    data->window.draw(btn3);
-    data->window.draw(btn4);
-    data->window.draw(b1);
-    data->window.draw(b2);
-    data->window.draw(b3);
+    data->window.draw(btnPlay);
+    data->window.draw(btnSetting);
+    data->window.draw(btnHelp);
+    data->window.draw(btnScore);
+    data->window.draw(btnExit);
+    data->window.draw(btn_play);
+    data->window.draw(btn_setting);
+    data->window.draw(btn_help);
+    data->window.draw(btn_score);
     data->window.display();
 }
 

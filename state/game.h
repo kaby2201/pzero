@@ -25,11 +25,12 @@ enum class Texture : int {
     DECREASE_VOLUME,
     EXIT,
     TABLE,
-    BUTTON1,
-    BUTTON2,
-    BUTTON3,
-    BUTTON4,
+    BUTTON_PLAY,
+    BUTTON_SETTING,
+    BUTTON_HELP,
+    BUTTON_SCORE,
     MENU_BOARD_BACKGROUND,
+    BUTTON_EXIT,
     PAUSE_HEADER
 };
 
