@@ -30,6 +30,7 @@
 #define HELP_BUTTON "resources/ui/help.png"
 #define EXIT_BUTTON "resources/ui/exit.png"
 #define MENU_BACKGROUND_BOARD "resources/ui/PNG/pause/bg.png"
+#define SETTING_IMAGE "resources/ui/settingstitle.png"
 
 //Buttons
 #define RESUME_BUTTON "resources/ui/PNG/btn/restart.png"

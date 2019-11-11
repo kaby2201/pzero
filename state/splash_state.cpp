@@ -26,6 +26,7 @@ void SplashState::init() {
     // Load file and play the music
     this->data->music.load(Music::BACKGROUND_MUSIC, MENU_BACKGROUND_MUSIC);
     this->data->sound.setBuffer(this->data->music.get(Music::BACKGROUND_MUSIC));
+    this->data->sound.setVolume(50);
     this->data->sound.play();
 
     this->data->textures.load(Texture::BACKGROUND_CLOUD_TEXTURE, BACKGROUND_CLOUD);

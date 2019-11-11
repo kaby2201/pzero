@@ -20,6 +20,8 @@ set(SOURCE_FILES
         state/main_menu_state.cpp
         state/main_menu_state.h
         state/setting_state.cpp
+        state/game_arena.cpp
+        state/game_arena.h
         state/setting_state.h)
 
 add_executable(pzero ${SOURCE_FILES})

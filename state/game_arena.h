@@ -2,38 +2,29 @@
 #define GAME_ARENA_H
 
 #include "state.h"
+#include "game.h"
 #include <SFML/Graphics.hpp>
+#include <utility>
 
-class GameArena : public State{
+class GameArena : public State {
 public:
-    GameArena(){}
+    GameArena(gameDataRef data) : data(std::move(data)) {}
 
-    void pause() override {
-        State::pause();
-    }
+    ~GameArena(){}
 
-    void init() override {
+    void init();
 
-    }
+    void handleInput();
 
-    void resume() override {
-        State::resume();
-    }
+    void update(float dt);
 
-    void handleInput() override {
-
-    }
-
-    void draw(float dt) override {
-
-    }
-
-    void update(float dt) override {
-
-    }
+    void draw(float dt);
 
 private:
-    sf::RenderTexture recTexture;
+    gameDataRef data;
+    sf::Text title;
+    //ParticleSystem ParticleSystem;
+    sf::RectangleShape box;
 };
 
 
