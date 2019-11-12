@@ -23,8 +23,6 @@ public:
 private:
     gameDataRef data;
     sf::Text title;
-    //ParticleSystem ParticleSystem;
-    sf::RectangleShape box;
 };
 
 

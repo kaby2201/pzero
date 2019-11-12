@@ -22,7 +22,9 @@ set(SOURCE_FILES
         state/setting_state.cpp
         state/game_arena.cpp
         state/game_arena.h
-        state/setting_state.h)
+        state/setting_state.h
+        state/in_game/camera.cpp
+        state/in_game/camera.h)
 
 add_executable(pzero ${SOURCE_FILES})
 target_include_directories(pzero PUBLIC . )

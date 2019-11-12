@@ -5,7 +5,6 @@ void GameArena::init() {
     title.setFillColor(sf::Color::Green);
     title.setFont(data->fonts.get(Font::GAME_TITLE));
 
-//    ParticleSystem particles(1000);
 }
 
 void GameArena::handleInput() {
