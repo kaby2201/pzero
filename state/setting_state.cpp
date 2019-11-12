@@ -1,6 +1,5 @@
 #include "setting_state.h"
 #include "DEFINITIONS.hpp"
-#include "setting_state.h"
 #include "main_menu_state.h"
 #include <iostream>
 #include "game.h"
@@ -28,14 +27,14 @@ void SettingState::init() {
     muteOn.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - muteOn.getGlobalBounds().width / 2,
                        table.getPosition().y + 150);
 
-    this->data->textures.load(Texture::VOLUME_INCREASE, VOLUME_ADD);
-    Vinrease.setTexture(this->data->textures.get(Texture::VOLUME_INCREASE));
-    Vinrease.setPosition(table.getGlobalBounds().width - Vinrease.getGlobalBounds().width + 30,
-                         (table.getPosition().y + table.getGlobalBounds().height / 2 -
-                          text1.getGlobalBounds().height / 2) + 60);
     this->data->textures.load(Texture::DECREASE_VOLUME, VOLUME_DECREASE);
     Vdecrease.setTexture(this->data->textures.get(Texture::DECREASE_VOLUME));
-    Vdecrease.setPosition((table.getPosition().x + table.getGlobalBounds().width - text1.getGlobalBounds().width -
+    Vdecrease.setPosition(table.getGlobalBounds().width - Vdecrease.getGlobalBounds().width + 30,
+                         (table.getPosition().y + table.getGlobalBounds().height / 2 -
+                          text1.getGlobalBounds().height / 2) + 60);
+    this->data->textures.load(Texture::VOLUME_INCREASE, VOLUME_ADD);
+    Vinrease.setTexture(this->data->textures.get(Texture::VOLUME_INCREASE));
+    Vinrease.setPosition((table.getPosition().x + table.getGlobalBounds().width - text1.getGlobalBounds().width -
                            table.getPosition().x / 2) - 15,
                           (table.getPosition().y + table.getGlobalBounds().height / 2 -
                            text1.getGlobalBounds().height / 2) + 60);
@@ -119,7 +118,7 @@ void SettingState::handleInput() {
             }
         }
 
-        if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))) {
+        if (this->data->input.isSpriteClicked(this->exit, sf::Mouse::Left, data->window)) {
             this->data->machine.addState(stateRef(new MainMenuState(data)), true);
         }
     }

@@ -20,8 +20,9 @@ set(SOURCE_FILES
         state/main_menu_state.cpp
         state/main_menu_state.h
         state/setting_state.cpp
-        state/setting_state.h)
+        state/setting_state.h
+        state/HelpState.cpp state/HelpState.h)
 
 add_executable(pzero ${SOURCE_FILES})
-target_include_directories(pzero PUBLIC . ext/jsoncpp)
+target_include_directories(pzero PUBLIC .)
 target_link_libraries (pzero sfml-graphics sfml-window sfml-system sfml-audio)
