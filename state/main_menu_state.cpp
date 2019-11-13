@@ -3,9 +3,8 @@
 #include "DEFINITIONS.hpp"
 #include "setting_state.h"
 #include "SFML/Graphics.hpp"
-#include "state/help_state.h"
 #include "help_state.h"
-#include "HelpState.h"
+
 
 void MainMenuState::init() {
 
@@ -87,7 +86,7 @@ void MainMenuState::handleInput() {
             this->data->machine.addState(stateRef(new SettingState(data)), true);
         }
 
-        if (this->data->input.isSpriteClicked(this->btn3, sf::Mouse::Left, data->window)) {
+        if (this->data->input.isTextClicked(this->title, sf::Mouse::Left, data->window)) {
             this->data->machine.addState(stateRef(new HelpState(data)), true);
         }
 

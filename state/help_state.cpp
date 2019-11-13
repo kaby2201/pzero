@@ -1,4 +1,5 @@
-#include "HelpState.h"
+#include "help_state.h"
+#include "main_menu_state.h"
 
 void HelpState::init() {
 
