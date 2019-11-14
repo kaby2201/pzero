@@ -30,7 +30,10 @@ enum class Texture : int {
     BUTTON3,
     BUTTON4,
     MENU_BOARD_BACKGROUND,
-    PAUSE_HEADER
+    PAUSE_HEADER,
+    SPACEBAR,
+    LEFT_POINTER,
+    RIGHT_POINTER
 };
 
 enum class Font : int {

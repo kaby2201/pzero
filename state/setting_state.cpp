@@ -4,11 +4,11 @@
 #include <iostream>
 #include "game.h"
 
-void SettingState::pause() {
+void SettingsState::pause() {
     State::pause();
 }
 
-void SettingState::init() {
+void SettingsState::init() {
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
 
     this->data->textures.load(Texture::TABLE_BACKGROUND_TEXTURE, SETTINGS_SCREEN_BACKROUND);
@@ -85,11 +85,11 @@ void SettingState::init() {
 
 }
 
-void SettingState::resume() {
+void SettingsState::resume() {
     State::resume();
 }
 
-void SettingState::handleInput() {
+void SettingsState::handleInput() {
     sf::Event event;
 
     while (this->data->window.pollEvent(event)) {
@@ -125,7 +125,7 @@ void SettingState::handleInput() {
 
 }
 
-void SettingState::draw(float dt) {
+void SettingsState::draw(float dt) {
     data->window.clear();
     this->data->window.draw(this->background);
     this->data->window.draw(this->table);
@@ -145,7 +145,7 @@ void SettingState::draw(float dt) {
     data->window.display();
 }
 
-void SettingState::update(float dt) {
+void SettingsState::update(float dt) {
     num = this->data->sound.getVolume();
     Vnumber.setString(std::to_string(num));
     Vnumber.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - Vnumber.getGlobalBounds().width / 2,

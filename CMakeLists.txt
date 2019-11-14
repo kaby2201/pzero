@@ -21,8 +21,7 @@ set(SOURCE_FILES
         state/main_menu_state.h
         state/setting_state.cpp
         state/setting_state.h
-        state/help_state.cpp
-        state/help_state.h)
+        state/state_help.cpp state/state_help.h)
 
 add_executable(pzero ${SOURCE_FILES})
 target_include_directories(pzero PUBLIC .)
