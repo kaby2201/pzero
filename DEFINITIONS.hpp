@@ -24,15 +24,17 @@
 #define VOLUME_DECREASE "resources/ui/decreasevolume.png"
 #define EXIT_BUTTON "resources/ui/exit.png"
 
+// define components for menu
 #define TABLE_BACKGROUND "resources/ui/table.png"
 #define PLAY_BUTTON "resources/ui/play.png"
 #define SETTING_BUTTON "resources/ui/setting.png"
 #define HELP_BUTTON "resources/ui/help.png"
-#define EXIT_BUTTON "resources/ui/exit.png"
+#define SCORE_BUTTON "resources/ui/score.png"
+#define EXIT_MENU_BUTTON "resources/ui/close_2.png"
 #define MENU_BACKGROUND_BOARD "resources/ui/PNG/pause/bg.png"
 #define SETTING_IMAGE "resources/ui/settingstitle.png"
 
-//Buttons
+
 #define RESUME_BUTTON "resources/ui/PNG/btn/restart.png"
 #define RESTART_BUTTON "resources/ui/PNG/btn/restart.png"
 #define MENU_BUTTON "resources/ui/PNG/btn/menu.png"
