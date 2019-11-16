@@ -4,6 +4,7 @@
 #include "setting_state.h"
 #include "SFML/Graphics.hpp"
 #include "game_arena.h"
+#include "state_help.h"
 
 void MainMenuState::init() {
 
@@ -97,30 +98,26 @@ void MainMenuState::handleInput() {
             data->window.close();
         }
 
-
         if (this->data->input.isSpriteClicked(this->btnPlay, sf::Mouse::Left, data->window)) {
             this->data->machine.addState(stateRef(new GameArena(data)), true);
+
         }
 
         if (this->data->input.isSpriteClicked(this->btnSetting, sf::Mouse::Left, data->window)) {
-            this->data->machine.addState(stateRef(new SettingState(data)), true);
+            this->data->machine.addState(stateRef(new SettingsState(data)), true);
         }
 
-
         if (this->data->input.isSpriteClicked(this->btnHelp, sf::Mouse::Left, data->window)) {
+            this->data->machine.addState(stateRef(new state_help(data)), true);
+        }
 
-            if (this->data->input.isSpriteClicked(this->btnSetting, sf::Mouse::Left, data->window)) {
-                this->data->machine.addState(stateRef(new SettingState(data)), true);
-            }
-
-            if (this->data->input.isSpriteClicked(this->btnExit, sf::Mouse::Left, data->window)) {
-
+        if (this->data->input.isSpriteClicked(this->btnExit, sf::Mouse::Left, data->window)) {
                 data->window.close();
             }
 
         }
-    }
 }
+
 void MainMenuState::update(float dt) {
 
 }

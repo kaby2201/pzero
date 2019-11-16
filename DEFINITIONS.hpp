@@ -2,7 +2,7 @@
 
 // Game settings (for dev)
 #define GAME_NAME "Pzero"
-#define SPLASH_STATE_SHOW_TIME 5
+#define SPLASH_STATE_SHOW_TIME 3
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
@@ -33,7 +33,10 @@
 #define EXIT_MENU_BUTTON "resources/ui/close_2.png"
 #define MENU_BACKGROUND_BOARD "resources/ui/PNG/pause/bg.png"
 #define SETTING_IMAGE "resources/ui/settingstitle.png"
-
+#define HELP_BUTTONS "resources/ui/piltaster.jpg"
+#define SPACE_BAR "resources/ui/spacebar.png"
+#define POINTER_LEFT "resources/ui/left.png"
+#define POINTER_RIGHT "resources/ui/right.png"
 
 #define RESUME_BUTTON "resources/ui/PNG/btn/restart.png"
 #define RESTART_BUTTON "resources/ui/PNG/btn/restart.png"

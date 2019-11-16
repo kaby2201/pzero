@@ -6,9 +6,9 @@
 #include "state.h"
 #include <iostream>
 
-class SettingState : public State{
+class SettingsState : public State{
 public:
-    SettingState(gameDataRef data)  : data(std::move(data)){}
+    SettingsState(gameDataRef data)  : data(std::move(data)){}
 
     void pause() override;
 

@@ -24,7 +24,7 @@ void SplashState::init() {
     text.setPosition((float) data->window.getSize().x / 4, (float) data->window.getSize().y / 3);
 
     // Load file and play the music
-    this->data->music.load(Music::BACKGROUND_MUSIC, MENU_BACKGROUND_MUSIC);
+    this->data->music.load(Music::BACKGROUND_MUSIC, MENU_BACKGROUND_SOUND);
     this->data->sound.setBuffer(this->data->music.get(Music::BACKGROUND_MUSIC));
     this->data->sound.setVolume(50);
     this->data->sound.play();
