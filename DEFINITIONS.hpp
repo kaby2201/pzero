@@ -30,6 +30,7 @@
 #define HELP_BUTTON "resources/ui/help.png"
 #define EXIT_BUTTON "resources/ui/exit.png"
 #define MENU_BACKGROUND_BOARD "resources/ui/PNG/pause/bg.png"
+#define HELP_BUTTONS "resources/ui/piltaster.jpg"
 #define SPACE_BAR "resources/ui/spacebar.png"
 #define POINTER_LEFT "resources/ui/left.png"
 #define POINTER_RIGHT "resources/ui/right.png"

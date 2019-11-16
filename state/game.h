@@ -33,7 +33,8 @@ enum class Texture : int {
     PAUSE_HEADER,
     SPACEBAR,
     LEFT_POINTER,
-    RIGHT_POINTER
+    RIGHT_POINTER,
+    LEFT_RIGHT_POINTER
 };
 
 enum class Font : int {

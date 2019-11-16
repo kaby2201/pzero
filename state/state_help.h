@@ -28,14 +28,17 @@ public:
 
 private:
     gameDataRef data;
+    sf::Texture texture;
     sf::Sprite background;
     sf::Sprite table;
     sf::Sprite spacebar;
     sf::Sprite leftPointer;
     sf::Sprite rightPointer;
+    sf::Sprite leftrightPointer;
     sf::Sprite exit;
     sf::Text leftPointerText;
     sf::Text rightPointerText;
+    sf::Text leftRightPointerText;
     sf::Text spacebarText;
     sf::Text title1;
 };
