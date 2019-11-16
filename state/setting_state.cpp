@@ -39,8 +39,8 @@ void SettingsState::init() {
                           (table.getPosition().y + table.getGlobalBounds().height / 2 -
                            text1.getGlobalBounds().height / 2) + 60);
 
-    this->data->textures.load(Texture::EXIT, EXIT_BUTTON);
-    exit.setTexture(this->data->textures.get(Texture::EXIT));
+    //this->data->textures.load(Texture::EXIT, EXIT_BUTTON);
+    exit.setTexture(this->data->textures.get(Texture::BUTTON4));
     exit.setScale(0.13, 0.13);
     exit.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - exit.getGlobalBounds().width / 2,
                      table.getPosition().y + 395);

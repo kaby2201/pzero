@@ -34,7 +34,6 @@ enum class Texture : int {
     SPACEBAR,
     LEFT_POINTER,
     RIGHT_POINTER,
-    LEFT_RIGHT_POINTER
 };
 
 enum class Font : int {
