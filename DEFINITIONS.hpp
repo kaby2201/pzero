@@ -2,13 +2,15 @@
 
 // Game settings (for dev)
 #define GAME_NAME "Pzero"
+
+
 #define SPLASH_STATE_SHOW_TIME 3
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
 
 // Sound & Music
-#define MENU_BACKGROUND_SOUND "resources/music/music.ogg"
+
 #define GAME_MUSIC "resources/music/BoxCat_Games_Mission.ogg"
 #define MENU_BACKGROUND_MUSIC "resources/music/Rise of spirit.ogg"
 

@@ -1,6 +1,7 @@
 #include "main_menu_state.h"
 #include <iostream>
 #include "DEFINITIONS.hpp"
+
 #include "setting_state.h"
 #include "SFML/Graphics.hpp"
 #include "game_arena.h"
@@ -98,6 +99,7 @@ void MainMenuState::handleInput() {
             data->window.close();
         }
 
+
         if (this->data->input.isSpriteClicked(this->btnPlay, sf::Mouse::Left, data->window)) {
             this->data->machine.addState(stateRef(new GameArena(data)), true);
 
@@ -112,10 +114,10 @@ void MainMenuState::handleInput() {
         }
 
         if (this->data->input.isSpriteClicked(this->btnExit, sf::Mouse::Left, data->window)) {
-                data->window.close();
-            }
-
+            data->window.close();
         }
+
+    }
 }
 
 void MainMenuState::update(float dt) {
