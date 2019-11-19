@@ -24,7 +24,7 @@ set(SOURCE_FILES
         state/game_arena.h
         state/setting_state.h
         state/in_game/camera.cpp
-        state/in_game/camera.h)
+        state/in_game/camera.h state/in_game/word_manager.cpp state/in_game/word_manager.h state/in_game/world.cpp state/in_game/world.h state/in_game/star.cpp state/in_game/star.h state/in_game/icollideable.cpp state/in_game/icollideable.h state/in_game/player.cpp state/in_game/player.h state/in_game/sprite_object.cpp state/in_game/sprite_object.h state/in_game/assets.cpp state/in_game/assets.h state/in_game/sprite_info.h state/in_game/irenderable.cpp state/in_game/irenderable.h state/in_game/iobject.h)
 
 add_executable(pzero ${SOURCE_FILES})
 target_include_directories(pzero PUBLIC . )
