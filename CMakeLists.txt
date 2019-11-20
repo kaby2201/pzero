@@ -44,9 +44,7 @@ set(SOURCE_FILES
         state/in_game/src/SpriteObject.cpp
         state/in_game/src/World.cpp
         state/in_game/src/WorldManager.cpp
-        state/in_game/src/WorldObject.cpp
-
-        )
+        state/in_game/src/WorldObject.cpp)
 
 add_executable(pzero ${SOURCE_FILES})
 target_include_directories(pzero PUBLIC . )
