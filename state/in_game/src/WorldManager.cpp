@@ -1,10 +1,9 @@
-#include "word_manager.h"
+#include "state/in_game/include/WorldManager.h"
 
 #include <fstream>
-#include <SFML/Graphics/RenderTarget.hpp>
 
 WorldManager::WorldManager() :
-        currentWorld(0){
+    mCurrentWorld(0){
     loadWorldFileNames();
     loadWorld();
 }
@@ -15,11 +14,11 @@ WorldManager::~WorldManager()
 }
 
 void WorldManager::update(int ticks){
-    worlds[currentWorld].update(ticks);
+    mWorlds[mCurrentWorld].update(ticks);
 
-    if (worlds[currentWorld].getStart().lock()->isCollided())
+    if (mWorlds[mCurrentWorld].getBlackHole().lock()->isCollided())
     {
-        currentWorld = mWorlds[mCurrentWorld].getBlackHole().lock()->getNextWorld();
+        mCurrentWorld = mWorlds[mCurrentWorld].getBlackHole().lock()->getNextWorld();
         loadWorld();
     }
 }

@@ -23,8 +23,30 @@ set(SOURCE_FILES
         state/game_arena.cpp
         state/game_arena.h
         state/setting_state.h
-        state/in_game/camera.cpp
-        state/in_game/camera.h state/in_game/word_manager.cpp state/in_game/word_manager.h state/in_game/world.cpp state/in_game/world.h state/in_game/star.cpp state/in_game/star.h state/in_game/icollideable.cpp state/in_game/icollideable.h state/in_game/player.cpp state/in_game/player.h state/in_game/sprite_object.cpp state/in_game/sprite_object.h state/in_game/assets.cpp state/in_game/assets.h state/in_game/sprite_info.h state/in_game/irenderable.cpp state/in_game/irenderable.h state/in_game/iobject.h)
+        #In game files
+        state/in_game/include/Assets.h
+        state/in_game/include/Blackhole.h
+        state/in_game/include/Camera.h
+        state/in_game/include/Constants.h
+        state/in_game/include/Direction.h
+        state/in_game/include/ICollideable.h
+        state/in_game/include/IRenderable.h
+        state/in_game/include/Player.h
+        state/in_game/include/SpriteInfo.h
+        state/in_game/include/SpriteObject.h
+        state/in_game/include/World.h
+        state/in_game/include/WorldManager.h
+        state/in_game/include/WorldObject.h
+        state/in_game/src/Assets.cpp
+        state/in_game/src/Blackhole.cpp
+        state/in_game/src/Camera.cpp
+        state/in_game/src/Player.cpp
+        state/in_game/src/SpriteObject.cpp
+        state/in_game/src/World.cpp
+        state/in_game/src/WorldManager.cpp
+        state/in_game/src/WorldObject.cpp
+
+        )
 
 add_executable(pzero ${SOURCE_FILES})
 target_include_directories(pzero PUBLIC . )

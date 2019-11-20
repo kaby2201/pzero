@@ -6,13 +6,6 @@
 #include "game_arena.h"
 
 void MainMenuState::init() {
-
-    this->settings.setString("Settings");
-    settings.setFont(this->data->fonts.get(Font::GAME_TITLE));
-    settings.setCharacterSize(60);
-
-    background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
-
     this->data->textures.load(Texture::TABLE, TABLE_BACKGROUND);
     table.setTexture(this->data->textures.get(Texture::TABLE));
     table.setScale(0.8, 0.9);
@@ -106,7 +99,6 @@ void MainMenuState::draw(float dt) {
     data->window.draw(b);
     data->window.draw(settings);
 
-    data->window.draw(background);
     data->window.draw(title1);
     data->window.draw(table);
     data->window.draw(btn1);

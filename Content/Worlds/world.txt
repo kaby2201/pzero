@@ -6,7 +6,7 @@ renderonly: cloud 128 128 parallax
 renderonly: cloud 512 96 parallax
 
 platform: tilegrassblock 0 567
-platform: tallrock 190| 498
+platform: tallrock 172 498
 platform: grassblock 100 567
 platform: tilegrassblock 64 567
 platform: grassblock 300 567
@@ -19,4 +19,5 @@ platform: tilegrassblock 787 567
 platform: tilegrassblock 851 567
 platform: tilegrassblock 915 567
 platform: tilegrassblock 979 567
-platform: tallrock 1042 500
+platform: tallrock 1042 478
+platform: tallrock 1100 478

@@ -1,10 +1,7 @@
+#include <SFML/Graphics.hpp>
 #include "game_arena.h"
 
 void GameArena::init() {
-    title.setString("the best game ever...?");
-    title.setFillColor(sf::Color::Green);
-    title.setFont(data->fonts.get(Font::GAME_TITLE));
-
 }
 
 void GameArena::handleInput() {
@@ -14,15 +11,16 @@ void GameArena::handleInput() {
         if (sf::Event::Closed == event.type || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
             this->data->window.close();
         }
+        worldMgr.handleEvents(event);
     }
 }
 
 void GameArena::update(float dt) {
-
+    worldMgr.update((int)dt);
 }
 
 void GameArena::draw(float dt) {
     this->data->window.clear();
-    this->data->window.draw(title);
+    worldMgr.draw(data->window, dt);
     this->data->window.display();
 }
