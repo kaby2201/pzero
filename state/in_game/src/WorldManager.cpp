@@ -8,8 +8,7 @@ WorldManager::WorldManager() :
     loadWorld();
 }
 
-WorldManager::~WorldManager()
-{
+WorldManager::~WorldManager(){
     //dtor
 }
 
@@ -39,7 +38,7 @@ void WorldManager::loadWorld(){
 void WorldManager::loadWorldFileNames(){
 
     std::string line = "";
-    std::ifstream file("Content/Worlds/world_filenames.txt");
+    std::ifstream file("resources/map/map_filenames.txt");
 
     if (file.is_open()){
         while (std::getline(file, line))
