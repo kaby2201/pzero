@@ -66,12 +66,12 @@ void Player::handleEvents(sf::Event& event){
             mVelocity.y = -mJumpSpeed;
             mGrounded = false;
         }
-        if (event.key.code == sf::Keyboard::A)
+        if (event.key.code == sf::Keyboard::Left)
         {
             mVelocity.x = -mRunSpeed;
             mDirection = Direction::LEFT;
         }
-        else if (event.key.code == sf::Keyboard::D)
+        else if (event.key.code == sf::Keyboard::Right)
         {
             mVelocity.x = mRunSpeed;
             mDirection = Direction::RIGHT;
@@ -83,12 +83,12 @@ void Player::handleEvents(sf::Event& event){
         {
             mVelocity.y = 0.f;
         }
-        if (event.key.code == sf::Keyboard::A)
+        if (event.key.code == sf::Keyboard::Left)
         {
             mVelocity.x = 0.f;
             mDirection = Direction::STILL_LEFT;
         }
-        else if (event.key.code == sf::Keyboard::D)
+        else if (event.key.code == sf::Keyboard::Right)
         {
             mVelocity.x = 0.f;
             mDirection = Direction::STILL_RIGHT;

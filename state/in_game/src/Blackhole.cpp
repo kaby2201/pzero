@@ -17,6 +17,6 @@ Blackhole::~Blackhole()
 
 bool Blackhole::onContactBegin(std::weak_ptr<ICollideable> object, bool fromLeft, bool fromTop)
 {
-    mCollided = false;
+    mCollided = true;
     return false;
 }
