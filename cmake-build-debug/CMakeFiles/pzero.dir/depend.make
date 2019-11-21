@@ -143,7 +143,6 @@ CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../engine/input_manager.h
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../engine/machine.h
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/state.h
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/game.h
-CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/main_menu_state.h
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/pause_state.cpp
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/pause_state.h
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/state.h

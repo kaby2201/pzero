@@ -12,6 +12,9 @@ void GameArena::handleInput() {
         if (sf::Event::Closed == event.type || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
             this->data->machine.addState(stateRef(new PauseState(data)), false);
         }
+        if (sf::Event::Closed == event.type) {
+            this->data->window.close();
+        }
         worldMgr.handleEvents(event);
     }
 }

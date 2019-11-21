@@ -38,8 +38,7 @@ void World::update(int ticks)
         mCollideables.push_back(mPlayer);
     }
 
-    for (auto& obj : mCollideables)
-    {
+    for (auto& obj : mCollideables){
         obj->update();
         if (!obj->isStatic())
             obj->setVelocity(obj->getVelocity() + mGravity*(UPDATE_STEP.asSeconds()));
@@ -47,10 +46,8 @@ void World::update(int ticks)
             obj->kill();
     }
 
-    for (auto& obj : mRenderables)
-    {
-        if (obj->isParallaxable())
-        {
+    for (auto& obj : mRenderables){
+        if (obj->isParallaxable()){
             obj->setRenderPosition(obj->getRenderPosition() + sf::Vector2f(0.25f, 0.f));
             if (obj->getRenderPosition().x > SCREEN_WIDTH)
                 obj->setRenderPosition(sf::Vector2f(-obj->getSpriteInfo().mHitBox.width, obj->getRenderPosition().y));
@@ -86,8 +83,7 @@ void World::update(int ticks)
     mCamera.follow(sf::Vector2f(mPlayer->getRenderPosition().x, SCREEN_HEIGHT/2.f));
 }
 
-void World::draw(sf::RenderTarget& target, float alpha)
-{
+void World::draw(sf::RenderTarget& target, float alpha){
     target.setView(target.getDefaultView());
 
     target.draw(mBackground);
@@ -211,8 +207,7 @@ void World::loadWorld(std::string path)
     }
 }
 
-bool World::checkCollision(std::weak_ptr<ICollideable> a, std::weak_ptr<ICollideable> b)
-{
+bool World::checkCollision(std::weak_ptr<ICollideable> a, std::weak_ptr<ICollideable> b){
     sf::Vector2f a1 = a.lock()->getPhysicsPosition() + sf::Vector2f(a.lock()->getHitBox().left, a.lock()->getHitBox().top);
     sf::Vector2f a2 = sf::Vector2f(a.lock()->getHitBox().width, a.lock()->getHitBox().height);
 
