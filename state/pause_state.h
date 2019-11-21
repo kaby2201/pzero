@@ -29,6 +29,8 @@ private:
     sf::Sprite backgroundBoard, pauseHeader;
     sf::Sprite resumeButton;
     sf::Sprite menuButton;
+
+    sf::View view;
 };
 
 

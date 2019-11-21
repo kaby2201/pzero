@@ -8,12 +8,7 @@
 #include "state_help.h"
 
 void MainMenuState::init() {
-
-    this->settings.setString("Settings");
-    settings.setFont(this->data->fonts.get(Font::GAME_TITLE));
-    settings.setCharacterSize(60);
-
-    background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
+    background.setTexture(data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
 
     this->data->textures.load(Texture::TABLE, TABLE_BACKGROUND);
     table.setTexture(this->data->textures.get(Texture::TABLE));
@@ -99,7 +94,6 @@ void MainMenuState::handleInput() {
             data->window.close();
         }
 
-
         if (this->data->input.isSpriteClicked(this->btnPlay, sf::Mouse::Left, data->window)) {
             this->data->machine.addState(stateRef(new GameArena(data)), true);
 
@@ -128,9 +122,9 @@ void MainMenuState::draw(float dt) {
     data->window.clear();
     data->window.draw(b);
     data->window.draw(settings);
-
     data->window.draw(background);
     data->window.draw(titleMenu);
+
     data->window.draw(table);
     data->window.draw(btnPlay);
     data->window.draw(btnSetting);

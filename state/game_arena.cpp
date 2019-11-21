@@ -1,11 +1,8 @@
+#include <SFML/Graphics.hpp>
 #include "game_arena.h"
+#include "pause_state.h"
 
 void GameArena::init() {
-    title.setString("the best game ever...?");
-    title.setFillColor(sf::Color::Green);
-    title.setFont(data->fonts.get(Font::GAME_TITLE));
-
-//    ParticleSystem particles(1000);
 }
 
 void GameArena::handleInput() {
@@ -13,17 +10,18 @@ void GameArena::handleInput() {
 
     while (this->data->window.pollEvent(event)) {
         if (sf::Event::Closed == event.type || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-            this->data->window.close();
+            this->data->machine.addState(stateRef(new PauseState(data)), false);
         }
+        worldMgr.handleEvents(event);
     }
 }
 
 void GameArena::update(float dt) {
-
+    worldMgr.update((int)dt);
 }
 
 void GameArena::draw(float dt) {
     this->data->window.clear();
-    this->data->window.draw(title);
+    worldMgr.draw(data->window, dt);
     this->data->window.display();
 }

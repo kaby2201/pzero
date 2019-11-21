@@ -3,7 +3,6 @@
 // Game settings (for dev)
 #define GAME_NAME "Pzero"
 
-
 #define SPLASH_STATE_SHOW_TIME 3
 
 #define SCREEN_WIDTH 1920

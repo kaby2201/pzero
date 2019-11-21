@@ -1,7 +1,6 @@
 #include "setting_state.h"
 #include "DEFINITIONS.hpp"
 #include "main_menu_state.h"
-#include <iostream>
 #include "game.h"
 
 void SettingsState::pause() {
@@ -39,20 +38,12 @@ void SettingsState::init() {
                           (table.getPosition().y + table.getGlobalBounds().height / 2 -
                            text1.getGlobalBounds().height / 2) + 60);
 
-    //this->data->textures.load(Texture::EXIT, EXIT_BUTTON);
+
     exit.setTexture(this->data->textures.get(Texture::BUTTON_EXIT));
     exit.setScale(0.13, 0.13);
     exit.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - exit.getGlobalBounds().width / 2,
                      table.getPosition().y + 395);
 
-
-
-    /*text.setString("Test");
-    text.setCharacterSize(50);
-    text.setFont(data->fonts.get(Font::GAME_TITLE));*/
-
-    //button.setColor(sf::Color::Blue);
-    //button.setPosition(((float)SCREEN_WIDTH / 2) - (this->button.getGlobalBounds().width / 2),((float)SCREEN_HEIGHT / 2) -(this->button.getGlobalBounds().height / 2));
 
     this->title.setString("SETTINGS");
     title.setFont(this->data->fonts.get(Font::GAME_TITLE));
@@ -93,6 +84,10 @@ void SettingsState::handleInput() {
     sf::Event event;
 
     while (this->data->window.pollEvent(event)) {
+        if (sf::Event::Closed == event.type || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+            this->data->machine.addState(stateRef(new MainMenuState(data)), true);
+        }
+
         if (this->data->input.isSpriteClicked(this->muteOff, sf::Mouse::Left, data->window)) {
             if (!alpha) {
                 this->data->sound.pause();
@@ -121,20 +116,20 @@ void SettingsState::handleInput() {
         if (this->data->input.isSpriteClicked(this->exit, sf::Mouse::Left, data->window)) {
             this->data->machine.addState(stateRef(new MainMenuState(data)), true);
         }
-    }
 
+
+    }
 }
 
 void SettingsState::draw(float dt) {
     data->window.clear();
     this->data->window.draw(this->background);
     this->data->window.draw(this->table);
-    if (!alpha) {
+    if (!alpha)
         this->data->window.draw(this->muteOff);
-    }
-    if (alpha) {
+    else
         this->data->window.draw(this->muteOn);
-    }
+
     this->data->window.draw(this->Vinrease);
     this->data->window.draw(this->Vdecrease);
     data->window.draw(text);

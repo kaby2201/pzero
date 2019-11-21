@@ -19,24 +19,115 @@ CMakeFiles/pzero.dir/main.cpp.obj: ../state/game.h
 CMakeFiles/pzero.dir/state/game.cpp.obj: ../engine/asset_manager.h
 CMakeFiles/pzero.dir/state/game.cpp.obj: ../engine/input_manager.h
 CMakeFiles/pzero.dir/state/game.cpp.obj: ../engine/machine.h
-CMakeFiles/pzero.dir/state/game.cpp.obj: ../state/splash_state.h
 CMakeFiles/pzero.dir/state/game.cpp.obj: ../state/state.h
 CMakeFiles/pzero.dir/state/game.cpp.obj: ../state/game.cpp
 CMakeFiles/pzero.dir/state/game.cpp.obj: ../state/game.h
+CMakeFiles/pzero.dir/state/game.cpp.obj: ../state/splash_state.h
+CMakeFiles/pzero.dir/state/game.cpp.obj: ../state/state.h
 
 CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../engine/asset_manager.h
 CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../engine/input_manager.h
 CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../engine/machine.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/Blackhole.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/Camera.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/ICollideable.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/IObject.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/IRenderable.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/Player.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/SpriteInfo.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/SpriteObject.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/World.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/WorldManager.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/in_game/include/WorldObject.h
 CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/state.h
 CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/game.h
 CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/game_arena.cpp
 CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/game_arena.h
+CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/pause_state.h
 CMakeFiles/pzero.dir/state/game_arena.cpp.obj: ../state/state.h
+
+CMakeFiles/pzero.dir/state/in_game/src/Assets.cpp.obj: ../DEFINITIONS.hpp
+CMakeFiles/pzero.dir/state/in_game/src/Assets.cpp.obj: ../state/in_game/include/Assets.h
+CMakeFiles/pzero.dir/state/in_game/src/Assets.cpp.obj: ../state/in_game/include/SpriteInfo.h
+CMakeFiles/pzero.dir/state/in_game/src/Assets.cpp.obj: ../state/in_game/src/Assets.cpp
+
+CMakeFiles/pzero.dir/state/in_game/src/Blackhole.cpp.obj: ../state/in_game/include/Blackhole.h
+CMakeFiles/pzero.dir/state/in_game/src/Blackhole.cpp.obj: ../state/in_game/include/ICollideable.h
+CMakeFiles/pzero.dir/state/in_game/src/Blackhole.cpp.obj: ../state/in_game/include/IObject.h
+CMakeFiles/pzero.dir/state/in_game/src/Blackhole.cpp.obj: ../state/in_game/include/IRenderable.h
+CMakeFiles/pzero.dir/state/in_game/src/Blackhole.cpp.obj: ../state/in_game/include/SpriteInfo.h
+CMakeFiles/pzero.dir/state/in_game/src/Blackhole.cpp.obj: ../state/in_game/include/SpriteObject.h
+CMakeFiles/pzero.dir/state/in_game/src/Blackhole.cpp.obj: ../state/in_game/src/Blackhole.cpp
+
+CMakeFiles/pzero.dir/state/in_game/src/Camera.cpp.obj: ../state/in_game/include/Camera.h
+CMakeFiles/pzero.dir/state/in_game/src/Camera.cpp.obj: ../state/in_game/include/Constants.h
+CMakeFiles/pzero.dir/state/in_game/src/Camera.cpp.obj: ../state/in_game/src/Camera.cpp
+
+CMakeFiles/pzero.dir/state/in_game/src/Player.cpp.obj: ../state/in_game/include/Direction.h
+CMakeFiles/pzero.dir/state/in_game/src/Player.cpp.obj: ../state/in_game/include/ICollideable.h
+CMakeFiles/pzero.dir/state/in_game/src/Player.cpp.obj: ../state/in_game/include/IObject.h
+CMakeFiles/pzero.dir/state/in_game/src/Player.cpp.obj: ../state/in_game/include/IRenderable.h
+CMakeFiles/pzero.dir/state/in_game/src/Player.cpp.obj: ../state/in_game/include/Player.h
+CMakeFiles/pzero.dir/state/in_game/src/Player.cpp.obj: ../state/in_game/include/SpriteInfo.h
+CMakeFiles/pzero.dir/state/in_game/src/Player.cpp.obj: ../state/in_game/include/SpriteObject.h
+CMakeFiles/pzero.dir/state/in_game/src/Player.cpp.obj: ../state/in_game/src/Player.cpp
+
+CMakeFiles/pzero.dir/state/in_game/src/SpriteObject.cpp.obj: ../state/in_game/include/IObject.h
+CMakeFiles/pzero.dir/state/in_game/src/SpriteObject.cpp.obj: ../state/in_game/include/IRenderable.h
+CMakeFiles/pzero.dir/state/in_game/src/SpriteObject.cpp.obj: ../state/in_game/include/SpriteInfo.h
+CMakeFiles/pzero.dir/state/in_game/src/SpriteObject.cpp.obj: ../state/in_game/include/SpriteObject.h
+CMakeFiles/pzero.dir/state/in_game/src/SpriteObject.cpp.obj: ../state/in_game/src/SpriteObject.cpp
+
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/Assets.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/Blackhole.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/Camera.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/Constants.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/ICollideable.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/IObject.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/IRenderable.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/Player.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/SpriteInfo.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/SpriteObject.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/World.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/include/WorldObject.h
+CMakeFiles/pzero.dir/state/in_game/src/World.cpp.obj: ../state/in_game/src/World.cpp
+
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/Blackhole.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/Camera.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/ICollideable.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/IObject.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/IRenderable.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/Player.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/SpriteInfo.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/SpriteObject.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/World.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/WorldManager.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/include/WorldObject.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldManager.cpp.obj: ../state/in_game/src/WorldManager.cpp
+
+CMakeFiles/pzero.dir/state/in_game/src/WorldObject.cpp.obj: ../state/in_game/include/ICollideable.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldObject.cpp.obj: ../state/in_game/include/IObject.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldObject.cpp.obj: ../state/in_game/include/IRenderable.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldObject.cpp.obj: ../state/in_game/include/SpriteInfo.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldObject.cpp.obj: ../state/in_game/include/SpriteObject.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldObject.cpp.obj: ../state/in_game/include/WorldObject.h
+CMakeFiles/pzero.dir/state/in_game/src/WorldObject.cpp.obj: ../state/in_game/src/WorldObject.cpp
 
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../DEFINITIONS.hpp
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../engine/asset_manager.h
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../engine/input_manager.h
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../engine/machine.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/Blackhole.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/Camera.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/ICollideable.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/IObject.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/IRenderable.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/Player.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/SpriteInfo.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/SpriteObject.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/World.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/WorldManager.h
+CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/in_game/include/WorldObject.h
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/state.h
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/game.h
 CMakeFiles/pzero.dir/state/main_menu_state.cpp.obj: ../state/game_arena.h
@@ -52,6 +143,7 @@ CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../engine/input_manager.h
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../engine/machine.h
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/state.h
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/game.h
+CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/main_menu_state.h
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/pause_state.cpp
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/pause_state.h
 CMakeFiles/pzero.dir/state/pause_state.cpp.obj: ../state/state.h
@@ -71,6 +163,8 @@ CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../DEFINITIONS.hpp
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../engine/asset_manager.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../engine/input_manager.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../engine/machine.h
+CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../state/in_game/include/Assets.h
+CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../state/in_game/include/SpriteInfo.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../state/state.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../state/game.h
 CMakeFiles/pzero.dir/state/splash_state.cpp.obj: ../state/main_menu_state.h

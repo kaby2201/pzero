@@ -3,13 +3,16 @@
 
 #include <utility>
 #include <iostream>
+#include <state/in_game/include/Assets.h>
 #include "main_menu_state.h"
 
 SplashState::SplashState(gameDataRef data) : data(std::move(data)) {}
 
 void SplashState::init() {
-    // Load and sed the background
+    // Loading all the game sprites
+    Assets::loadAssets();
 
+    // Load and sed the background
     this->data->textures.load(Texture::WELCOME_BACKGROUND_IMG, SPLASH_SCREEN_BACKGROUND);
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
 

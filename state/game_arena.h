@@ -5,6 +5,7 @@
 #include "game.h"
 #include <SFML/Graphics.hpp>
 #include <utility>
+#include <state/in_game/include/WorldManager.h>
 
 class GameArena : public State {
 public:
@@ -21,10 +22,11 @@ public:
     void draw(float dt);
 
 private:
+    WorldManager worldMgr;
+    sf::View view;
+
+
     gameDataRef data;
-    sf::Text title;
-    //ParticleSystem ParticleSystem;
-    sf::RectangleShape box;
 };
 
 

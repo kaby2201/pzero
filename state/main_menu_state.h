@@ -25,7 +25,6 @@ public:
 private:
     gameDataRef data;
     sf::Sprite b;
-    sf::Sprite button;
     sf::Text settings;
     sf::Text  titleMenu;
     sf::Sprite background;
@@ -35,4 +34,4 @@ private:
 };
 
 
-#endif //PZERO_MAIN_MENU_STATE_H
+#endif //MAIN_MENU_STATE_H
