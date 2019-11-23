@@ -20,10 +20,11 @@ set(SOURCE_FILES
         state/main_menu_state.cpp
         state/main_menu_state.h
         state/setting_state.cpp
-        state/game_arena.cpp
-        state/game_arena.h
+        state/ingame_state.cpp
+        state/ingame_state.h
         state/setting_state.h
         state/state_help.cpp
+
         state/state_help.h
         #In game files
         state/in_game/include/Assets.h
@@ -46,7 +47,9 @@ set(SOURCE_FILES
         state/in_game/src/SpriteObject.cpp
         state/in_game/src/World.cpp
         state/in_game/src/WorldManager.cpp
-        state/in_game/src/WorldObject.cpp)
+        state/in_game/src/WorldObject.cpp
+        state/state_help.h state/animation.cpp state/animation.h state/player.cpp state/player.h)
+
 
 add_executable(pzero ${SOURCE_FILES})
 target_include_directories(pzero PUBLIC . )

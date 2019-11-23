@@ -4,7 +4,7 @@
 
 #include "setting_state.h"
 #include "SFML/Graphics.hpp"
-#include "game_arena.h"
+#include "ingame_state.h"
 #include "state_help.h"
 
 void MainMenuState::init() {

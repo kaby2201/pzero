@@ -2,6 +2,8 @@
 
 // Game settings (for dev)
 #define GAME_NAME "Pzero"
+
+
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
 
@@ -12,6 +14,9 @@
 // Sound & Music
 #define MENU_BACKGROUND_MUSIC "resources/music/Rise of spirit.ogg"
 #define BACKGROUND_CLOUD "resources/ui/clouds_2.png"
+
+#define GAME_CHARACTER "resources/sprite/MainCharacter.jpg"
+
 #define SETTINGS_SCREEN_BACKROUND "resources/ui/table.png"
 
 // Sound settings
