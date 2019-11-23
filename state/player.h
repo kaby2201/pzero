@@ -7,9 +7,9 @@
 #include "SFML\Graphics.hpp"
 #include "animation.h"
 
-class player {
+class Player {
 public:
-    player(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed);
+    Player(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed);
     void Update(float deltaTime);
     void Draw(sf::RenderWindow& window);
 

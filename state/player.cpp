@@ -5,7 +5,7 @@
 #include "player.h"
 #include "SFML\Graphics.hpp"
 
-player::player(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed) :
+Player::Player(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed) :
         animation(texture, imageCount, switchTime)                                                     //caller constructor for å slippe gitter/getter
 {
     this->speed = speed;
@@ -17,7 +17,7 @@ player::player(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, 
     body.setTexture(texture);
 }
 
-void player::Update(float deltaTime) {
+void Player::Update(float deltaTime) {
     sf::Vector2f movement(0.0f, 0.0f);
 
 
@@ -53,7 +53,7 @@ void player::Update(float deltaTime) {
 
 }
 
-void player::Draw(sf::RenderWindow& window) {
+void Player::Draw(sf::RenderWindow& window) {
     window.draw(body);
 }
 
