@@ -4,7 +4,7 @@
 #define GAME_NAME "Pzero"
 
 
-#define SPLASH_STATE_SHOW_TIME 3
+#define SPLASH_STATE_SHOW_TIME 0
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
@@ -18,7 +18,7 @@
 #define SPLASH_SCREEN_BACKGROUND "resources/ui/game_background_1.png"
 #define PAUSE_BACKGROUND "resources/ui/game_background_1.png"
 #define BACKGROUND_CLOUD "resources/ui/clouds_2.png"
-
+#define GAME_CHARACTER "resources/sprite/MainCharacter.jpg"
 #define SETTINGS_SCREEN_BACKROUND "resources/ui/table.png"
 #define MUTE_ON "resources/ui/mute.png"
 #define MUTE_OFF "resources/ui/muteoff.png"
