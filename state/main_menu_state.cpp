@@ -8,17 +8,7 @@
 
 void MainMenuState::init() {
 
-    this->settings.setString("Settings");
-    settings.setFont(this->data->fonts.get(Font::GAME_TITLE));
-    settings.setCharacterSize(60);
-
-    background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
-
-    this->data->textures.load(Texture::TABLE, TABLE_BACKGROUND);
-    table.setTexture(this->data->textures.get(Texture::TABLE));
-    table.setScale(0.9, 1.0);
-    table.setPosition(SCREEN_WIDTH / 2.f - table.getGlobalBounds().width / 2,
-                      SCREEN_HEIGHT / 2.f - table.getGlobalBounds().height / 2);
+    menuTexture(0.9,1.0,700,this->data);
 
     // insert images and texts of menu state
     this->data->textures.load(Texture::BUTTON_PLAY, PLAY_BUTTON);
@@ -75,10 +65,10 @@ void MainMenuState::init() {
     btn_score.setPosition(table.getPosition().x - btn_score.getGlobalBounds().width + 400, table.getPosition().y + 560);
 
     // exit button
-    this->data->textures.load(Texture::BUTTON_EXIT, EXIT_MENU_BUTTON);
+    /*this->data->textures.load(Texture::BUTTON_EXIT, EXIT_MENU_BUTTON);
     btnExit.setTexture(this->data->textures.get(Texture::BUTTON_EXIT));
     btnExit.setScale(0.4, 0.4);
-    btnExit.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - btnExit.getGlobalBounds().width / 2, table.getPosition().y + 700);
+    btnExit.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - btnExit.getGlobalBounds().width / 2, table.getPosition().y + 700);*/
 
     // Menu text that is on the top of the Menu
     this->titleMenu.setString("MENU");
@@ -91,16 +81,11 @@ void MainMenuState::init() {
 }
 
 void MainMenuState::handleInput() {
-    sf::Event event{};
+    sf::Event event;
 
     while (this->data->window.pollEvent(event)) {
-        if (sf::Event::Closed == event.type || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-            data->window.close();
-        }
-
         if (this->data->input.isSpriteClicked(this->btnPlay, sf::Mouse::Left, data->window)) {
             this->data->machine.addState(stateRef(new GameArena(data)), true);
-
         }
 
         if (this->data->input.isSpriteClicked(this->btnSetting, sf::Mouse::Left, data->window)) {
@@ -111,12 +96,10 @@ void MainMenuState::handleInput() {
             this->data->machine.addState(stateRef(new state_help(data)), true);
         }
 
-        if (this->data->input.isSpriteClicked(this->btnExit, sf::Mouse::Left, data->window)) {
-                data->window.close();
-            }
-
-        }
+        inputSolver(1,event,this->data);
+    }
 }
+
 
 void MainMenuState::update(float dt) {
 
@@ -124,17 +107,13 @@ void MainMenuState::update(float dt) {
 
 void MainMenuState::draw(float dt) {
     data->window.clear();
-    data->window.draw(b);
+    drawTexture(this->data);
     data->window.draw(settings);
-
-    data->window.draw(background);
     data->window.draw(titleMenu);
-    data->window.draw(table);
     data->window.draw(btnPlay);
     data->window.draw(btnSetting);
     data->window.draw(btnHelp);
     data->window.draw(btnScore);
-    data->window.draw(btnExit);
     data->window.draw(btn_play);
     data->window.draw(btn_setting);
     data->window.draw(btn_help);

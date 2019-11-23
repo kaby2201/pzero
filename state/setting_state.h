@@ -4,9 +4,10 @@
 #include <SFML/Graphics.hpp>
 #include "game.h"
 #include "state.h"
+#include "menuBase_state.h"
 #include <iostream>
 
-class SettingsState : public State{
+class SettingsState : public State, MenuBaseState{
 public:
     SettingsState(gameDataRef data)  : data(std::move(data)){}
 
@@ -29,12 +30,10 @@ private:
     sf::Text title;
     gameDataRef data;
     sf::Sprite background;
-    sf::Sprite table;
     sf::Sprite muteOff;
     sf::Sprite muteOn;
     sf::Sprite Vinrease;
     sf::Sprite Vdecrease;
-    sf::Sprite exit;
 
     bool alpha = false;
     int num;

@@ -8,7 +8,7 @@
 #define SCREEN_HEIGHT 1080
 
 // Sound & Music
-#define MENU_BACKGROUND_SOUND "resources/music/music.ogg"
+#define MENU_BACKGROUND_SOUND "resources/music/menu.ogg"
 #define GAME_MUSIC "resources/music/BoxCat_Games_Mission.ogg"
 #define MENU_BACKGROUND_MUSIC "resources/music/Rise of spirit.ogg"
 

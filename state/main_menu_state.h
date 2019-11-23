@@ -3,8 +3,9 @@
 
 #include <SFML/Audio/Sound.hpp>
 #include "game.h"
+#include "menuBase_state.h"
 
-class MainMenuState : public State {
+class MainMenuState : public State, MenuBaseState {
 public:
     MainMenuState(gameDataRef data) : data(data) {}
 
@@ -28,8 +29,8 @@ private:
     sf::Sprite button;
     sf::Text settings;
     sf::Text  titleMenu;
-    sf::Sprite background;
-    sf::Sprite btnPlay, btnSetting, btnHelp, btnExit, table, btnScore;
+    //sf::Sprite background;
+    sf::Sprite btnPlay, btnSetting, btnHelp, /*btnExit, table,*/ btnScore;
 
     sf::Text btn_play, btn_setting, btn_help, btn_score;
 };
