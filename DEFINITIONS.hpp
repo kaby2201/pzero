@@ -8,7 +8,7 @@
 #define SCREEN_HEIGHT 1080
 
 // Plash state
-#define SPLASH_STATE_SHOW_TIME 3
+#define SPLASH_STATE_SHOW_TIME 0
 #define SPLASH_SCREEN_BACKGROUND "resources/ui/game_background_1.png"
 
 // Sound & Music
@@ -49,4 +49,8 @@
 
 // Fonts
 #define GAME_TITLE_FONT "resources/font/Modak-Regular.ttf"
+
+//In game
+#define COIN_IMAGE "resources/ui/coin.png"
+#define HEART_IMAGE "resources/ui/heart.png"
 
