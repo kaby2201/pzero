@@ -18,7 +18,7 @@ void GameArena::init() {
     sf::ContextSettings settings;
     settings.antialiasingLevel = 0;
     sf::Texture playerTexture;
-
+    this->data->window.setFramerateLimit(60);
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
 
     this->level.setString("LEVEL ");
@@ -129,30 +129,6 @@ void GameArena::init() {
         {
             data->window.draw(hearts[i]);
         }
-        /*switch(intHealth)
-        {
-            case 4:
-                data->window.draw(heart1);
-                data->window.draw(heart2);
-                data->window.draw(heart3);
-                data->window.draw(heart4);
-
-            case 3:
-                data->window.draw(heart1);
-                data->window.draw(heart2);
-                data->window.draw(heart3);
-
-            case 2:
-                data->window.draw(heart1);
-                data->window.draw(heart2);
-
-            case 1:
-                data->window.draw(heart1);
-
-            default:
-                break;
-
-        }*/
 
 
         player.Draw(data->window);
