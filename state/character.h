@@ -1,17 +1,20 @@
 //
 // Created by ALI on 08/11/2019.
 //
-#ifndef PZERO_PLAYER_H
-#define PZERO_PLAYER_H
+#ifndef PZERO_CHARACTER_H
+#define PZERO_CHARACTER_H
 
 #include "SFML\Graphics.hpp"
 #include "animation.h"
 
-class Player {
+class character {
 public:
-    Player(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed);
+    character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed);
     void Update(float deltaTime);
     void Draw(sf::RenderWindow& window);
+
+
+    sf::Vector2f GetPositions() { return body.getPosition();}
 
 private:
     sf::RectangleShape body;
@@ -20,6 +23,7 @@ private:
     float speed;
     bool faceRight;
     bool standStill;
+
 };
 
-#endif //PZERO_PLAYER_H
+#endif //PZERO_CHARACTER_H

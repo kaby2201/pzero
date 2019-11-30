@@ -8,6 +8,8 @@
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
+#define SCREEN_WIDTH_MIDDLE 960
+#define SCREEN_HEIGTH_MIDDLE 540
 
 // Sound & Music
 
@@ -19,6 +21,8 @@
 #define PAUSE_BACKGROUND "resources/ui/game_background_1.png"
 #define BACKGROUND_CLOUD "resources/ui/clouds_2.png"
 #define GAME_CHARACTER "resources/sprite/MainCharacter.jpg"
+#define SPIKES "resources\\sprite\\spike B.png"
+
 #define SETTINGS_SCREEN_BACKROUND "resources/ui/table.png"
 #define MUTE_ON "resources/ui/mute.png"
 #define MUTE_OFF "resources/ui/muteoff.png"

@@ -5,6 +5,7 @@
 #include "game.h"
 #include <SFML/Graphics.hpp>
 #include <utility>
+#include "character.h"
 
 class GameArena : public State {
 public:
@@ -25,7 +26,14 @@ gameDataRef data;
 sf::Text title;
 //ParticleSystem ParticleSystem;
 sf::RectangleShape box;
-sf::Texture backgroundtest;
+sf::Sprite background;
+sf::Sprite spikes;
+sf::Texture spikeTexture;
+sf::Texture playerTexture;
+
+
+
+
 };
 
 

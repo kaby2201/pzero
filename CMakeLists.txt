@@ -25,7 +25,7 @@ set(SOURCE_FILES
         state/setting_state.h
         state/setting_state.h
         state/state_help.cpp
-        state/state_help.h state/animation.cpp state/animation.h state/player.cpp state/player.h state/game_arena_gui.h)
+        state/state_help.h state/animation.cpp state/animation.h state/character.cpp state/character.h state/game_arena_gui.h)
 
 add_executable(pzero ${SOURCE_FILES})
 target_include_directories(pzero PUBLIC .)
