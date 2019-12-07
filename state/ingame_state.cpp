@@ -12,7 +12,7 @@ void ResizeView(const sf::RenderWindow& window, sf::View& view){
 }
 
 void GameArena::init() {
-    int health = 4;
+     unsigned int health = 4;
     int x = 98;
 
     title.setFillColor(sf::Color::Red);
