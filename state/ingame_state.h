@@ -13,39 +13,39 @@ public:
 
     ~GameArena(){}
 
-void init();
+    void init();
 
-void handleInput();
+    void handleInput();
 
-void update(float dt);
+    void update(float dt);
 
-void draw(float dt);
+    void draw(float dt);
 
 private:
-gameDataRef data;
-sf::Sprite coin;
-sf::Sprite heart1;
-sf::Sprite heart2;
-sf::Sprite heart3;
-sf::Sprite heart4;
-sf::Sprite background;
-sf::Text title;
-sf::Text level;
-sf::Text level1;
-sf::Text score;
-sf::Text coins;
-sf::Text x;
+    gameDataRef data;
+    sf::Sprite coin;
+    sf::Sprite heart1;
+    sf::Sprite heart2;
+    sf::Sprite heart3;
+    sf::Sprite heart4;
+    sf::Sprite background;
+    sf::Text title;
+    sf::Text level;
+    sf::Text level1;
+    sf::Text score;
+    sf::Text coins;
+    sf::Text x;
 
-int highscore;
-int intLevel;
-int intCoin;
-int intHealth;
+    int highscore;
+    int intLevel;
+    int intCoin;
+    int intHealth;
 
-std::vector<sf::Sprite> hearts;
+    std::vector<sf::Sprite> hearts;
 
-//ParticleSystem ParticleSystem;
-sf::RectangleShape box;
-sf::Texture backgroundtest;
+    //ParticleSystem ParticleSystem;
+    sf::RectangleShape box;
+    sf::Texture backgroundtest;
 };
 
 
