@@ -7,9 +7,6 @@ PauseState::PauseState(gameDataRef data) : data(std::move(data)) {
 }
 
 void PauseState::init() {
-    this->data->window.setView(data->window.getDefaultView());
-
-
     data->textures.load(Texture::PAUSE_HEADER, RESUME_BUTTON);
     pauseButton.setTexture(data->textures.get(Texture::PAUSE_HEADER));
     pauseButton.setPosition((data->window.getSize().x - pauseButton.getTexture()->getSize().x)/2,

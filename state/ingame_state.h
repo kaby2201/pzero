@@ -47,8 +47,6 @@ private:
 
     std::vector<sf::Sprite> hearts;
 
-    //ParticleSystem ParticleSystem;
-    //ParticleSystem ParticleSystem;
     sf::RectangleShape box;
     sf::Sprite spikes;
     sf::Texture spikeTexture;
