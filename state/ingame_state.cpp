@@ -78,14 +78,12 @@ void GameArena::init() {
     if (!playerTexture.loadFromFile(GAME_CHARACTER)) {
         std::cout << "Error couldnt not load character.jpg" << std::endl;
     }
-  //  sf::RenderWindow window(sf::VideoMode(800, 800), "SFML works!", sf::Style::Default, settings);
-//    this->data->textures.load(Texture::TABLE, );
-
-
 
 
     player player(&playerTexture, sf::Vector2u(9, 21), 0.05f,150.0f);  //vi har 21 rader og opp til 13 animasjoner og switchtime bestemmer hvor fort
+
     //- vi går gjennom animasjonen
+
     float deltaTime = 0.0f;
     sf::Clock clock;
     while (data->window.isOpen()) {
@@ -125,8 +123,7 @@ void GameArena::init() {
         data->window.draw(coin);
 
 
-        for(int i = 0; i < intHealth; i++)
-        {
+        for(int i = 0; i < intHealth; i++){
             data->window.draw(hearts[i]);
         }
 

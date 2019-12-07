@@ -23,6 +23,5 @@ private:
     sf::Vector2u currentImage;
     float totalTime;  //disse bestemmer hvor fort animasjonen skal gå
     float switchTime; //tiden den bruker på å bytte mellom hvert bilde
-    float speed;
 };
 #endif //PZERO_ANIMATION_H

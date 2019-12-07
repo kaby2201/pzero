@@ -25,7 +25,6 @@ private:
 
     sf::Sprite background;
     sf::Sprite cloud;
-    sf::Vector2i Size;
 };
 
 

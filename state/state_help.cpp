@@ -3,11 +3,7 @@
 #include "main_menu_state.h"
 
 void state_help::init() {
-    background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
-    table.setTexture(this->data->textures.get(Texture::TABLE));
-    table.setScale(0.7, 0.6);
-    table.setPosition(SCREEN_WIDTH / 2.f - table.getGlobalBounds().width / 2,
-                      SCREEN_HEIGHT / 2.f - table.getGlobalBounds().height / 2);
+    menuTexture(0.7,0.6,395,this->data);
 
     this->data->textures.load(Texture::LEFT_POINTER, POINTER_LEFT);
     leftPointer.setTexture(this->data->textures.get(Texture::LEFT_POINTER));
@@ -21,24 +17,18 @@ void state_help::init() {
     spacebar.setTexture(this->data->textures.get(Texture::SPACEBAR));
     spacebar.setPosition(table.getPosition().x  - leftPointerText.getGlobalBounds().width + 550, table.getPosition().y + 360-60);
 
-    exit.setTexture(this->data->textures.get(Texture::BUTTON_EXIT));
-    exit.setScale(0.13, 0.13);
-    exit.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - exit.getGlobalBounds().width / 2,
-                     table.getPosition().y + 395);
-
     this->leftPointerText.setString("Move left");
     leftPointerText.setFont(this->data->fonts.get(Font::GAME_TITLE));
     leftPointerText.setCharacterSize(60);
     leftPointerText.setFillColor(sf::Color::Black);
     leftPointerText.setPosition(table.getPosition().x  - leftPointer.getGlobalBounds().width + 250+10, table.getPosition().y + 80+35-40);
-    //leftPointer.setPosition(table.getPosition().x  - leftPointer.getGlobalBounds().width + 250, table.getPosition().y + 80);
+
 
     this->rightPointerText.setString("Move right");
     rightPointerText.setFont(this->data->fonts.get(Font::GAME_TITLE));
     rightPointerText.setCharacterSize(60);
     rightPointerText.setFillColor(sf::Color::Black);
     rightPointerText.setPosition(table.getPosition().x - leftPointer.getGlobalBounds().width + 250+10, table.getPosition().y + 240+35-50);
-    //rightPointer.setPosition(table.getPosition().x  - rightPointer.getGlobalBounds().width + 250, table.getPosition().y + 240);
 
 
     this->spacebarText.setString("Jump");
@@ -46,7 +36,6 @@ void state_help::init() {
     spacebarText.setCharacterSize(60);
     spacebarText.setFillColor(sf::Color::Black);
     spacebarText.setPosition(table.getPosition().x - leftPointer.getGlobalBounds().width + 250+10, table.getPosition().y + 360+35-40);
-    //spacebar.setPosition(table.getPosition().x  - rightPointer.getGlobalBounds().width + 250, table.getPosition().y + 400);
 
     this->title1.setString("HELP");
     title1.setFont(this->data->fonts.get(Font::GAME_TITLE));
@@ -60,11 +49,8 @@ void state_help::init() {
 void state_help::handleInput() {
     sf::Event event;
 
-    while (this->data->window.pollEvent(event))
-    {
-        if (this->data->input.isSpriteClicked(this->exit, sf::Mouse::Left, data->window)) {
-            this->data->machine.addState(stateRef(new MainMenuState(data)), true);
-        }
+    while (this->data->window.pollEvent(event)){
+        inputSolver(2,event,this->data);
     }
 
 }
@@ -75,12 +61,10 @@ void state_help::update(float dt) {
 
 void state_help::draw(float dt) {
     data->window.clear();
-    data->window.draw(background);
-    data->window.draw(table);
+    drawTexture(this->data);
     data->window.draw(leftPointer);
     data->window.draw(rightPointer);
     data->window.draw(spacebar);
-    data->window.draw(exit);
     data->window.draw(title1);
     data->window.draw(leftPointerText);
     data->window.draw(rightPointerText);

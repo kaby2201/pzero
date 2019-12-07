@@ -3,8 +3,9 @@
 
 #include <SFML/Audio/Sound.hpp>
 #include "game.h"
+#include "menuBase_state.h"
 
-class state_help : public State {
+class state_help : public State, MenuBaseState{
 public:
     state_help(gameDataRef data) : data(data) {}
 
@@ -26,7 +27,7 @@ private:
     gameDataRef data;
     sf::Texture texture;
     sf::Sprite background;
-    sf::Sprite table;
+    //sf::Sprite table;
     sf::Sprite spacebar;
     sf::Sprite leftPointer;
     sf::Sprite rightPointer;

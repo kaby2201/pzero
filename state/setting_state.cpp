@@ -1,20 +1,15 @@
 #include "setting_state.h"
 #include "DEFINITIONS.hpp"
 #include "main_menu_state.h"
+
 #include "game.h"
 
 void SettingsState::pause() {
-    State::pause();
+    //State::pause();
 }
 
 void SettingsState::init() {
-    background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
-
-    this->data->textures.load(Texture::TABLE_BACKGROUND_TEXTURE, SETTINGS_SCREEN_BACKROUND);
-    table.setTexture(this->data->textures.get(Texture::TABLE_BACKGROUND_TEXTURE));
-    table.setScale(0.7, 0.6);
-    table.setPosition(SCREEN_WIDTH / 2.f - table.getGlobalBounds().width / 2,
-                      SCREEN_HEIGHT / 2.f - table.getGlobalBounds().height / 2);
+    menuTexture(0.7,0.6,395,this->data);
 
     this->data->textures.load(Texture::OFF_MUTE, MUTE_OFF);
     muteOff.setTexture(this->data->textures.get(Texture::OFF_MUTE));
@@ -34,15 +29,9 @@ void SettingsState::init() {
     this->data->textures.load(Texture::VOLUME_INCREASE, VOLUME_ADD);
     Vinrease.setTexture(this->data->textures.get(Texture::VOLUME_INCREASE));
     Vinrease.setPosition((table.getPosition().x + table.getGlobalBounds().width - text1.getGlobalBounds().width -
-                           table.getPosition().x / 2) - 15,
+                          table.getPosition().x / 2) - 15,
                           (table.getPosition().y + table.getGlobalBounds().height / 2 -
                            text1.getGlobalBounds().height / 2) + 60);
-
-
-    exit.setTexture(this->data->textures.get(Texture::BUTTON_EXIT));
-    exit.setScale(0.13, 0.13);
-    exit.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - exit.getGlobalBounds().width / 2,
-                     table.getPosition().y + 395);
 
 
     this->title.setString("SETTINGS");
@@ -50,7 +39,7 @@ void SettingsState::init() {
     title.setCharacterSize(150);
     title.setFillColor(sf::Color::Black);
     title.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - title.getGlobalBounds().width / 2,
-                     table.getPosition().y -150);
+                      table.getPosition().y - 150);
 
     this->text.setString("Mute");
     text.setFont(this->data->fonts.get(Font::GAME_TITLE));
@@ -58,6 +47,7 @@ void SettingsState::init() {
     text.setFillColor(sf::Color::Black);
     text.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - text.getGlobalBounds().width / 2,
                      table.getPosition().y + 60);
+
     this->text1.setString("Sound Volume");
     text1.setFont(this->data->fonts.get(Font::GAME_TITLE));
     text1.setCharacterSize(60);
@@ -77,7 +67,7 @@ void SettingsState::init() {
 }
 
 void SettingsState::resume() {
-    State::resume();
+    //State::resume();
 }
 
 void SettingsState::handleInput() {
@@ -113,22 +103,20 @@ void SettingsState::handleInput() {
             }
         }
 
-        if (this->data->input.isSpriteClicked(this->exit, sf::Mouse::Left, data->window)) {
-            this->data->machine.addState(stateRef(new MainMenuState(data)), true);
-        }
-
-
+        inputSolver(2, event, this->data);
     }
+
 }
 
 void SettingsState::draw(float dt) {
     data->window.clear();
-    this->data->window.draw(this->background);
-    this->data->window.draw(this->table);
-    if (!alpha)
-        this->data->window.draw(this->muteOff);
-    else
+    SettingsState::drawTexture(this->data);
+
+    if (alpha) {
         this->data->window.draw(this->muteOn);
+    } else {
+        this->data->window.draw(this->muteOff);
+    }
 
     this->data->window.draw(this->Vinrease);
     this->data->window.draw(this->Vdecrease);
@@ -136,7 +124,6 @@ void SettingsState::draw(float dt) {
     data->window.draw(text1);
     data->window.draw(Vnumber);
     data->window.draw(title);
-    data->window.draw(exit);
     data->window.display();
 }
 
@@ -144,6 +131,6 @@ void SettingsState::update(float dt) {
     num = this->data->sound.getVolume();
     Vnumber.setString(std::to_string(num));
     Vnumber.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - Vnumber.getGlobalBounds().width / 2,
-                        (table.getPosition().y + table.getGlobalBounds().height / 2 -
-                         text1.getGlobalBounds().height / 2) + 40 + Vinrease.getGlobalBounds().height / 2);
+            (table.getPosition().y + table.getGlobalBounds().height / 2 - text1.getGlobalBounds().height / 2)
+            + 40 + Vinrease.getGlobalBounds().height / 2);
 }

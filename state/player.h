@@ -1,6 +1,3 @@
-//
-// Created by ALI on 08/11/2019.
-//
 #ifndef PZERO_PLAYER_H
 #define PZERO_PLAYER_H
 

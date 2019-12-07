@@ -2,16 +2,18 @@
 #include "splash_state.h"
 
 #include <utility>
-#include <iostream>
 #include "main_menu_state.h"
 
 SplashState::SplashState(gameDataRef data) : data(std::move(data)) {}
 
 void SplashState::init() {
+    this->data->window.setFramerateLimit(60);
+
     // Load and sed the background
     this->data->textures.load(Texture::WELCOME_BACKGROUND_IMG, SPLASH_SCREEN_BACKGROUND);
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
 
+    // Load default fonts
     this->data->fonts.load(Font::GAME_TITLE, GAME_TITLE_FONT);
     text.setFont(this->data->fonts.get(Font::GAME_TITLE));
 
@@ -19,7 +21,6 @@ void SplashState::init() {
     text.setCharacterSize(190);
 
     text.setString( GAME_NAME " 2019");
-
     text.setPosition((float) data->window.getSize().x / 4, (float) data->window.getSize().y / 3);
 
     // Load file and play the music

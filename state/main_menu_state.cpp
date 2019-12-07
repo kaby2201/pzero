@@ -8,7 +8,8 @@
 #include "state_help.h"
 
 void MainMenuState::init() {
-    background.setTexture(data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
+
+    menuTexture(0.9,1.0,700,this->data);
 
     this->data->textures.load(Texture::TABLE, TABLE_BACKGROUND);
     table.setTexture(this->data->textures.get(Texture::TABLE));
@@ -23,7 +24,7 @@ void MainMenuState::init() {
     btnPlay.setPosition((table.getPosition().x + table.getGlobalBounds().width - btnPlay.getGlobalBounds().width -
                       table.getPosition().x / 2) + 80, table.getPosition().y + 80);
 
-    this->data->textures.load(Texture::BUTTON_SETTING, SETTING_BUTTON);
+    data->textures.load(Texture::BUTTON_SETTING, SETTING_BUTTON);
     btnSetting.setTexture(this->data->textures.get(Texture::BUTTON_SETTING));
     btnSetting.setScale(0.4, 0.4);
     btnSetting.setPosition((table.getPosition().x + table.getGlobalBounds().width - btnSetting.getGlobalBounds().width -
@@ -41,8 +42,8 @@ void MainMenuState::init() {
     btnScore.setScale(0.4, 0.4);
     btnScore.setPosition((table.getPosition().x + table.getGlobalBounds().width - btnScore.getGlobalBounds().width -
                          table.getPosition().x / 2) + 80, table.getPosition().y + 560);
-    // buttons text for Menu
 
+    // buttons text for Menu
     this->btn_play.setString("Play");
     btn_play.setFont(this->data->fonts.get(Font::GAME_TITLE));
     btn_play.setCharacterSize(80);
@@ -70,33 +71,23 @@ void MainMenuState::init() {
     btn_score.setFillColor(sf::Color::Black);
     btn_score.setPosition(table.getPosition().x - btn_score.getGlobalBounds().width + 400, table.getPosition().y + 560);
 
-    // exit button
-    this->data->textures.load(Texture::BUTTON_EXIT, EXIT_MENU_BUTTON);
-    btnExit.setTexture(this->data->textures.get(Texture::BUTTON_EXIT));
-    btnExit.setScale(0.4, 0.4);
-    btnExit.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - btnExit.getGlobalBounds().width / 2, table.getPosition().y + 700);
 
     // Menu text that is on the top of the Menu
     this->titleMenu.setString("MENU");
     titleMenu.setFont(this->data->fonts.get(Font::GAME_TITLE));
     titleMenu.setCharacterSize(100);
-    titleMenu.setFillColor(sf::Color::Black);
+    titleMenu.setFillColor(sf::Color::White);
     titleMenu.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - titleMenu.getGlobalBounds().width / 2,
                        table.getPosition().y - 100);
 
 }
 
 void MainMenuState::handleInput() {
-    sf::Event event{};
+    sf::Event event;
 
     while (this->data->window.pollEvent(event)) {
-        if (sf::Event::Closed == event.type || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-            data->window.close();
-        }
-
         if (this->data->input.isSpriteClicked(this->btnPlay, sf::Mouse::Left, data->window)) {
             this->data->machine.addState(stateRef(new GameArena(data)), true);
-
         }
 
         if (this->data->input.isSpriteClicked(this->btnSetting, sf::Mouse::Left, data->window)) {
@@ -107,30 +98,27 @@ void MainMenuState::handleInput() {
             this->data->machine.addState(stateRef(new state_help(data)), true);
         }
 
-        if (this->data->input.isSpriteClicked(this->btnExit, sf::Mouse::Left, data->window)) {
-            data->window.close();
-        }
+
+        inputSolver(1,event,this->data);
 
     }
 }
 
-void MainMenuState::update(float dt) {
 
+void MainMenuState::update(float dt) {
 }
 
 void MainMenuState::draw(float dt) {
     data->window.clear();
-    data->window.draw(b);
+    drawTexture(this->data);
     data->window.draw(settings);
-    data->window.draw(background);
     data->window.draw(titleMenu);
-
-    data->window.draw(table);
     data->window.draw(btnPlay);
     data->window.draw(btnSetting);
     data->window.draw(btnHelp);
     data->window.draw(btnScore);
-    data->window.draw(btnExit);
+
+    // Text
     data->window.draw(btn_play);
     data->window.draw(btn_setting);
     data->window.draw(btn_help);
