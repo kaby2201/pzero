@@ -12,7 +12,7 @@ GameHeader::GameHeader(GameData &data) : data(data) {
     level.setFont(this->data.fonts.get(Font::GAME_TITLE));
     level.setCharacterSize(50);
     level.setFillColor(sf::Color::White);
-    level.setPosition(SCREEN_WIDTH-200-100,0);
+    level.setPosition(data.window.getSize().x-300,0);
 
     this->level1.setString(std::to_string(intLevel));
     level1.setFont(this->data.fonts.get(Font::GAME_TITLE));
@@ -48,9 +48,8 @@ GameHeader::GameHeader(GameData &data) : data(data) {
 }
 
 void GameHeader::draw() {
-    for(auto& h  : hearts){
+    for(auto& h  : hearts)
         data.window.draw(h);
-    }
 
     data.window.draw(level);
     data.window.draw(level1);

@@ -1,12 +1,10 @@
-#include <iostream>
 #include "pause_state.h"
 #include "DEFINITIONS.hpp"
 
-PauseState::PauseState(gameDataRef data) : data(std::move(data)) {
-
-}
+PauseState::PauseState(gameDataRef data) : data(std::move(data)) {}
 
 void PauseState::init() {
+    data->window.setView(data->window.getDefaultView());
     data->textures.load(Texture::PAUSE_HEADER, RESUME_BUTTON);
     pauseButton.setTexture(data->textures.get(Texture::PAUSE_HEADER));
     pauseButton.setPosition((data->window.getSize().x - pauseButton.getTexture()->getSize().x)/2,
@@ -21,7 +19,6 @@ void PauseState::handleInput() {
             this->data->machine.removeState(); // remove from stack will resume
         }
         if (sf::Event::Closed == event.type) {
-            this->data->window.clear();
             this->data->window.close();
         }
 

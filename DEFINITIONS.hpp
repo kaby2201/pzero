@@ -6,11 +6,9 @@
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
-#define SCREEN_WIDTH_MIDDLE 960
-#define SCREEN_HEIGTH_MIDDLE 540
 
 // Plash state
-#define SPLASH_STATE_SHOW_TIME 0
+#define SPLASH_STATE_SHOW_TIME 3
 #define SPLASH_SCREEN_BACKGROUND "resources/ui/game_background_1.png"
 
 // Sound & Music
@@ -24,10 +22,6 @@
 
 
 // Sound settings
-
-#define SPIKES "resources/sprite/spike B.png"
-
-#define SETTINGS_SCREEN_BACKROUND "resources/ui/table.png"
 #define MUTE_ON "resources/ui/mute.png"
 #define MUTE_OFF "resources/ui/muteoff.png"
 #define VOLUME_ADD "resources/ui/addvolume.png"
@@ -47,7 +41,6 @@
 #define POINTER_RIGHT "resources/ui/right.png"
 
 // Pause state
-#define PAUSE_HEADER_TEXT "resources/ui/PNG/pause/header.png"
 #define RESUME_BUTTON "resources/ui/PNG/btn/restart.png"
 
 // Fonts

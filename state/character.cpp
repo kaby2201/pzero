@@ -1,3 +1,4 @@
+#include <DEFINITIONS.hpp>
 #include "character.h"
 
 Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed) :
@@ -10,7 +11,7 @@ Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switch
 
     body.setSize(sf::Vector2f(65.f, 65.f));
     body.setOrigin(body.getSize()/2.f);
-    body.setPosition(250.f, 750.f);
+    body.setPosition(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
     body.setTexture(texture);
 }
 
@@ -23,7 +24,6 @@ void Character::Update(float deltaTime) {
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
         movement.y += speed * deltaTime;
-
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
     {

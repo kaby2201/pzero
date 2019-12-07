@@ -31,10 +31,10 @@ set(SOURCE_FILES
         state/menu_base.cpp
         state/menu_base.h
         state/character.cpp
-        state/character.h state/game_header.h state/game_header.cpp)
+        state/character.h state/game_header.h state/game_header.cpp map/map.cpp map/map.h objects/layer.cpp objects/layer.h objects/object.h objects/sprite.cpp objects/sprite.h)
 
 
 add_executable(pzero ${SOURCE_FILES})
 target_include_directories(pzero PUBLIC . )
 
-target_link_libraries (pzero sfml-graphics sfml-window sfml-system sfml-audio)
+target_link_libraries (pzero jsoncpp sfml-graphics sfml-window sfml-system sfml-audio)

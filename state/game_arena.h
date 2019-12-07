@@ -1,13 +1,18 @@
 #ifndef GAME_ARENA_H
 #define GAME_ARENA_H
 
+#include <list>
+#include <SFML/System/Clock.hpp>
+#include <SFML/Graphics.hpp>
+
+#include "map/map.h"
 #include "state.h"
 #include "game.h"
-#include <SFML/Graphics.hpp>
-#include <utility>
-#include <vector>
-#include "character.h"
 #include "game_header.h"
+#include "character.h"
+
+class Object;
+
 
 class GameArena : public State {
 public:
@@ -30,6 +35,11 @@ private:
     Character* character;
     sf::Texture playerTexture;
 
+protected:
+    std::list<std::shared_ptr<Object>> objects;
+    sf::Clock clock;
+
+    Map map;
 };
 
 

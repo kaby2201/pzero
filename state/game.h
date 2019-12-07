@@ -45,9 +45,6 @@ enum class Font : int {
     MAIN_FONT
 };
 
-enum class Sprite : int {
-    PLAY_BTN
-};
 
 
 enum class Music : int {
@@ -62,7 +59,7 @@ struct GameData {
 
     AssetManager<sf::Font, Font> fonts;
     AssetManager<sf::SoundBuffer, Music> music;
-    AssetManager<sf::Sprite, Sprite> sprites;
+    AssetManager<sf::Sprite, int> sprites;
     AssetManager<sf::Texture, Texture> textures;
 };
 

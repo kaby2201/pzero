@@ -12,7 +12,6 @@ public:
     void Update(float deltaTime);
     void draw(sf::RenderWindow& window);
 
-
     sf::Vector2f GetPositions() { return body.getPosition();}
 
 private:
