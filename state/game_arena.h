@@ -52,8 +52,6 @@ private:
     sf::Texture spikeTexture;
     sf::Texture playerTexture;
 
-
-
 };
 
 

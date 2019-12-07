@@ -1,7 +1,3 @@
-//
-// Created by ALI on 03/11/2019.
-//
-
 #ifndef PZERO_ANIMATION_H
 #define PZERO_ANIMATION_H
 

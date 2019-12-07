@@ -1,14 +1,14 @@
-#ifndef PZERO_MENUBASE_STATE_H
-#define PZERO_MENUBASE_STATE_H
+#ifndef PZERO_MENUBASE_H
+#define PZERO_MENUBASE_H
 
 #include <SFML/Graphics.hpp>
 #include "state.h"
 #include "state.h"
 #include "game.h"
 
-class MenuBaseState {
+class menuBase {
 public:
-      void menuTexture(float factorX, float factorY, float posY, gameDataRef &data);
+    void menuTexture(float factorX, float factorY, float posY, gameDataRef &data);
 
     void inputSolver(int choice, sf::Event event, gameDataRef &data);
 

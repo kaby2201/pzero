@@ -2,12 +2,13 @@
 #define MAIN_MENU_STATE_H
 
 #include <SFML/Audio/Sound.hpp>
+#include <utility>
 #include "game.h"
-#include "menuBase_state.h"
+#include "menuBase.h"
 
-class MainMenuState : public State, MenuBaseState {
+class MainMenuState : public State, menuBase {
 public:
-    MainMenuState(gameDataRef data) : data(data) {}
+    MainMenuState(gameDataRef data) : data(std::move(data)) {};
 
     ~MainMenuState() {}
 
@@ -25,11 +26,9 @@ public:
 
 private:
     gameDataRef data;
-    sf::Text settings;
-    sf::Text  titleMenu;
     sf::Sprite btnPlay, btnSetting, btnHelp, btnScore;
 
-    sf::Text btn_play, btn_setting, btn_help, btn_score;
+    sf::Text settings, titleMenu, btn_play, btn_setting, btn_help, btn_score;
 };
 
 

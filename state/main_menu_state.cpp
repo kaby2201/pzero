@@ -4,7 +4,7 @@
 
 #include "setting_state.h"
 #include "SFML/Graphics.hpp"
-#include "ingame_state.h"
+#include "game_arena.h"
 #include "state_help.h"
 
 void MainMenuState::init() {
@@ -99,7 +99,7 @@ void MainMenuState::handleInput() {
         }
 
 
-        inputSolver(1,event,this->data);
+        inputSolver(1, event,this->data);
 
     }
 }

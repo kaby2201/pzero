@@ -1,8 +1,7 @@
-#include "DEFINITIONS.hpp"
-#include "splash_state.h"
-
 #include <utility>
 #include "main_menu_state.h"
+#include "DEFINITIONS.hpp"
+#include "splash_state.h"
 
 SplashState::SplashState(gameDataRef data) : data(std::move(data)) {}
 
@@ -37,7 +36,6 @@ void SplashState::handleInput() {
     sf::Event event{};
 
     while (this->data->window.pollEvent(event)) {
-
         if (sf::Event::Closed == event.type || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
             this->data->window.close();
         }
@@ -45,7 +43,6 @@ void SplashState::handleInput() {
 }
 
 void SplashState::update(float dt) {
-
     cloud.setPosition(cloud.getPosition().x - 1.0f, cloud.getPosition().y);
     // Will change to splash state after 3-seconds
     if (this->clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME){

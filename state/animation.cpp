@@ -23,21 +23,14 @@ void animation::Update(int row, float deltaTime, bool faceRight, bool standStill
         totalTime -= switchTime;         //(kunne satt den
 
 
-        /*    if(currentImage.x >= imageCount.x){      //Starter animasjonen på nytt (setter x posision tilbake til 0).
-                currentImage.x = 0;
-            } */
-
         if (standStill) {
-            //  if (currentImage.x >= 1) {      //Starter animasjonen på nytt (setter x posision tilbake til 0).
             currentImage.x = 0;
-            //  }
         } else {
             currentImage.x++;
             if(currentImage.x >= 8) {      //Starter animasjonen på nytt (setter x posision tilbake til 0).
                 currentImage.x = 0;
-
-            } }
-
+            }
+        }
     }
 
     uvRect.top = currentImage.y * uvRect.height;

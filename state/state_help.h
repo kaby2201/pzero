@@ -3,9 +3,9 @@
 
 #include <SFML/Audio/Sound.hpp>
 #include "game.h"
-#include "menuBase_state.h"
+#include "menuBase.h"
 
-class state_help : public State, MenuBaseState{
+class state_help : public State, menuBase{
 public:
     state_help(gameDataRef data) : data(data) {}
 

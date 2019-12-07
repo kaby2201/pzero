@@ -4,10 +4,10 @@
 #include <SFML/Graphics.hpp>
 #include "game.h"
 #include "state.h"
-#include "menuBase_state.h"
+#include "menuBase.h"
 #include <iostream>
 
-class SettingsState : public State, MenuBaseState{
+class SettingsState : public State, menuBase{
 public:
     SettingsState(gameDataRef data)  : data(std::move(data)){}
 

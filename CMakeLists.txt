@@ -20,16 +20,16 @@ set(SOURCE_FILES
         state/main_menu_state.cpp
         state/main_menu_state.h
         state/setting_state.cpp
-        state/ingame_state.cpp
-        state/ingame_state.h
+        state/game_arena.cpp
+        state/game_arena.h
         state/setting_state.h
         state/state_help.cpp
 
         state/animation.cpp
         state/animation.h
         state/state_help.h
-        state/menuBase_state.cpp
-        state/menuBase_state.h
+        state/menuBase.cpp
+        state/menuBase.h
         state/character.cpp
         state/character.h)
 

@@ -1,4 +1,4 @@
-#include "ingame_state.h"
+#include "game_arena.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "character.h"
@@ -99,9 +99,8 @@ void GameArena::init() {
      background.setPosition(0,0);
 
 
-
     if (!playerTexture.loadFromFile(GAME_CHARACTER)) {
-        std::cout << "Error couldnt not load character.jpg" << std::endl;
+        std::cout << "Error couldn't not load character.jpg" << std::endl;
     }
 
     character character(&playerTexture, sf::Vector2u(9, 21), 0.05f,200.0f);  //vi har 21 rader og opp til 13 animasjoner og switchtime bestemmer hvor fort
@@ -116,8 +115,7 @@ void GameArena::init() {
             {
                 case sf::Event::KeyPressed:
 
-                    if(sf::Keyboard::isKeyPressed(sf::Keyboard::X))
-                    {
+                    if(sf::Keyboard::isKeyPressed(sf::Keyboard::X)){
 
                         highscore += 10;
                         score.setString(std::to_string(highscore));
@@ -151,7 +149,6 @@ void GameArena::init() {
         data->window.draw(level);
         data->window.draw(level1);
         data->window.draw(score);
-        //data->window.draw(x);
         data->window.draw(coins);
         data->window.draw(coin);
 
@@ -174,10 +171,10 @@ void GameArena::init() {
                 x = 0;
             }
         }
-        data->window.draw(title);
+/*        data->window.draw(title);
         character.Draw(data->window);
         data->window.draw(spikes);
-        data->window.display();
+        data->window.display();*/
     }
 }
 
@@ -196,8 +193,8 @@ void GameArena::update(float dt) {
 }
 
 void GameArena::draw(float dt) {
-    this->data->window.clear();
+/*    this->data->window.clear();
     this->data->window.draw(level);
     this->data->window.draw(title);
-    this->data->window.display();
+    this->data->window.display();*/
 }
