@@ -12,19 +12,20 @@ public:
 
     ~GameArena(){}
 
-    void init();
+void init();
 
-    void handleInput();
+void handleInput();
 
-    void update(float dt);
+void update(float dt);
 
-    void draw(float dt);
+void draw(float dt);
 
 private:
-    gameDataRef data;
-    sf::Text title;
-    //ParticleSystem ParticleSystem;
-    sf::RectangleShape box;
+gameDataRef data;
+sf::Text title;
+//ParticleSystem ParticleSystem;
+sf::RectangleShape box;
+sf::Texture backgroundtest;
 };
 
 

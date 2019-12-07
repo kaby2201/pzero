@@ -2,14 +2,13 @@
 #include "splash_state.h"
 
 #include <utility>
-#include <iostream>
 #include "main_menu_state.h"
 
 SplashState::SplashState(gameDataRef data) : data(std::move(data)) {}
 
 void SplashState::init() {
+
     // Load and sed the background
-    std::cout<<"Test kjører!"<<std::endl;
     this->data->textures.load(Texture::WELCOME_BACKGROUND_IMG, SPLASH_SCREEN_BACKGROUND);
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
 
@@ -24,7 +23,7 @@ void SplashState::init() {
     text.setPosition((float) data->window.getSize().x / 4, (float) data->window.getSize().y / 3);
 
     // Load file and play the music
-    this->data->music.load(Music::BACKGROUND_MUSIC, MENU_BACKGROUND_SOUND);
+    this->data->music.load(Music::BACKGROUND_MUSIC, MENU_BACKGROUND_MUSIC);
     this->data->sound.setBuffer(this->data->music.get(Music::BACKGROUND_MUSIC));
     this->data->sound.setVolume(50);
     this->data->sound.play();

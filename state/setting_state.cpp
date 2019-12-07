@@ -1,8 +1,8 @@
 #include "setting_state.h"
 #include "DEFINITIONS.hpp"
 #include "main_menu_state.h"
+
 #include "menuBase_state.h"
-#include <iostream>
 #include "game.h"
 
 void SettingsState::pause() {
@@ -35,6 +35,12 @@ void SettingsState::init() {
                            text1.getGlobalBounds().height / 2) + 60);
 
 
+/*
+    exit.setTexture(this->data->textures.get(Texture::BUTTON_EXIT));
+    exit.setScale(0.13, 0.13);
+    exit.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - exit.getGlobalBounds().width / 2,
+                     table.getPosition().y + 395);*/
+
     this->title.setString("SETTINGS");
     title.setFont(this->data->fonts.get(Font::GAME_TITLE));
     title.setCharacterSize(150);
@@ -48,6 +54,7 @@ void SettingsState::init() {
     text.setFillColor(sf::Color::Black);
     text.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - text.getGlobalBounds().width / 2,
                      table.getPosition().y + 60);
+
     this->text1.setString("Sound Volume");
     text1.setFont(this->data->fonts.get(Font::GAME_TITLE));
     text1.setCharacterSize(60);
@@ -74,6 +81,10 @@ void SettingsState::handleInput() {
     sf::Event event;
 
     while (this->data->window.pollEvent(event)) {
+        if (sf::Event::Closed == event.type || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+            this->data->machine.addState(stateRef(new MainMenuState(data)), true);
+        }
+
         if (this->data->input.isSpriteClicked(this->muteOff, sf::Mouse::Left, data->window)) {
             if (!alpha) {
                 this->data->sound.pause();
@@ -106,26 +117,31 @@ void SettingsState::handleInput() {
 
 void SettingsState::draw(float dt) {
     data->window.clear();
+
     SettingsState::drawTexture(this->data);
     if (!alpha) {
-        this->data->window.draw(this->muteOff);
+
+        this->data->window.draw(this->background);
+        this->data->window.draw(this->table);
+        if (!alpha)
+            this->data->window.draw(this->muteOff);
+        else
+            this->data->window.draw(this->muteOn);
+
+        this->data->window.draw(this->Vinrease);
+        this->data->window.draw(this->Vdecrease);
+        data->window.draw(text);
+        data->window.draw(text1);
+        data->window.draw(Vnumber);
+        data->window.draw(title);
+        data->window.display();
     }
-    if (alpha) {
-        this->data->window.draw(this->muteOn);
-    }
-    this->data->window.draw(this->Vinrease);
-    this->data->window.draw(this->Vdecrease);
-    data->window.draw(text);
-    data->window.draw(text1);
-    data->window.draw(Vnumber);
-    data->window.draw(title);
-    data->window.display();
 }
 
 void SettingsState::update(float dt) {
     num = this->data->sound.getVolume();
     Vnumber.setString(std::to_string(num));
     Vnumber.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - Vnumber.getGlobalBounds().width / 2,
-                        (table.getPosition().y + table.getGlobalBounds().height / 2 -
-                         text1.getGlobalBounds().height / 2) + 40 + Vinrease.getGlobalBounds().height / 2);
+            (table.getPosition().y + table.getGlobalBounds().height / 2 - text1.getGlobalBounds().height / 2)
+            + 40 + Vinrease.getGlobalBounds().height / 2);
 }

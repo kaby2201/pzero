@@ -49,8 +49,7 @@ void state_help::init() {
 void state_help::handleInput() {
     sf::Event event;
 
-    while (this->data->window.pollEvent(event))
-    {
+    while (this->data->window.pollEvent(event)){
         inputSolver(2,event,this->data);
     }
 

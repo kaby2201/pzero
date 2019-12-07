@@ -25,10 +25,7 @@ public:
 
 private:
     gameDataRef data;
-    sf::Sprite background;
-    sf::Sprite backgroundBoard, pauseHeader;
-    sf::Sprite resumeButton;
-    sf::Sprite menuButton;
+    sf::Sprite pauseButton;
 };
 
 

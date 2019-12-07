@@ -1,14 +1,21 @@
 #include "main_menu_state.h"
 #include <iostream>
 #include "DEFINITIONS.hpp"
+
 #include "setting_state.h"
 #include "SFML/Graphics.hpp"
-#include "game_arena.h"
+#include "ingame_state.h"
 #include "state_help.h"
 
 void MainMenuState::init() {
 
     menuTexture(0.9,1.0,700,this->data);
+
+    this->data->textures.load(Texture::TABLE, TABLE_BACKGROUND);
+    table.setTexture(this->data->textures.get(Texture::TABLE));
+    table.setScale(0.9, 1.0);
+    table.setPosition(SCREEN_WIDTH / 2.f - table.getGlobalBounds().width / 2,
+                      SCREEN_HEIGHT / 2.f - table.getGlobalBounds().height / 2);
 
     // insert images and texts of menu state
     this->data->textures.load(Texture::BUTTON_PLAY, PLAY_BUTTON);
@@ -91,7 +98,9 @@ void MainMenuState::handleInput() {
             this->data->machine.addState(stateRef(new state_help(data)), true);
         }
 
+
         inputSolver(1,event,this->data);
+
     }
 }
 
@@ -105,6 +114,8 @@ void MainMenuState::draw(float dt) {
     drawTexture(this->data);
     data->window.draw(settings);
     data->window.draw(titleMenu);
+    data->window.draw(titleMenu);
+    data->window.draw(table);
     data->window.draw(btnPlay);
     data->window.draw(btnSetting);
     data->window.draw(btnHelp);
