@@ -1,6 +1,6 @@
 #include "character.h"
 
-character::character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed) :
+Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed) :
         animation(texture, imageCount, switchTime)                                                     //caller constructor for å slippe gitter/getter
 {
     this->speed = speed;
@@ -14,18 +14,14 @@ character::character(sf::Texture *texture, sf::Vector2u imageCount, float switch
     body.setTexture(texture);
 }
 
-void character::Update(float deltaTime) {
+void Character::Update(float deltaTime) {
     sf::Vector2f movement(0.0f, 0.0f);
 
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-    {
-
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
         movement.y -= speed * deltaTime;
 
     }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-    {
-
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
         movement.y += speed * deltaTime;
 
     }
@@ -51,10 +47,9 @@ void character::Update(float deltaTime) {
     animation.Update(row, deltaTime, faceRight, standStill);
     body.setTextureRect(animation.uvRect);
     body.move(movement);
-
 }
 
-void character::Draw(sf::RenderWindow& window) {
+void Character::draw(sf::RenderWindow& window) {
     window.draw(body);
 }
 

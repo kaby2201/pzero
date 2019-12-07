@@ -5,11 +5,9 @@
 #include "game.h"
 #include <SFML/Graphics.hpp>
 #include <utility>
-
 #include <vector>
-
 #include "character.h"
-
+#include "game_header.h"
 
 class GameArena : public State {
 public:
@@ -27,29 +25,9 @@ public:
 
 private:
     gameDataRef data;
-    sf::Sprite coin;
-    sf::Sprite heart1;
-    sf::Sprite heart2;
-    sf::Sprite heart3;
-    sf::Sprite heart4;
-    sf::Sprite background;
-    sf::Text title;
-    sf::Text level;
-    sf::Text level1;
-    sf::Text score;
-    sf::Text coins;
-    sf::Text x;
+    GameHeader* header;
 
-    int highscore;
-    int intLevel;
-    int intCoin;
-    int intHealth;
-
-    std::vector<sf::Sprite> hearts;
-
-    sf::RectangleShape box;
-    sf::Sprite spikes;
-    sf::Texture spikeTexture;
+    Character* character;
     sf::Texture playerTexture;
 
 };

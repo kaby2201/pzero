@@ -4,9 +4,9 @@
 #include <SFML/Audio/Sound.hpp>
 #include <utility>
 #include "game.h"
-#include "menuBase.h"
+#include "menu_base.h"
 
-class MainMenuState : public State, menuBase {
+class MainMenuState : public State, MenuBase {
 public:
     MainMenuState(gameDataRef data) : data(std::move(data)) {};
 

@@ -4,10 +4,10 @@
 #include <SFML/Graphics.hpp>
 #include "game.h"
 #include "state.h"
-#include "menuBase.h"
+#include "menu_base.h"
 #include <iostream>
 
-class SettingsState : public State, menuBase{
+class SettingsState : public State, MenuBase{
 public:
     SettingsState(gameDataRef data)  : data(std::move(data)){}
 
@@ -24,11 +24,11 @@ public:
     void update(float dt) override;
 
 private:
+    gameDataRef data;
     sf::Text text;
     sf::Text text1;
     sf::Text Vnumber;
     sf::Text title;
-    gameDataRef data;
     sf::Sprite background;
     sf::Sprite muteOff;
     sf::Sprite muteOn;

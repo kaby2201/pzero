@@ -1,16 +1,13 @@
-//
-// Created by ALI on 03/11/2019.
-//
 #include "animation.h"
 #include <SFML/Graphics.hpp>
 
 animation::animation(sf::Texture *texture, sf::Vector2u imageCount, float switchTime) {
     this->imageCount = imageCount;
     this->switchTime = switchTime;
+
     totalTime = 0.0f;
     currentImage.x = 0; //bestemmer hvilket bilde vi får tilgang til i en rad.
 
-    //   uvRect.width = texture->getSize().x / float(imageCount.x);
     uvRect.width = 64;
     uvRect.height = texture->getSize().y / float(imageCount.y);
 }

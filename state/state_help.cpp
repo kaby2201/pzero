@@ -1,6 +1,5 @@
 #include <DEFINITIONS.hpp>
 #include "state_help.h"
-#include "main_menu_state.h"
 
 void state_help::init() {
     menuTexture(0.7,0.6,395,this->data);

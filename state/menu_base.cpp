@@ -1,8 +1,8 @@
-#include "menuBase.h"
+#include "menu_base.h"
 #include "DEFINITIONS.hpp"
 #include "main_menu_state.h"
 
-void menuBase::menuTexture(float factorX, float factorY, float posY, gameDataRef &data){
+void MenuBase::menuTexture(float factorX, float factorY, float posY, gameDataRef &data){
 
     // Loading the background texture
     Background.setTexture(data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
@@ -21,7 +21,7 @@ void menuBase::menuTexture(float factorX, float factorY, float posY, gameDataRef
     / 2 - exitButton.getGlobalBounds().width / 2, table.getPosition().y + posY);
 }
 
-void menuBase::inputSolver(int choice, sf::Event event, gameDataRef &data){
+void MenuBase::inputSolver(int choice, sf::Event event, gameDataRef &data){
     if (data->input.isSpriteClicked(this->exitButton, sf::Mouse::Left, data->window)) {
         if(choice == 1)
             data->window.close();
@@ -38,7 +38,7 @@ void menuBase::inputSolver(int choice, sf::Event event, gameDataRef &data){
 
 }
 
-void menuBase::drawTexture(gameDataRef &data){
+void MenuBase::drawTexture(gameDataRef &data){
     data->window.draw(Background);
     data->window.draw(table);
     data->window.draw(exitButton);

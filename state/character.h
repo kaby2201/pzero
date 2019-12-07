@@ -5,12 +5,12 @@
 #include "animation.h"
 
 
-class character {
+class Character {
 public:
-    character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed);
+    Character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed);
 
     void Update(float deltaTime);
-    void Draw(sf::RenderWindow& window);
+    void draw(sf::RenderWindow& window);
 
 
     sf::Vector2f GetPositions() { return body.getPosition();}

@@ -28,10 +28,10 @@ set(SOURCE_FILES
         state/animation.cpp
         state/animation.h
         state/state_help.h
-        state/menuBase.cpp
-        state/menuBase.h
+        state/menu_base.cpp
+        state/menu_base.h
         state/character.cpp
-        state/character.h)
+        state/character.h state/game_header.h state/game_header.cpp)
 
 
 add_executable(pzero ${SOURCE_FILES})

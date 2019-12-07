@@ -1,12 +1,12 @@
-#ifndef PZERO_MENUBASE_H
-#define PZERO_MENUBASE_H
+#ifndef PZERO_MENU_BASE_H
+#define PZERO_MENU_BASE_H
 
 #include <SFML/Graphics.hpp>
 #include "state.h"
 #include "state.h"
 #include "game.h"
 
-class menuBase {
+class MenuBase {
 public:
     void menuTexture(float factorX, float factorY, float posY, gameDataRef &data);
 
