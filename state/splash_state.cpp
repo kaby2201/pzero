@@ -19,7 +19,6 @@ void SplashState::init() {
 
     text.setFillColor(sf::Color(71, 71, 135));
     text.setCharacterSize(190);
-
     text.setString( GAME_NAME " 2019");
     text.setPosition((float) data->window.getSize().x / 4, (float) data->window.getSize().y / 3);
 

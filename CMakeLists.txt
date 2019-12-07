@@ -24,15 +24,14 @@ set(SOURCE_FILES
         state/ingame_state.h
         state/setting_state.h
         state/state_help.cpp
+
         state/animation.cpp
         state/animation.h
-        state/player.cpp
-        state/player.h
         state/state_help.h
         state/menuBase_state.cpp
-        state/animation.h
-        state/animation.cpp
-        state/menuBase_state.h)
+        state/menuBase_state.h
+        state/character.cpp
+        state/character.h)
 
 
 add_executable(pzero ${SOURCE_FILES})

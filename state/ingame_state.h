@@ -5,7 +5,11 @@
 #include "game.h"
 #include <SFML/Graphics.hpp>
 #include <utility>
+
 #include <vector>
+
+#include "character.h"
+
 
 class GameArena : public State {
 public:
@@ -44,8 +48,14 @@ private:
     std::vector<sf::Sprite> hearts;
 
     //ParticleSystem ParticleSystem;
+    //ParticleSystem ParticleSystem;
     sf::RectangleShape box;
-    sf::Texture backgroundtest;
+    sf::Sprite spikes;
+    sf::Texture spikeTexture;
+    sf::Texture playerTexture;
+
+
+
 };
 
 

@@ -6,6 +6,8 @@
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
+#define SCREEN_WIDTH_MIDDLE 960
+#define SCREEN_HEIGTH_MIDDLE 540
 
 // Plash state
 #define SPLASH_STATE_SHOW_TIME 0
@@ -20,7 +22,12 @@
 
 #define GAME_CHARACTER "resources/sprite/MainCharacter.jpg"
 
+
 // Sound settings
+
+#define SPIKES "resources/sprite/spike B.png"
+
+#define SETTINGS_SCREEN_BACKROUND "resources/ui/table.png"
 #define MUTE_ON "resources/ui/mute.png"
 #define MUTE_OFF "resources/ui/muteoff.png"
 #define VOLUME_ADD "resources/ui/addvolume.png"
