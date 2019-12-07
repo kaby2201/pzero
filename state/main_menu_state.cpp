@@ -17,7 +17,7 @@ void MainMenuState::init() {
     btnPlay.setPosition((table.getPosition().x + table.getGlobalBounds().width - btnPlay.getGlobalBounds().width -
                       table.getPosition().x / 2) + 80, table.getPosition().y + 80);
 
-    this->data->textures.load(Texture::BUTTON_SETTING, SETTING_BUTTON);
+    data->textures.load(Texture::BUTTON_SETTING, SETTING_BUTTON);
     btnSetting.setTexture(this->data->textures.get(Texture::BUTTON_SETTING));
     btnSetting.setScale(0.4, 0.4);
     btnSetting.setPosition((table.getPosition().x + table.getGlobalBounds().width - btnSetting.getGlobalBounds().width -
@@ -64,17 +64,12 @@ void MainMenuState::init() {
     btn_score.setFillColor(sf::Color::Black);
     btn_score.setPosition(table.getPosition().x - btn_score.getGlobalBounds().width + 400, table.getPosition().y + 560);
 
-    // exit button
-    /*this->data->textures.load(Texture::BUTTON_EXIT, EXIT_MENU_BUTTON);
-    btnExit.setTexture(this->data->textures.get(Texture::BUTTON_EXIT));
-    btnExit.setScale(0.4, 0.4);
-    btnExit.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - btnExit.getGlobalBounds().width / 2, table.getPosition().y + 700);*/
 
     // Menu text that is on the top of the Menu
     this->titleMenu.setString("MENU");
     titleMenu.setFont(this->data->fonts.get(Font::GAME_TITLE));
     titleMenu.setCharacterSize(100);
-    titleMenu.setFillColor(sf::Color::Black);
+    titleMenu.setFillColor(sf::Color::White);
     titleMenu.setPosition(table.getPosition().x + table.getGlobalBounds().width / 2 - titleMenu.getGlobalBounds().width / 2,
                        table.getPosition().y - 100);
 
