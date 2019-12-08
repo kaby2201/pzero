@@ -20,8 +20,8 @@ void Character::Update(float deltaTime) {
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
         movement.y -= speed * deltaTime;
-
     }
+
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
         movement.y += speed * deltaTime;
     }
