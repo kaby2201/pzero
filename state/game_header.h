@@ -15,9 +15,16 @@ public:
 
     void addHealth();
 
+    void addIntHealth();
+
     void removeHealth();
 
     void addCoin();
+
+    int getScore();
+
+    int getHealth();
+
 
 private:
     GameData& data;
@@ -26,8 +33,10 @@ private:
 
     int intLevel = 1;
     int intCoin = 2;
-    int highScore = 0;
     int intHealth = 4;
+    int highScore = 0;
+    bool alpha = false;
+    bool beta = false;
 
     std::vector<sf::Sprite> hearts;
 

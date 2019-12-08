@@ -12,6 +12,8 @@
 #include "objects/layer.h"
 #include "objects/sprite.h"
 #include "pause_state.h"
+#include "game_over_state.h"
+//#include "game_over_state.h"
 
 void GameArena::init() {
     header = new GameHeader(*data);
@@ -34,11 +36,11 @@ void GameArena::init() {
     std::copy(map.getSprites().begin(), map.getSprites().end(), std::back_inserter(objects));
 
     // Double the size of the screen
-/*    sf::View view = data->window.getDefaultView();
+   /*sf::View view = data->window.getDefaultView();
     view.setSize(view.getSize().x / 2, view.getSize().y / 2);
     view.setCenter(view.getCenter().x / 2, view.getCenter().y / 2);
-    data->window.setView(view);*/
-    data->window.setVerticalSyncEnabled(true);
+    data->window.setView(view);
+    data->window.setVerticalSyncEnabled(true);*/
 }
 
 void GameArena::handleInput() {
@@ -57,6 +59,7 @@ void GameArena::handleInput() {
         // just for test - adding score by pressing X on the keyboard
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::X)){
             header->addScore();
+            header->addIntHealth();
             header->addHealth();
         }
         // Remove health
@@ -84,6 +87,8 @@ void GameArena::handleInput() {
 
 void GameArena::update(float dt) {
     character->Update(dt);
+
+
 }
 
 void GameArena::draw(float dt) {

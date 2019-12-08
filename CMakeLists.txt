@@ -31,7 +31,7 @@ set(SOURCE_FILES
         state/menu_base.cpp
         state/menu_base.h
         state/character.cpp
-        state/character.h state/game_header.h state/game_header.cpp map/map.cpp map/map.h objects/layer.cpp objects/layer.h objects/object.h objects/sprite.cpp objects/sprite.h)
+        state/character.h state/game_header.h state/game_header.cpp map/map.cpp map/map.h objects/layer.cpp objects/layer.h objects/object.h objects/sprite.cpp objects/sprite.h state/game_over_state.cpp state/game_over_state.h)
 
 
 add_executable(pzero ${SOURCE_FILES})

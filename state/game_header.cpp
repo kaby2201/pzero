@@ -5,7 +5,7 @@ GameHeader::GameHeader(GameData &data) : data(data) {
 
     // Legger til live
     this->data.textures.load(Texture::HEART, HEART_IMAGE);
-    for (int i = 0; i <= intHealth; ++i)
+    for (int i = 1; i <= intHealth; ++i)
         addHealth();
 
     this->level.setString("LEVEL ");
@@ -48,8 +48,8 @@ GameHeader::GameHeader(GameData &data) : data(data) {
 }
 
 void GameHeader::draw() {
-    for(auto& h  : hearts)
-        data.window.draw(h);
+    for(int i = 0; i < intHealth; i++)
+    {data.window.draw(hearts[i]);}
 
     data.window.draw(level);
     data.window.draw(level1);
@@ -72,12 +72,29 @@ void GameHeader::addHealth() {
     hearts.push_back(sprite);
 }
 
+
+
 void GameHeader::removeHealth() {
-    hearts.pop_back();
+        intHealth -=1;
 }
 
 void GameHeader::addCoin() {
-    intCoin ++;
+    intCoin +=1;
     this->coins.setString(std::to_string(intCoin));
+}
+
+int GameHeader::getScore()
+{
+    return highScore;
+}
+
+int GameHeader::getHealth()
+{
+    return intHealth;
+}
+
+void GameHeader::addIntHealth()
+{
+    intHealth+=1;
 }
 
