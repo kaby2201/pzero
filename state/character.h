@@ -7,11 +7,13 @@
 
 class Character {
 public:
-    Character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed);
+    Character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed, float jumpHeight);
 
     void Update(float deltaTime);
     void draw(sf::RenderWindow& window);
-    void setTexture(sf::Texture& texture){ body.setTexture(&texture); }
+
+    void onCollision(sf::Vector2f& direction);
+
     sf::Vector2f GetPositions() { return body.getPosition();}
     Collider getCollider(){ return Collider(body); }
 
@@ -23,6 +25,9 @@ private:
     bool faceRight;
     bool standStill;
 
+    sf::Vector2f velocity;
+    bool canJum = false;
+    float jumHeight;
 };
 
 #endif //PZERO_CHARACTER_H

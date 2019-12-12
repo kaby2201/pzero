@@ -25,5 +25,9 @@ void Sprite::draw(sf::RenderWindow& window)
     map.setSpriteTextureFromGid(sprite, gid, frame);
     sprite.setPosition((float)x, (float)y);
 
+    body.setPosition((float) x, (float) y);
+    body.setSize(sf::Vector2f(16, 16));
+    body.setFillColor(sf::Color::Blue);
     window.draw(sprite);
+    //window.draw(body);
 }

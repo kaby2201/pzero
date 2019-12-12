@@ -1,54 +1,77 @@
 #include <DEFINITIONS.hpp>
+#include <math.h>
 #include "character.h"
 
-Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed) :
-        animation(texture, imageCount, switchTime)                                                     //caller constructor for å slippe gitter/getter
+Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed, float jumpHeight) :
+        animation(texture, imageCount, switchTime)
+        //caller constructor for å slippe gitter/getter
 {
     this->speed = speed;
+    this->jumHeight = jumpHeight;
     row = 2;
     faceRight = false;
     standStill = false;
     body.setSize(sf::Vector2f(30.f, 30.f));
     body.setOrigin(body.getSize()/2.f);
-    body.setPosition(SCREEN_WIDTH/4, SCREEN_HEIGHT/4);
+    body.setPosition(SCREEN_WIDTH/4, SCREEN_HEIGHT/5);
     body.setTexture(texture);
 }
 
 void Character::Update(float deltaTime) {
-    sf::Vector2f movement(0.0f, 0.0f);
 
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
-        movement.y -= speed * deltaTime;
+    velocity.x *= 0.f; // TODO play around with this and see resultat
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && canJum) {
+        canJum = false;
+        velocity.y = -sqrtf(2.0f * 9.810f * jumHeight);
     }
 
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-        movement.y += speed * deltaTime;
-    }
+    velocity.y += 981.0f * deltaTime;
+
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
     {
-        movement.x -= speed * deltaTime;
+        velocity.x -= speed * deltaTime;
 
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-        movement.x += speed * deltaTime;
+        velocity.x += speed * deltaTime;
     }
 
-    if(movement.x == 0.0f){
+    if(velocity.x == 0.0f){
         //     row = 3;
         standStill = true;
     } else {
         standStill = false;
         row = 11;
 
-        faceRight = movement.x >= 0;
+        faceRight = velocity.x >= 0;
     }
 
     animation.Update(row, deltaTime, faceRight, standStill);
     body.setTextureRect(animation.uvRect);
-    body.move(movement);
+    body.move(velocity * deltaTime);
 }
 
 void Character::draw(sf::RenderWindow& window) {
     window.draw(body);
+
+}
+
+void Character::onCollision(sf::Vector2f& direction) {
+    if (direction.x < 0.0f) {
+        // Collision on the left
+        velocity.x = 0.0f;
+    } else if (direction.x > 0.0f) {
+        velocity.x = 0.0f;
+    }
+
+    if (direction.y < 0.0f) {
+        // Collision on the bottom.
+        velocity.y = 0.0f;
+        canJum = true;
+    } else if (direction.y > 0.0f) {
+        // Collision on top
+        velocity.y = 0.0f;
+    }
 }
 

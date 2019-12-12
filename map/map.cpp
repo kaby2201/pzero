@@ -126,8 +126,6 @@ void Map::setSpriteTextureFromGid(sf::Sprite &sprite, unsigned int gid, int fram
     // Set the texture and texture source rectangle
     sprite.setTexture(tileset->texture);
     sprite.setTextureRect(sf::IntRect(x, y, textureRectWidth, textureRectHeight));
-
-
 }
 
 // Protected functions

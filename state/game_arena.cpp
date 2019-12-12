@@ -15,13 +15,13 @@
 
 void GameArena::init() {
     header = new GameHeader(*data);
-    platform = new Platform(nullptr, sf::Vector2f(200, 200), sf::Vector2f(500, 200));
+    platform = new Platform(nullptr, sf::Vector2f(data->window.getSize().x/4, 50), sf::Vector2f(500, (data->window.getSize().y/5)-50));
 
     if (!playerTexture.loadFromFile(GAME_CHARACTER))
         std::cout << "Error couldnt not load character.jpg" << std::endl;
 
     // Vi har 21 rader og opp til 13 animasjoner og switchtime bestemmer hvor fort
-    this->character = new Character(&playerTexture, sf::Vector2u(9, 21), 0.05f, 90.0f);
+    this->character = new Character(&playerTexture, sf::Vector2u(9, 21), 0.05f, 9000.0f, 800.f);
 
     // Vi har 21 rader og opp til 13 animasjoner og switchtime bestemmer hvor fort
 
@@ -97,10 +97,15 @@ void GameArena::handleInput() {
 
 void GameArena::update(float dt) {
     character->Update(dt);
-    platform->getColider().checkCollision(character->getCollider(), 0.2f);
+    platform->getColider().checkCollision(character->getCollider(), direction, 1.0f);
 
     for (auto &item : map.getLayers()) {
-        item->getColider().checkCollision(character->getCollider(), 1.0f);
+        item->getColider().checkCollision(character->getCollider(), direction, 1.0f);
+        character->onCollision(direction);
+    }
+    for (auto &item : map.getSprites()) {
+        item->getColider().checkCollision(character->getCollider(), direction, 1.0f);
+        character->onCollision(direction);
     }
 }
 
@@ -115,8 +120,8 @@ void GameArena::draw(float dt) {
     for (auto& object: objects){
         object->process(dt);
         object->draw(this->data->window);
-        platform->draw(data->window);
     }
+    platform->draw(data->window);
     character->draw(data->window);
     this->data->window.display();
 }

@@ -2,6 +2,7 @@
 #define SPRITE_H
 
 #include <SFML/System/Clock.hpp>
+#include <state/collider.h>
 
 #include "object.h"
 
@@ -14,9 +15,11 @@ public:
 
     void process(float time) override;
     void draw(sf::RenderWindow& window) override;
+    Collider getColider(){ return Collider(body); }
 
-    sf::Sprite sprite;
 protected:
+    sf::Sprite sprite;
+    sf::RectangleShape body;
 
     // Object id
     int id = 0;

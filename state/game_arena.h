@@ -33,6 +33,7 @@ private:
     GameHeader* header;
     Character* character;
 protected:
+    sf::Vector2f direction = sf::Vector2f(0, 0);
     sf::Texture playerTexture;
     sf::Sprite background;
     Platform* platform;

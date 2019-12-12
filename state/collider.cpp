@@ -3,7 +3,7 @@
 
 Collider::Collider(sf::RectangleShape &body) : body(body){}
 
-bool Collider::checkCollision(Collider other, float push) {
+bool Collider::checkCollision(Collider other, sf::Vector2f& direction, float push) {
 
     sf::Vector2f otherPosition = other.getPosition();
     sf::Vector2f otherHalfSize = other.getHalfSize();
@@ -23,17 +23,31 @@ bool Collider::checkCollision(Collider other, float push) {
             if (deltaX > 0.0f) {
                 Move(intersectX * (1.0f - push), 0.f);
                 other.Move(-intersectX * push, 0.f);
+
+                direction.x = 1.0f;
+                direction.y = 0.0f;
+
             }else{
                 Move(-intersectX * (1.0f - push), 0.f);
                 other.Move(intersectX * push, 0.f);
+
+                direction.x = -1.0f;
+                direction.y = 0.0f;
             }
         }else{
             if (deltaY > 0.0f) {
                 Move(0.f, intersectY * (1.0f - push));
                 other.Move(0.f, -intersectY * push);
+
+                direction.x = 0.0f;
+                direction.y = 1.0f;
+
             }else{
                 Move(0.f, -intersectY * (1.0f - push));
                 other.Move(0.f, intersectY * push);
+
+                direction.x = 0.0f;
+                direction.y = -1.0f;
             }
         }
         return true;
