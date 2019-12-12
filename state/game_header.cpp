@@ -24,11 +24,11 @@ GameHeader::GameHeader(GameData &data) : data(data) {
     score.setFont(this->data.fonts.get(Font::GAME_TITLE));
     score.setCharacterSize(50);
     score.setFillColor(sf::Color::White);
-    score.setPosition(SCREEN_WIDTH-200-50,50);
+    score.setPosition(SCREEN_WIDTH-250,50);
 
     this->data.textures.load(Texture::COIN, COIN_IMAGE);
     coin.setTexture(this->data.textures.get(Texture::COIN));
-    coin.setScale(0.025, 0.025);
+    coin.setScale(0.010, 0.010);
     coin.setPosition(25,10);
 
     this->X.setString("X");

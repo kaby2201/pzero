@@ -4,21 +4,21 @@
 #include <list>
 #include <SFML/System/Clock.hpp>
 #include <SFML/Graphics.hpp>
+#include <objects/object.h>
+#include <map/map.h>
 
-#include "map/map.h"
 #include "state.h"
 #include "game.h"
 #include "game_header.h"
 #include "character.h"
-
-class Object;
+#include "platform.h"
 
 
 class GameArena : public State {
 public:
     GameArena(gameDataRef data) : data(std::move(data)) {}
 
-    ~GameArena(){}
+    ~GameArena()= default;
 
     void init();
 
@@ -31,15 +31,13 @@ public:
 private:
     gameDataRef data;
     GameHeader* header;
-
     Character* character;
-    sf::Texture playerTexture;
-
 protected:
-    std::list<std::shared_ptr<Object>> objects;
-    sf::Clock clock;
-
+    sf::Texture playerTexture;
+    sf::Sprite background;
+    Platform* platform;
     Map map;
+    std::list<std::shared_ptr<Object>> objects;
 };
 
 

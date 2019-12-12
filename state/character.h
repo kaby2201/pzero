@@ -3,7 +3,7 @@
 
 #include <SFML\Graphics.hpp>
 #include "animation.h"
-
+#include "collider.h"
 
 class Character {
 public:
@@ -11,8 +11,9 @@ public:
 
     void Update(float deltaTime);
     void draw(sf::RenderWindow& window);
-
+    void setTexture(sf::Texture& texture){ body.setTexture(&texture); }
     sf::Vector2f GetPositions() { return body.getPosition();}
+    Collider getCollider(){ return Collider(body); }
 
 private:
     sf::RectangleShape body;

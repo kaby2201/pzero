@@ -8,10 +8,9 @@ Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switch
     row = 2;
     faceRight = false;
     standStill = false;
-
-    body.setSize(sf::Vector2f(65.f, 65.f));
+    body.setSize(sf::Vector2f(30.f, 30.f));
     body.setOrigin(body.getSize()/2.f);
-    body.setPosition(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
+    body.setPosition(SCREEN_WIDTH/4, SCREEN_HEIGHT/4);
     body.setTexture(texture);
 }
 

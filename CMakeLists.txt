@@ -31,7 +31,15 @@ set(SOURCE_FILES
         state/menu_base.cpp
         state/menu_base.h
         state/character.cpp
-        state/character.h state/game_header.h state/game_header.cpp map/map.cpp map/map.h objects/layer.cpp objects/layer.h objects/object.h objects/sprite.cpp objects/sprite.h)
+        state/character.h
+        state/game_header.h
+        state/game_header.cpp
+        state/collider.cpp
+        state/collider.h
+        state/platform.cpp
+        state/platform.h
+        map/map.cpp
+        map/map.h objects/layer.cpp objects/layer.h objects/object.h objects/sprite.cpp objects/sprite.h)
 
 
 add_executable(pzero ${SOURCE_FILES})

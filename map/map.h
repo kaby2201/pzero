@@ -7,7 +7,7 @@
 #include <list>
 #include <map>
 
-#include <SFML/Graphics/Texture.hpp>
+#include <SFML/Graphics.hpp>
 
 namespace sf
 {
@@ -72,6 +72,7 @@ public:
     // Sets sprite texture and texture coordinates based on global tile id
     void setSpriteTextureFromGid(sf::Sprite& sprite, unsigned int gid, int frame = 0);
 
+
 protected:
     // Used in loadFromFile to load information from JSON
     void loadTileset(Json::Value& tileset);
@@ -90,6 +91,8 @@ protected:
     // Map content
     std::list<std::shared_ptr<Layer>> layers;
     std::list<std::shared_ptr<Sprite>> sprites;
+
+    sf::RectangleShape body;
 };
 
 #endif
