@@ -9,14 +9,16 @@ Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switch
     faceRight = false;
     standStill = false;
 
-    body.setSize(sf::Vector2f(65.f, 65.f));
+    view.setSize(800, 600);
+    body.setSize(sf::Vector2f(30.f, 30.f));
     body.setOrigin(body.getSize()/2.f);
-    body.setPosition(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
+    body.setPosition(100, 415);
     body.setTexture(texture);
 }
 
 void Character::Update(float deltaTime) {
     sf::Vector2f movement(0.0f, 0.0f);
+
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
         movement.y -= speed * deltaTime;
@@ -47,9 +49,24 @@ void Character::Update(float deltaTime) {
     animation.Update(row, deltaTime, faceRight, standStill);
     body.setTextureRect(animation.uvRect);
     body.move(movement);
+    if(body.getPosition().x < 400) {
+        if(body.getPosition().y < 400){
+            view.setCenter(body.getPosition().x, 400);
+        }else
+            view.setCenter(400, body.getPosition().y);
+    } else {
+        view.setCenter(body.getPosition());
+    }
 }
 
 void Character::draw(sf::RenderWindow& window) {
     window.draw(body);
+
+
 }
+
+
+
+
+
 

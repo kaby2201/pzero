@@ -20,7 +20,7 @@ void GameArena::init() {
         std::cout << "Error couldnt not load character.jpg" << std::endl;
 
     // Vi har 21 rader og opp til 13 animasjoner og switchtime bestemmer hvor fort
-    this->character = new Character(&playerTexture, sf::Vector2u(9, 21), 0.05f, 90.0f);
+    this->character = new Character(&playerTexture, sf::Vector2u(9, 21), 0.05f, 200.0f);
 
     // Load map information from JSON into object list
     if (!map.loadFromFile("data/level_1.json")){
@@ -34,11 +34,12 @@ void GameArena::init() {
     std::copy(map.getSprites().begin(), map.getSprites().end(), std::back_inserter(objects));
 
     // Double the size of the screen
-/*    sf::View view = data->window.getDefaultView();
+  /*  sf::View view = data->window.getDefaultView();
     view.setSize(view.getSize().x / 2, view.getSize().y / 2);
     view.setCenter(view.getCenter().x / 2, view.getCenter().y / 2);
-    data->window.setView(view);*/
-    data->window.setVerticalSyncEnabled(true);
+    data->window.setView(view);
+    data->window.setVerticalSyncEnabled(true); */
+
 }
 
 void GameArena::handleInput() {
@@ -83,7 +84,10 @@ void GameArena::handleInput() {
 
 
 void GameArena::update(float dt) {
+    this->data->window.setView(character->viewer());
     character->Update(dt);
+
+
 }
 
 void GameArena::draw(float dt) {

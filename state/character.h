@@ -11,16 +11,17 @@ public:
 
     void Update(float deltaTime);
     void draw(sf::RenderWindow& window);
-
-    sf::Vector2f GetPositions() { return body.getPosition();}
+    sf::View viewer(){ return view;};
 
 private:
     sf::RectangleShape body;
+    sf::View view;
     animation animation;
     int row;
     float speed;
     bool faceRight;
     bool standStill;
+
 
 };
 
