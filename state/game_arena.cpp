@@ -91,10 +91,6 @@ void GameArena::init() {
                     std::copy(map.getSprites().begin(), map.getSprites().end(), std::back_inserter(objects));
                 }
 
-                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-                    score = header->getScore();
-                    this->data->machine.addState(stateRef(new GameOverState(data)), true);
-                }
             }
         }
     }
@@ -113,14 +109,7 @@ void GameArena::init() {
 
         dual = true;
     }
-        if(character->finished)
-        {
-            this->data->window.setView(data->window.getDefaultView());
-            score = header->getScore();
-            status = true;
-            this->data->machine.addState(stateRef(new GameOverState(data)), true);
 
-        }
 
 
     }
@@ -136,6 +125,15 @@ void GameArena::init() {
         {character->draw(data->window);
             this->data->window.setView(data->window.getDefaultView());
             header->draw();
+
+            if(character->finished)
+            {
+                score = header->getScore();
+                status = true;
+                this->data->machine.addState(stateRef(new GameOverState(data)), true);
+
+            }
+
 
             this->data->window.display();
             dual = false;

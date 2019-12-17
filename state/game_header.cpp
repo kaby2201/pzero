@@ -51,7 +51,6 @@ GameHeader::GameHeader(GameData &data) : data(data) {
 }
 
 void GameHeader::draw() {
-    //this->data.window.setView(data.window.getDefaultView());
     for(int i = 0; i < intHealth; i++)
     {data.window.draw(hearts[i]);}
 
