@@ -47,47 +47,54 @@ void GameArena::init() {
 }
 
     void GameArena::handleInput() {
-        sf::Event event{};
+        sf::Event event;
 
         while (this->data->window.pollEvent(event)) {
             if (sf::Event::Closed == event.type) {
                 this->data->window.close();
             }
 
-            // Press P to pause the game
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)) {
-                this->data->machine.addState(stateRef(new PauseState(data)), false);
-            }
-
-            // just for test - adding score by pressing X on the keyboard
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::X)) {
-                header->addScore();
-                header->addIntHealth();
-                header->addHealth();
-            }
-            // Remove health
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::H)) {
-                header->removeHealth();
-            }
-            // add more coin
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::C)) {
-                header->addCoin();
-            }
-
-            if (event.key.code == sf::Keyboard::F5) {
-                objects.clear();
-
-                if (!map.loadFromFile("data/level_1.json")) {
-                    std::cout << "Failed to reload map data." << std::endl;
+            if(event.type == sf::Event::KeyPressed) {
+                // Press P to pause the game
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)) {
+                    this->data->machine.addState(stateRef(new PauseState(data)), false);
                 }
 
-                std::copy(map.getLayers().begin(), map.getLayers().end(), std::back_inserter(objects));
-                std::copy(map.getSprites().begin(), map.getSprites().end(), std::back_inserter(objects));
-            }
+                // just for test - adding score by pressing X on the keyboard
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::X)) {
+                    header->addScore();
+                    header->addIntHealth();
+                    header->addHealth();
+                }
+                // Remove health
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::H)) {
+                    if(header->getHealth() <= 1)
+                    {
+                        score = header->getScore();
+                        this->data->machine.addState(stateRef(new GameOverState(data)), true);
+                    }
+                    else{header->removeHealth();}
+                }
+                // add more coin
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::C)) {
+                    header->addCoin();
+                }
 
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-                score = header->getScore();
-                this->data->machine.addState(stateRef(new GameOverState(data)), true);
+                if (event.key.code == sf::Keyboard::F5) {
+                    objects.clear();
+
+                    if (!map.loadFromFile("data/level_1.json")) {
+                        std::cout << "Failed to reload map data." << std::endl;
+                    }
+
+                    std::copy(map.getLayers().begin(), map.getLayers().end(), std::back_inserter(objects));
+                    std::copy(map.getSprites().begin(), map.getSprites().end(), std::back_inserter(objects));
+                }
+
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+                    score = header->getScore();
+                    this->data->machine.addState(stateRef(new GameOverState(data)), true);
+                }
             }
         }
     }
@@ -95,6 +102,8 @@ void GameArena::init() {
 
 
     void GameArena::update(float dt) {
+
+
 
     if(!dual)
     {
@@ -127,6 +136,7 @@ void GameArena::init() {
         {character->draw(data->window);
             this->data->window.setView(data->window.getDefaultView());
             header->draw();
+
             this->data->window.display();
             dual = false;
         }

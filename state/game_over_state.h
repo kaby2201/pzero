@@ -22,9 +22,8 @@ public:
     void update(float dt) override;
 
 private:
+    sf::View view;
     gameDataRef data;
-    GameHeader *header;
-
     sf::Sprite table;
     sf::Sprite tryAgain;
     sf::Sprite exit;

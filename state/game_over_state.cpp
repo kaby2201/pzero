@@ -1,7 +1,7 @@
 #include <DEFINITIONS.hpp>
 #include "game_over_state.h"
 #include "main_menu_state.h"
-
+#include "game_arena.h"
 
 
 extern bool status;
@@ -12,8 +12,13 @@ void GameOverState::pause() {
 }
 
 void GameOverState::init() {
+
+    view.setSize(800, 600);
+    view.setCenter(400, 250);
+    data->window.setView(view);
+
+
     //SCREEN_WIDTH / 2.f - table.getGlobalBounds().width /
-    header = new GameHeader(*data);
     table.setTexture(this->data->textures.get(Texture::TABLE));
     table.setScale(0.3,0.4);
     table.setPosition( 2 + data->window.getView().getCenter().x-table.getGlobalBounds().width/2,
@@ -70,7 +75,6 @@ void GameOverState::init() {
 
 
 
-
 }
 
 void GameOverState::resume() {
@@ -78,13 +82,22 @@ void GameOverState::resume() {
 }
 
 void GameOverState::handleInput() {
-    sf::Event event;
+    sf::Event event{};
 
     while (this->data->window.pollEvent(event))
     {
-        if (this->data->input.isSpriteClicked(this->exit, sf::Mouse::Left, data->window)) {
+            if (this->data->input.isSpriteClicked(this->exit, sf::Mouse::Left, data->window)) {
+                this->data->machine.addState(stateRef(new MainMenuState(data)), true);
+            }
+
+        if (this->data->input.isSpriteClicked(this->tryAgain, sf::Mouse::Left, data->window)) {
+            this->data->machine.addState(stateRef(new GameArena(data)), true);
+        }
+
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
             this->data->machine.addState(stateRef(new MainMenuState(data)), true);
         }
+
     }
     }
 
@@ -92,7 +105,6 @@ void GameOverState::handleInput() {
 
 void GameOverState::draw(float dt) {
     //data->window.clear();
-
     data->window.draw(table);
     if(status)
     {data->window.draw(gameOverWon);}

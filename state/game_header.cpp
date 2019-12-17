@@ -6,9 +6,6 @@ extern int counter;
 GameHeader::GameHeader(GameData &data) : data(data) {
 
     // Legger til live
-    //view1.setSize(data.window.getDefaultView());
-
-    this->data.window.setView(data.window.getDefaultView());
 
     this->data.textures.load(Texture::HEART, HEART_IMAGE);
     for (int i = 1; i <= intHealth; ++i)
@@ -82,6 +79,7 @@ void GameHeader::addHealth() {
 
 
 void GameHeader::removeHealth() {
+    std::cout<<"Removed health!"<<std::endl;
         intHealth -=1;
 }
 
