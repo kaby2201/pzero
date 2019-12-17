@@ -6,6 +6,10 @@ extern int counter;
 GameHeader::GameHeader(GameData &data) : data(data) {
 
     // Legger til live
+    //view1.setSize(data.window.getDefaultView());
+
+    this->data.window.setView(data.window.getDefaultView());
+
     this->data.textures.load(Texture::HEART, HEART_IMAGE);
     for (int i = 1; i <= intHealth; ++i)
         addHealth();
@@ -50,6 +54,7 @@ GameHeader::GameHeader(GameData &data) : data(data) {
 }
 
 void GameHeader::draw() {
+    //this->data.window.setView(data.window.getDefaultView());
     for(int i = 0; i < intHealth; i++)
     {data.window.draw(hearts[i]);}
 

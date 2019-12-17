@@ -15,10 +15,18 @@
 #include "game_over_state.h"
 //#include "game_over_state.h"
 
-int counter;
+bool status = false;
+
+int score;
+
+
 
 void GameArena::init() {
     header = new GameHeader(*data);
+    dual = false;
+
+    data->window.setFramerateLimit(60);
+
     if (!playerTexture.loadFromFile(GAME_CHARACTER))
         std::cout << "Error couldnt not load character.jpg" << std::endl;
 
@@ -78,6 +86,7 @@ void GameArena::init() {
             }
 
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+                score = header->getScore();
                 this->data->machine.addState(stateRef(new GameOverState(data)), true);
             }
         }
@@ -86,12 +95,25 @@ void GameArena::init() {
 
 
     void GameArena::update(float dt) {
+
+    if(!dual)
+    {
         this->data->window.setView(character->viewer());
         character->Update(dt);
+        //character->draw(data->window);
+
+        dual = true;
+    }
         if(character->finished)
-        {this->data->machine.addState(stateRef(new GameOverState(data)), false);
+        {
+            this->data->window.setView(data->window.getDefaultView());
+            score = header->getScore();
+            status = true;
+            this->data->machine.addState(stateRef(new GameOverState(data)), true);
 
         }
+
+
     }
 
     void GameArena::draw(float dt) {
@@ -101,7 +123,12 @@ void GameArena::init() {
             object->process(dt);
             object->draw(this->data->window);
         }
-        character->draw(data->window);
-        header->draw();
-        this->data->window.display();
+        if(dual)
+        {character->draw(data->window);
+            this->data->window.setView(data->window.getDefaultView());
+            header->draw();
+            this->data->window.display();
+            dual = false;
+        }
+
     }

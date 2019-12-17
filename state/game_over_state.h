@@ -29,6 +29,7 @@ private:
     sf::Sprite tryAgain;
     sf::Sprite exit;
     sf::Text gameOver;
+    sf::Text gameOverWon;
     sf::Text highscore;
     sf::Text intScore;
 

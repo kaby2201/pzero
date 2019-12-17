@@ -27,6 +27,7 @@ public:
 
 
 private:
+    sf::View view1;
     GameData& data;
     sf::Sprite coin;
     sf::Text title, level, level1, score, coins, X;

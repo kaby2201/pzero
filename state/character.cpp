@@ -12,6 +12,7 @@ Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switch
 
     //800, 600
     //0.4166, 0.555
+
     view.setSize(800, 600);
     view.setCenter(400, 250);
     body.setSize(sf::Vector2f(30.f, 30.f));

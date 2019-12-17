@@ -34,6 +34,7 @@ private:
 
     Character* character;
     sf::Texture playerTexture;
+    bool dual;
 
 protected:
     std::list<std::shared_ptr<Object>> objects;
