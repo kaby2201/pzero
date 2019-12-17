@@ -3,6 +3,7 @@
 
 #include <SFML\Graphics.hpp>
 #include "animation.h"
+#include "game.h"
 
 
 class Character {
@@ -12,6 +13,10 @@ public:
     void Update(float deltaTime);
     void draw(sf::RenderWindow& window);
     sf::View viewer(){ return view;};
+    int getScore(){
+        return  row;
+    }
+    bool finished = false;
 
 private:
     sf::RectangleShape body;

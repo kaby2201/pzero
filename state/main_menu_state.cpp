@@ -6,16 +6,17 @@
 #include "SFML/Graphics.hpp"
 #include "game_arena.h"
 #include "state_help.h"
+#include "game_over_state.h"
 
 void MainMenuState::init() {
 
     menuTexture(0.9,1.0,700,this->data);
 
-    this->data->textures.load(Texture::TABLE, TABLE_BACKGROUND);
+    /*this->data->textures.load(Texture::TABLE, TABLE_BACKGROUND);
     table.setTexture(this->data->textures.get(Texture::TABLE));
     table.setScale(0.9, 1.0);
     table.setPosition(SCREEN_WIDTH / 2.f - table.getGlobalBounds().width / 2,
-                      SCREEN_HEIGHT / 2.f - table.getGlobalBounds().height / 2);
+                      SCREEN_HEIGHT / 2.f - table.getGlobalBounds().height / 2);*/
 
     // insert images and texts of menu state
     this->data->textures.load(Texture::BUTTON_PLAY, PLAY_BUTTON);
@@ -96,6 +97,10 @@ void MainMenuState::handleInput() {
 
         if (this->data->input.isSpriteClicked(this->btnHelp, sf::Mouse::Left, data->window)) {
             this->data->machine.addState(stateRef(new state_help(data)), true);
+        }
+
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+            this->data->machine.addState(stateRef(new GameOverState(data)), true);
         }
 
 
