@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <DEFINITIONS.hpp>
 #include "game.h"
+#include "character.h"
 
 class GameHeader{
 public:
@@ -25,6 +26,7 @@ public:
 
     int getHealth();
 
+    std::vector<sf::Sprite> hearts;
 
 private:
     GameData& data;
@@ -38,9 +40,8 @@ private:
     bool alpha = false;
     bool beta = false;
 
-    std::vector<sf::Sprite> hearts;
 
 protected:
-    float SPACE = 25; // Mellomrom mellom hver hjerte
+    float SPACE = 5; // Mellomrom mellom hver hjerte
 };
 #endif //GAME_HEADER_H

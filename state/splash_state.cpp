@@ -7,7 +7,7 @@
 SplashState::SplashState(gameDataRef data) : data(std::move(data)) {}
 
 void SplashState::init() {
-    this->data->window.setFramerateLimit(60);
+    this->data->window.setFramerateLimit(30);
     // Load and sed the background
     this->data->textures.load(Texture::WELCOME_BACKGROUND_IMG, SPLASH_SCREEN_BACKGROUND);
     background.setTexture(this->data->textures.get(Texture::WELCOME_BACKGROUND_IMG));

@@ -13,12 +13,21 @@
 #include "objects/sprite.h"
 #include "pause_state.h"
 #include "game_over_state.h"
-//#include "game_over_state.h"
 
-int counter;
+
+bool status = false;
+
+int score;
+
+
 
 void GameArena::init() {
+    this->data->window.setFramerateLimit(30);
     header = new GameHeader(*data);
+    dual = false;
+
+    data->window.setFramerateLimit(60);
+
     if (!playerTexture.loadFromFile(GAME_CHARACTER))
         std::cout << "Error couldnt not load character.jpg" << std::endl;
 
@@ -42,46 +51,51 @@ void GameArena::init() {
 }
 
     void GameArena::handleInput() {
-        sf::Event event{};
+        sf::Event event;
 
         while (this->data->window.pollEvent(event)) {
             if (sf::Event::Closed == event.type) {
                 this->data->window.close();
             }
 
-            // Press P to pause the game
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)) {
-                this->data->machine.addState(stateRef(new PauseState(data)), false);
-            }
-
-            // just for test - adding score by pressing X on the keyboard
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::X)) {
-                header->addScore();
-                header->addIntHealth();
-                header->addHealth();
-            }
-            // Remove health
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::H)) {
-                header->removeHealth();
-            }
-            // add more coin
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::C)) {
-                header->addCoin();
-            }
-
-            if (event.key.code == sf::Keyboard::F5) {
-                objects.clear();
-
-                if (!map.loadFromFile("data/level_1.json")) {
-                    std::cout << "Failed to reload map data." << std::endl;
+            if(event.type == sf::Event::KeyPressed) {
+                // Press P to pause the game
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)) {
+                    this->data->machine.addState(stateRef(new PauseState(data)), false);
                 }
 
-                std::copy(map.getLayers().begin(), map.getLayers().end(), std::back_inserter(objects));
-                std::copy(map.getSprites().begin(), map.getSprites().end(), std::back_inserter(objects));
-            }
+                // just for test - adding score by pressing X on the keyboard
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::X)) {
+                    header->addScore();
+                    header->addIntHealth();
+                    header->addHealth();
+                }
+                // Remove health
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::H)) {
+                    if(header->getHealth() <= 1)
+                    {
+                        status = false;
+                        score = header->getScore();
+                        this->data->machine.addState(stateRef(new GameOverState(data)), true);
+                    }
+                    else{header->removeHealth();}
+                }
+                // add more coin
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::C)) {
+                    header->addCoin();
+                }
 
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-                this->data->machine.addState(stateRef(new GameOverState(data)), true);
+                if (event.key.code == sf::Keyboard::F5) {
+                    objects.clear();
+
+                    if (!map.loadFromFile("data/level_1.json")) {
+                        std::cout << "Failed to reload map data." << std::endl;
+                    }
+
+                    std::copy(map.getLayers().begin(), map.getLayers().end(), std::back_inserter(objects));
+                    std::copy(map.getSprites().begin(), map.getSprites().end(), std::back_inserter(objects));
+                }
+
             }
         }
     }
@@ -89,13 +103,27 @@ void GameArena::init() {
 
 
     void GameArena::update(float dt) {
+
+
+
+    if(!dual)
+    {
         this->data->window.setView(character->viewer());
         monster->Update(dt);
         character->Update(dt);
+
+
         if(character->finished)
         {
             this->data->machine.addState(stateRef(new GameOverState(data)), false);
         }
+
+        dual = true;
+    }
+
+
+
+
     }
 
     void GameArena::draw(float dt) {
@@ -105,8 +133,24 @@ void GameArena::init() {
             object->process(dt);
             object->draw(this->data->window);
         }
-        monster->draw(data->window);
-        character->draw(data->window);
-        header->draw();
-        this->data->window.display();
+
+        if(dual)
+        { monster->draw(data->window);
+            character->draw(data->window);
+            this->data->window.setView(data->window.getDefaultView());
+            header->draw();
+
+            if(character->finished)
+            {
+                score = header->getScore();
+                status = true;
+                this->data->machine.addState(stateRef(new GameOverState(data)), true);
+
+            }
+
+
+            this->data->window.display();
+            dual = false;
+        }
+
     }

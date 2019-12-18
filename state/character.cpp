@@ -3,6 +3,7 @@
 #include "character.h"
 #include "game_over_state.h"
 
+
 Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed) :
         animation(texture, imageCount, switchTime)                                                     //caller constructor for å slippe gitter/getter
 {
@@ -11,10 +12,11 @@ Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switch
     faceRight = false;
     standStill = false;
 
-    //800, 600
-    //0.4166, 0.555
+
     view.setSize(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
     view.setCenter(480, 300);
+
+
     body.setSize(sf::Vector2f(30.f, 30.f));
     body.setOrigin(body.getSize()/2.f);
     body.setPosition(100, 485);

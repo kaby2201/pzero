@@ -22,13 +22,13 @@ public:
     void update(float dt) override;
 
 private:
+    sf::View view;
     gameDataRef data;
-    GameHeader *header;
-
     sf::Sprite table;
     sf::Sprite tryAgain;
     sf::Sprite exit;
     sf::Text gameOver;
+    sf::Text gameOverWon;
     sf::Text highscore;
     sf::Text intScore;
 

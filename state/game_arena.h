@@ -36,7 +36,10 @@ private:
     Monster* monster;
     Character* character;
     sf::Texture playerTexture;
+
     sf::Texture monsterTexture;
+    bool dual;
+
 
 protected:
     std::list<std::shared_ptr<Object>> objects;

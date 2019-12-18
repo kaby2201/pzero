@@ -10,6 +10,7 @@
 
 void MainMenuState::init() {
 
+    data->window.setView(data->window.getDefaultView());
     menuTexture(0.9,1.0,700,this->data);
 
     /*this->data->textures.load(Texture::TABLE, TABLE_BACKGROUND);
@@ -99,9 +100,9 @@ void MainMenuState::handleInput() {
             this->data->machine.addState(stateRef(new state_help(data)), true);
         }
 
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+        /*if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
             this->data->machine.addState(stateRef(new GameOverState(data)), true);
-        }
+        }*/
 
 
         inputSolver(1, event,this->data);
