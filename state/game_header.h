@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <DEFINITIONS.hpp>
 #include "game.h"
+#include "game_character/character.h"
 
 class GameHeader{
 public:
@@ -15,9 +16,17 @@ public:
 
     void addHealth();
 
+    void addIntHealth();
+
     void removeHealth();
 
     void addCoin();
+
+    int getScore();
+
+    int getHealth();
+
+    std::vector<sf::Sprite> hearts;
 
 private:
     GameData& data;
@@ -26,12 +35,13 @@ private:
 
     int intLevel = 1;
     int intCoin = 2;
-    int highScore = 0;
     int intHealth = 4;
+    int highScore = 0;
+    bool alpha = false;
+    bool beta = false;
 
-    std::vector<sf::Sprite> hearts;
 
 protected:
-    float SPACE = 25; // Mellomrom mellom hver hjerte
+    float SPACE = 5; // Mellomrom mellom hver hjerte
 };
 #endif //GAME_HEADER_H

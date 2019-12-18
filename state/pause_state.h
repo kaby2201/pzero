@@ -23,7 +23,13 @@ public:
 
     void resume() override;
 
+    void take_screenshot(const sf::RenderWindow& window, const std::string& filename);
+
 private:
+    sf::Image Screenshot;
+
+    sf::Texture texture;
+    sf::Sprite lastBackground;
     gameDataRef data;
     sf::Sprite pauseButton;
 };

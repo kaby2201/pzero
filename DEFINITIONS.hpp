@@ -2,7 +2,7 @@
 
 // Game settings (for dev)
 #define GAME_NAME "Pzero"
-
+//1920 + 1080
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
@@ -19,6 +19,7 @@
 #define BACKGROUND_CLOUD "resources/ui/clouds_2.png"
 
 #define GAME_CHARACTER "resources/sprite/MainCharacter.jpg"
+#define GAME_MONSTER "resources/sprite/EnemySheet2.jpg"
 
 
 // Sound settings
@@ -27,21 +28,23 @@
 #define VOLUME_ADD "resources/ui/addvolume.png"
 #define VOLUME_DECREASE "resources/ui/decreasevolume.png"
 
-
 // Define components for menu
+
+
 #define TABLE_BACKGROUND "resources/ui/table.png"
 #define PLAY_BUTTON "resources/ui/play.png"
 #define SETTING_BUTTON "resources/ui/setting.png"
 #define HELP_BUTTON "resources/ui/help.png"
 #define SCORE_BUTTON "resources/ui/score.png"
 #define EXIT_MENU_BUTTON "resources/ui/close.png"
-
 #define SPACE_BAR "resources/ui/spacebar.png"
+
 #define POINTER_LEFT "resources/ui/left.png"
 #define POINTER_RIGHT "resources/ui/right.png"
 
 // Pause state
 #define RESUME_BUTTON "resources/ui/PNG/btn/restart.png"
+#define PAUSE_IMAGE "resources/ui/PNG/pause/header.png"
 
 // Fonts
 #define GAME_TITLE_FONT "resources/font/Modak-Regular.ttf"

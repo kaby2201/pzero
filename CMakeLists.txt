@@ -30,8 +30,8 @@ set(SOURCE_FILES
         state/state_help.h
         state/menu_base.cpp
         state/menu_base.h
-        state/character.cpp
-        state/character.h
+        game_character/character.cpp
+        game_character/character.h
         state/game_header.h
         state/game_header.cpp
         state/collider.cpp
@@ -39,7 +39,29 @@ set(SOURCE_FILES
         state/platform.cpp
         state/platform.h
         map/map.cpp
-        map/map.h objects/layer.cpp objects/layer.h objects/object.h objects/sprite.cpp objects/sprite.h)
+        map/map.h
+
+        objects/layer.cpp
+        objects/layer.h
+        objects/object.h
+        objects/sprite.cpp
+        objects/sprite.h
+
+        game_character/character.h
+        state/game_header.h
+        state/game_header.cpp
+        map/map.cpp map/map.h
+
+        objects/layer.cpp
+        objects/layer.h
+        objects/object.h
+        objects/sprite.cpp
+        objects/sprite.h
+        state/game_over_state.cpp
+        state/game_over_state.h
+        game_character/monster.cpp
+        game_character/monster.h)
+
 
 
 add_executable(pzero ${SOURCE_FILES})

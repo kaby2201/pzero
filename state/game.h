@@ -10,7 +10,7 @@
 #include <engine/asset_manager.h>
 #include <engine/input_manager.h>
 #include <SFML/Audio/Sound.hpp>
-#include "character.h"
+#include "game_character/character.h"
 
 
 /*
@@ -57,11 +57,14 @@ struct GameData {
     InputManager input;
     sf::RenderWindow window;
     sf::Sound sound;
-
     AssetManager<sf::Font, Font> fonts;
+
     AssetManager<sf::SoundBuffer, Music> music;
     AssetManager<sf::Sprite, int> sprites;
     AssetManager<sf::Texture, Texture> textures;
+
+    // Player is alive
+    bool isAlive = true;
 };
 
 typedef std::shared_ptr<GameData> gameDataRef;

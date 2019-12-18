@@ -4,13 +4,16 @@
 #include <list>
 #include <SFML/System/Clock.hpp>
 #include <SFML/Graphics.hpp>
+
 #include <objects/object.h>
 #include <map/map.h>
+
+#include "game_character/monster.h"
 
 #include "state.h"
 #include "game.h"
 #include "game_header.h"
-#include "character.h"
+#include "game_character/character.h"
 #include "platform.h"
 
 
@@ -31,15 +34,18 @@ public:
 private:
     gameDataRef data;
     GameHeader* header;
+    Monster* monster;
+
     Character* character;
 
+    sf::Texture monsterTexture;
+    bool dual;
+
 protected:
-    sf::View view;
     sf::Vector2f direction = sf::Vector2f(0, 0);
-    sf::Vector2f velocity  = sf::Vector2f(0, 0);
     sf::Texture playerTexture;
     sf::Sprite background;
-    Platform* platform;
+
     Map map;
     std::list<std::shared_ptr<Object>> objects;
 };
