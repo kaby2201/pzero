@@ -19,17 +19,18 @@ bool Collider::checkCollision(Collider other, sf::Vector2f& direction, float pus
 
     if (intersectX < 0.0f && intersectY < 0.0f) {
         push = std::min(std::max(push, 0.0f), 1.0f);
+
         if (intersectX > intersectY) {
             if (deltaX > 0.0f) {
-                Move(intersectX * (1.0f - push), 0.f);
-                other.Move(-intersectX * push, 0.f);
+                Move(intersectX * (1.0f - push), 0.0f);
+                other.Move(-intersectX * push, 0.0f);
 
                 direction.x = 1.0f;
                 direction.y = 0.0f;
 
             }else{
-                Move(-intersectX * (1.0f - push), 0.f);
-                other.Move(intersectX * push, 0.f);
+                Move(-intersectX * (1.0f - push), 0.0f);
+                other.Move(intersectX * push, 0.0f);
 
                 direction.x = -1.0f;
                 direction.y = 0.0f;

@@ -32,8 +32,11 @@ private:
     gameDataRef data;
     GameHeader* header;
     Character* character;
+
 protected:
+    sf::View view;
     sf::Vector2f direction = sf::Vector2f(0, 0);
+    sf::Vector2f velocity  = sf::Vector2f(0, 0);
     sf::Texture playerTexture;
     sf::Sprite background;
     Platform* platform;

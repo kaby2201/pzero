@@ -7,27 +7,35 @@
 
 class Character {
 public:
-    Character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, float speed, float jumpHeight);
+    Character(sf::Texture *texture, sf::Vector2u imageCount, float switchTime, int speed, float jumpHeight);
 
-    void Update(float deltaTime);
+    void Update(float deltaTime, sf::Vector2f& velocity);
     void draw(sf::RenderWindow& window);
 
-    void onCollision(sf::Vector2f& direction);
+    void setPosition(sf::Vector2f pos){ body.setPosition(pos); }
 
-    sf::Vector2f GetPositions() { return body.getPosition();}
+    void onCollision(sf::Vector2f& direction, sf::Vector2f& velocity);
+
+    sf::Vector2f getPositions() { return body.getPosition();}
     Collider getCollider(){ return Collider(body); }
 
 private:
+    sf::Texture playerTexture;
     sf::RectangleShape body;
-    animation animation;
-    int row;
-    float speed;
+    sf::Vector2u imageCount;
+
+    float switchTime = 0.03f;
+    const float gravity = 2;
+    unsigned int row;
+    int speed = 5;
     bool faceRight;
     bool standStill;
+    animation animation;
 
-    sf::Vector2f velocity;
-    bool canJum = false;
+    //sf::Vector2f velocity;
+    bool canJum = true;
     float jumHeight;
+    float jumpSpeed = 9.0f;
 };
 
 #endif //PZERO_CHARACTER_H

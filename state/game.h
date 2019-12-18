@@ -10,6 +10,7 @@
 #include <engine/asset_manager.h>
 #include <engine/input_manager.h>
 #include <SFML/Audio/Sound.hpp>
+#include "character.h"
 
 
 /*

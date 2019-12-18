@@ -23,11 +23,15 @@ void Sprite::process(float deltaTime)
 void Sprite::draw(sf::RenderWindow& window)
 {
     map.setSpriteTextureFromGid(sprite, gid, frame);
+
+    //Get sprite size
+    sf::Vector2f size = sf::Vector2f(width, height);
+    sprite.setOrigin(size / 2.0f);
     sprite.setPosition((float)x, (float)y);
 
+
     body.setPosition((float) x, (float) y);
-    body.setSize(sf::Vector2f(16, 16));
-    body.setFillColor(sf::Color::Blue);
+    body.setOrigin(size / 2.0f);
     window.draw(sprite);
-    //window.draw(body);
+    window.draw(body);
 }
