@@ -102,9 +102,11 @@ void GameOverState::draw(float dt) {
     //data->window.clear();
     data->window.draw(table);
     if(status)
-    {data->window.draw(gameOverWon);}
+    {data->window.draw(gameOverWon);
+    }
     else if(!status)
-    {data->window.draw(gameOver);}
+    {data->window.draw(gameOver);
+    }
     data->window.draw(highscore);
     data->window.draw(intScore);
     data->window.draw(tryAgain);

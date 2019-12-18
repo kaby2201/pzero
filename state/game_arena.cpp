@@ -70,6 +70,7 @@ void GameArena::init() {
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::H)) {
                     if(header->getHealth() <= 1)
                     {
+                        status = false;
                         score = header->getScore();
                         this->data->machine.addState(stateRef(new GameOverState(data)), true);
                     }
