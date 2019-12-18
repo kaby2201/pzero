@@ -22,9 +22,12 @@ void GameArena::init() {
     if (!playerTexture.loadFromFile(GAME_CHARACTER))
         std::cout << "Error couldnt not load character.jpg" << std::endl;
 
-    // Vi har 21 rader og opp til 13 animasjoner og switchtime bestemmer hvor fort
-    this->character = new Character(&playerTexture, sf::Vector2u(9, 21), 0.05f, 400.0f);
+    if(!monsterTexture.loadFromFile(GAME_MONSTER))
+        std::cout<<"Error could not load monster.jpg" << std::endl;
 
+    // Vi har 21 rader og opp til 13 animasjoner og switchtime bestemmer hvor fort
+    this->character = new Character(&playerTexture, sf::Vector2u(9, 21), 0.05f, 150.0f);
+     this->monster = new Monster(&monsterTexture, sf::Vector2u(9,21),0.07f, 75.f);
     // Load map information from JSON into object list
     if (!map.loadFromFile("data/level_1.json")) {
         std::cout << "Failed to load map data." << std::endl;
@@ -87,10 +90,11 @@ void GameArena::init() {
 
     void GameArena::update(float dt) {
         this->data->window.setView(character->viewer());
+        monster->Update(dt);
         character->Update(dt);
         if(character->finished)
-        {this->data->machine.addState(stateRef(new GameOverState(data)), false);
-
+        {
+            this->data->machine.addState(stateRef(new GameOverState(data)), false);
         }
     }
 
@@ -101,6 +105,7 @@ void GameArena::init() {
             object->process(dt);
             object->draw(this->data->window);
         }
+        monster->draw(data->window);
         character->draw(data->window);
         header->draw();
         this->data->window.display();

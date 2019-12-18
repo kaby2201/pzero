@@ -4,6 +4,7 @@
 #include <list>
 #include <SFML/System/Clock.hpp>
 #include <SFML/Graphics.hpp>
+#include <monster.h>
 
 #include "map/map.h"
 #include "state.h"
@@ -32,8 +33,10 @@ private:
     gameDataRef data;
     GameHeader* header;
 
+    Monster* monster;
     Character* character;
     sf::Texture playerTexture;
+    sf::Texture monsterTexture;
 
 protected:
     std::list<std::shared_ptr<Object>> objects;

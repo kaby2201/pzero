@@ -1,4 +1,5 @@
 #include <DEFINITIONS.hpp>
+#include <iostream>
 #include "character.h"
 #include "game_over_state.h"
 
@@ -12,17 +13,16 @@ Character::Character(sf::Texture *texture, sf::Vector2u imageCount, float switch
 
     //800, 600
     //0.4166, 0.555
-    view.setSize(800, 600);
-    view.setCenter(400, 250);
+    view.setSize(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
+    view.setCenter(480, 300);
     body.setSize(sf::Vector2f(30.f, 30.f));
     body.setOrigin(body.getSize()/2.f);
-    body.setPosition(100, 415);
+    body.setPosition(100, 485);
     body.setTexture(texture);
 }
 
 void Character::Update(float deltaTime) {
     sf::Vector2f movement(0.0f, 0.0f);
-
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
         movement.y -= speed * deltaTime;
@@ -43,25 +43,32 @@ void Character::Update(float deltaTime) {
         movement.x += speed * deltaTime;
     }
 
+
     if(movement.x == 0.0f){
         //     row = 3;
         standStill = true;
     } else {
         standStill = false;
         row = 11;
-
         faceRight = movement.x >= 0;
+    }
+    if(body.getPosition().x <1000 and body.getPosition().x >1200){
+        body.setSize(sf::Vector2f(60.f, 60.f));
+    } else  body.setSize(sf::Vector2f(30.f, 30.f));
+
+    if (body.getPosition().x > 480 and body.getPosition().x < 2720){
+        view.setCenter(body.getPosition().x, 300);
+    } else if(body.getPosition().x > 3500){
+        finished = !finished;
     }
 
     animation.Update(row, deltaTime, faceRight, standStill);
     body.setTextureRect(animation.uvRect);
     body.move(movement);
 
-     if (body.getPosition().x > 400 and body.getPosition().x < 2800){
-        view.setCenter(body.getPosition().x, 250);
-    } else if(body.getPosition().x > 3500){
-      finished = true;
-     }
+
+
+
 
 }
 

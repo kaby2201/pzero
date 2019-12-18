@@ -19,6 +19,7 @@
 #define BACKGROUND_CLOUD "resources/ui/clouds_2.png"
 
 #define GAME_CHARACTER "resources/sprite/MainCharacter.jpg"
+#define GAME_MONSTER "resources/sprite/EnemySheet2.jpg"
 
 
 // Sound settings
