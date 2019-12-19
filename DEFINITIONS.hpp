@@ -8,7 +8,7 @@
 #define SCREEN_HEIGHT 1080
 
 // Plash state
-#define SPLASH_STATE_SHOW_TIME 0
+#define SPLASH_STATE_SHOW_TIME 3
 #define SPLASH_SCREEN_BACKGROUND "resources/ui/game_background_1.png"
 
 // Sound & Music
