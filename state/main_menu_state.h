@@ -26,7 +26,7 @@ public:
 
 private:
     gameDataRef data;
-    sf::Sprite btnPlay, btnSetting, btnHelp, btnScore;
+    sf::Sprite btnPlay, btnSetting, btnHelp, btnScore, cloud;
 
     sf::Text settings, titleMenu, btn_play, btn_setting, btn_help, btn_score;
 };

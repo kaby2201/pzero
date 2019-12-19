@@ -8,7 +8,7 @@ void PauseState::init() {
     sf::Texture texture;
     texture.create(data->window.getSize().x, data->window.getSize().y);
     texture.update(data->window);
-    if (texture.copyToImage().saveToFile("pndile.png"))
+    if (texture.copyToImage().saveToFile("screenshoot.png"))
     {
         std::cout << "screenshot saved to "  << std::endl;
     }

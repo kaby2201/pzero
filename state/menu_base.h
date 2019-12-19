@@ -15,7 +15,7 @@ public:
     void drawTexture(gameDataRef &data);
 
     sf::Sprite Background;
-    sf::Sprite table;
+    sf::Sprite table, cloud;
     sf::Sprite exitButton;
 };
 

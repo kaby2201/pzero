@@ -45,6 +45,7 @@ protected:
     sf::Vector2f direction = sf::Vector2f(0, 0);
     sf::Texture playerTexture;
     sf::Sprite background;
+    sf::Sprite cloud;
 
     Map map;
     std::list<std::shared_ptr<Object>> objects;

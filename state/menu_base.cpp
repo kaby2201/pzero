@@ -19,6 +19,9 @@ void MenuBase::menuTexture(float factorX, float factorY, float posY, gameDataRef
     exitButton.setScale(0.4, 0.4);
     exitButton.setPosition(table.getPosition().x + table.getGlobalBounds().width
     / 2 - exitButton.getGlobalBounds().width / 2, table.getPosition().y + posY);
+
+    cloud.setTexture(data->textures.get(Texture::BACKGROUND_CLOUD_TEXTURE));
+    cloud.setPosition((float) data->window.getSize().x / 2, (float) data->window.getSize().y / 2);
 }
 
 void MenuBase::inputSolver(int choice, sf::Event event, gameDataRef &data){
@@ -39,7 +42,9 @@ void MenuBase::inputSolver(int choice, sf::Event event, gameDataRef &data){
 }
 
 void MenuBase::drawTexture(gameDataRef &data){
+    cloud.setPosition(cloud.getPosition().x - 1.0f, cloud.getPosition().y);
     data->window.draw(Background);
+    data->window.draw(cloud);
     data->window.draw(table);
     data->window.draw(exitButton);
 }

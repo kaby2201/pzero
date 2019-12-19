@@ -48,9 +48,6 @@ void GameArena::init() {
 
     // Copy sprite references from map object to Game list
     std::copy(map.getSprites().begin(), map.getSprites().end(), std::back_inserter(objects));
-
-    // Loading the background texture
-    background.setTexture(data->textures.get(Texture::WELCOME_BACKGROUND_IMG));
 }
 
 void GameArena::handleInput() {
@@ -86,6 +83,9 @@ void GameArena::handleInput() {
             // add more coin
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::C)) {
                 header->addCoin();
+            }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::M)) {
+                data->music;
             }
 
             if (event.key.code == sf::Keyboard::F5) {
@@ -132,13 +132,14 @@ void GameArena::update(float dt) {
 
 void GameArena::draw(float dt) {
     this->data->window.clear();
-    data->window.draw(background);
+    //data->window.draw(background);
 
     // Process and render each object
     for (auto &object: objects) {
         object->process(dt);
         object->draw(this->data->window);
     }
+    data->window.draw(cloud);
 
     if(dual){
         monster->draw(data->window);

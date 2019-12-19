@@ -112,6 +112,7 @@ void MainMenuState::handleInput() {
 
 
 void MainMenuState::update(float dt) {
+
 }
 
 void MainMenuState::draw(float dt) {
