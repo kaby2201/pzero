@@ -11,7 +11,8 @@ Running Cha: A Platform based Game like Mario made by Byamungu Kabiraba, Ali Tod
 # Game installation
 
 ```
-TODO: Step-by-step instructions
+Open the binary folder and run the pzero.exe. 
+
 ```
 
 
@@ -19,7 +20,8 @@ TODO: Step-by-step instructions
 Compile with JetBrains CLion
 
 ```
-TODO: Step-by-step instructions
+Open jetBrains Clion and open source folder as project file. To generate cmake files go to view -> tool windows -> CMake. 
+Click then on reload icon on the left side on the bottom
 ```
 
 # 3rd-party libraries
