@@ -5,8 +5,8 @@
 
 class InputManager {
 public:
-    InputManager(){}
-    ~InputManager(){}
+    InputManager()= default;
+    ~InputManager()= default;
 
     //TODO - creat a template
     bool isSpriteClicked(const sf::Sprite& object, sf::Mouse::Button button, sf::RenderWindow& window);
