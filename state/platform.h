@@ -2,7 +2,6 @@
 #define PZERO_PLATFORM_H
 
 #include <SFML/Graphics.hpp>
-#include "collider.h"
 
 class Platform {
 public:
@@ -11,7 +10,6 @@ public:
 
     void draw(sf::RenderWindow &window);
 
-    Collider getColider(){ return Collider(body); }
 
 private:
     sf::RectangleShape body;

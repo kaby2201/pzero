@@ -2,7 +2,6 @@
 #define LAYER_H
 
 #include <string>
-#include <state/collider.h>
 
 #include "objects/object.h"
 
@@ -17,7 +16,6 @@ public:
 
     void draw(sf::RenderWindow& window) override;
 
-    Collider getColider(){ return Collider(body); }
 
     int getWidth() const { return width; }
     int getHeight() const { return height; }

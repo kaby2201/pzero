@@ -110,23 +110,7 @@ void GameArena::update(float dt) {
         monster->Update(dt);
         character->Update(dt);
 
-/*        if (!character->alive()) {
-            status = false;
-            this->data->machine.addState(stateRef(new GameOverState(data)), true);
-        }*/
-
         dual = true;
-    }
-
-
-    //character->onCollision(direction);
-    for (auto &item : map.getSprites()) {
-        item->getColider().checkCollision(character->getCollider(), direction, 1.0f);
-        character->onCollision(direction);
-    }
-
-    if (monster->getCollider().checkCollision(character->getCollider(), direction, 0.5f)) {
-       header->removeHealth();
     }
 }
 

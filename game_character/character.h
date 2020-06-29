@@ -3,7 +3,6 @@
 
 #include <SFML/Graphics.hpp>
 #include "state/animation.h"
-#include "state/collider.h"
 #include "state/game.h"
 
 class Character {
@@ -18,7 +17,6 @@ public:
     void onCollision(sf::Vector2f& direction);
 
     sf::Vector2f getPositions() { return body.getPosition();}
-    Collider getCollider(){ return Collider(body); }
 
     sf::View viewer(){ return view;};
 

@@ -34,8 +34,6 @@ set(SOURCE_FILES
         game_character/character.h
         state/game_header.h
         state/game_header.cpp
-        state/collider.cpp
-        state/collider.h
         state/platform.cpp
         state/platform.h
         map/map.cpp

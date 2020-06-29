@@ -4,7 +4,6 @@
 
 #include <SFML/Graphics.hpp>
 #include <state/animation.h>
-#include <state/collider.h>
 
 
 class Monster {
@@ -19,7 +18,6 @@ public:
     bool finished = false;
 
     sf::Vector2f getPositions() { return body.getPosition();}
-    Collider getCollider(){ return Collider(body); }
 
 private:
     int monsterSwitch;
